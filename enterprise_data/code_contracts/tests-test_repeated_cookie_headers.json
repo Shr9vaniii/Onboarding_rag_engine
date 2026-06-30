@@ -1,0 +1,60 @@
+{
+    "file_path": "tests\\test_repeated_cookie_headers.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "set_cookie",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 7
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "set_indirect_cookie",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 12
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_direct_cookie",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "dep",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_indirect_cookie",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "dep",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 22
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_cookie_is_set_once",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 29
+        }
+    ]
+}

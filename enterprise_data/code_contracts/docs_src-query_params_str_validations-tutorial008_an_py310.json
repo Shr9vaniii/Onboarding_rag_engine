@@ -1,0 +1,19 @@
+{
+    "file_path": "docs_src\\query_params_str_validations\\tutorial008_an_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "q",
+                    "type": "Annotated[str | None, Query(title='Query string', description='Query string for the items to search in the database that have a good match', min_length=3)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 9
+        }
+    ]
+}

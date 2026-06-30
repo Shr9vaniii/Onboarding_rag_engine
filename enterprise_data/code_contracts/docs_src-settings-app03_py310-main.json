@@ -1,0 +1,28 @@
+{
+    "file_path": "docs_src\\settings\\app03_py310\\main.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_settings",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 11
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "info",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "settings",
+                    "type": "config.Settings"
+                }
+            ],
+            "return_type": "",
+            "line_number": 16
+        }
+    ]
+}

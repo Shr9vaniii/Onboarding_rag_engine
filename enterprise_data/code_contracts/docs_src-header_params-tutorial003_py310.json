@@ -1,0 +1,19 @@
+{
+    "file_path": "docs_src\\header_params\\tutorial003_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "x_token",
+                    "type": "list[str] | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 7
+        }
+    ]
+}

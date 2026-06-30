@@ -1,0 +1,72 @@
+{
+    "file_path": "tests\\test_security_api_key_query.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "User",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "username",
+                    "type": "str"
+                }
+            ],
+            "line_number": 12
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_current_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "oauth_header",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_current_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "current_user",
+                    "type": "User"
+                }
+            ],
+            "return_type": "",
+            "line_number": 22
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_security_api_key",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 29
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_security_api_key_no_key",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 35
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 42
+        }
+    ]
+}

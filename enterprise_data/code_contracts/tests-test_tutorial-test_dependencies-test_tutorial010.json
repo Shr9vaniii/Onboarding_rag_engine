@@ -1,0 +1,28 @@
+{
+    "file_path": "tests\\test_tutorial\\test_dependencies\\test_tutorial010.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_db",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 10
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_root",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "c",
+                    "type": "Annotated[Any, Depends(get_db)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 14
+        }
+    ]
+}

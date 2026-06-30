@@ -1,0 +1,39 @@
+{
+    "file_path": "docs_src\\dependencies\\tutorial008d_an_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "InternalError",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 8
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_username",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 12
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item_id",
+                    "type": "str"
+                },
+                {
+                    "name": "username",
+                    "type": "Annotated[str, Depends(get_username)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 21
+        }
+    ]
+}

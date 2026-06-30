@@ -1,0 +1,19 @@
+{
+    "file_path": "docs_src\\query_params_str_validations\\tutorial004_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "q",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 7
+        }
+    ]
+}

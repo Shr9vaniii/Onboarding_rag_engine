@@ -1,0 +1,14 @@
+{
+    "file_path": "tests\\test_tutorial\\test_response_cookies\\test_tutorial001.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_path_operation",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 8
+        }
+    ]
+}

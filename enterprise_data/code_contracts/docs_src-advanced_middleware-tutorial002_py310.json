@@ -1,0 +1,14 @@
+{
+    "file_path": "docs_src\\advanced_middleware\\tutorial002_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "main",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 12
+        }
+    ]
+}

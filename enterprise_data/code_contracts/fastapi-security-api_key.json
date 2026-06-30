@@ -1,0 +1,200 @@
+{
+    "file_path": "fastapi\\security\\api_key.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "APIKeyBase",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "model",
+                    "type": "APIKey"
+                }
+            ],
+            "line_number": 11
+        },
+        {
+            "type": "class",
+            "name": "APIKeyQuery",
+            "docstring": "API key authentication using a query parameter.\n\nThis defines the name of the query parameter that should be provided in the request\nwith the API key and integrates that into the OpenAPI documentation. It extracts\nthe key value sent in the query parameter automatically and provides it as the\ndependency result. But it doesn't define how to send that API key to the client.\n\n## Usage\n\nCreate an instance object and use that object as the dependency in `Depends()`.\n\nThe dependency result will be a string containing the key value.\n\n## Example\n\n```python\nfrom fastapi import Depends, FastAPI\nfrom fastapi.security import APIKeyQuery\n\napp = FastAPI()\n\nquery_scheme = APIKeyQuery(name=\"api_key\")\n\n\n@app.get(\"/items/\")\nasync def read_items(api_key: str = Depends(query_scheme)):\n    return {\"api_key\": api_key}\n```",
+            "attributes": [],
+            "line_number": 55
+        },
+        {
+            "type": "class",
+            "name": "APIKeyHeader",
+            "docstring": "API key authentication using a header.\n\nThis defines the name of the header that should be provided in the request with\nthe API key and integrates that into the OpenAPI documentation. It extracts\nthe key value sent in the header automatically and provides it as the dependency\nresult. But it doesn't define how to send that key to the client.\n\n## Usage\n\nCreate an instance object and use that object as the dependency in `Depends()`.\n\nThe dependency result will be a string containing the key value.\n\n## Example\n\n```python\nfrom fastapi import Depends, FastAPI\nfrom fastapi.security import APIKeyHeader\n\napp = FastAPI()\n\nheader_scheme = APIKeyHeader(name=\"x-key\")\n\n\n@app.get(\"/items/\")\nasync def read_items(key: str = Depends(header_scheme)):\n    return {\"key\": key}\n```",
+            "attributes": [],
+            "line_number": 147
+        },
+        {
+            "type": "class",
+            "name": "APIKeyCookie",
+            "docstring": "API key authentication using a cookie.\n\nThis defines the name of the cookie that should be provided in the request with\nthe API key and integrates that into the OpenAPI documentation. It extracts\nthe key value sent in the cookie automatically and provides it as the dependency\nresult. But it doesn't define how to set that cookie.\n\n## Usage\n\nCreate an instance object and use that object as the dependency in `Depends()`.\n\nThe dependency result will be a string containing the key value.\n\n## Example\n\n```python\nfrom fastapi import Depends, FastAPI\nfrom fastapi.security import APIKeyCookie\n\napp = FastAPI()\n\ncookie_scheme = APIKeyCookie(name=\"session\")\n\n\n@app.get(\"/items/\")\nasync def read_items(session: str = Depends(cookie_scheme)):\n    return {\"session\": session}\n```",
+            "attributes": [],
+            "line_number": 235
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "location",
+                    "type": "APIKeyIn"
+                },
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "description",
+                    "type": "str | None"
+                },
+                {
+                    "name": "scheme_name",
+                    "type": "str | None"
+                },
+                {
+                    "name": "auto_error",
+                    "type": "bool"
+                }
+            ],
+            "return_type": "",
+            "line_number": 14
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "make_not_authenticated_error",
+            "docstring": "The WWW-Authenticate header is not standardized for API Key authentication but\nthe HTTP specification requires that an error of 401 \"Unauthorized\" must\ninclude a WWW-Authenticate header.\n\nRef: https://datatracker.ietf.org/doc/html/rfc9110#name-401-unauthorized\n\nFor this, this method sends a custom challenge `APIKey`.",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "HTTPException",
+            "line_number": 31
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "check_api_key",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "api_key",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "str | None",
+            "line_number": 47
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 87
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "__call__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "request",
+                    "type": "Request"
+                }
+            ],
+            "return_type": "str | None",
+            "line_number": 142
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 179
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "__call__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "request",
+                    "type": "Request"
+                }
+            ],
+            "return_type": "str | None",
+            "line_number": 230
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 267
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "__call__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "request",
+                    "type": "Request"
+                }
+            ],
+            "return_type": "str | None",
+            "line_number": 318
+        }
+    ]
+}

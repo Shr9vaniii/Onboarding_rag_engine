@@ -1,0 +1,732 @@
+{
+    "file_path": "tests\\test_response_model_as_return_annotation.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "BaseUser",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                }
+            ],
+            "line_number": 10
+        },
+        {
+            "type": "class",
+            "name": "User",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "surname",
+                    "type": "str"
+                }
+            ],
+            "line_number": 14
+        },
+        {
+            "type": "class",
+            "name": "DBUser",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "password_hash",
+                    "type": "str"
+                }
+            ],
+            "line_number": 18
+        },
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "price",
+                    "type": "float"
+                }
+            ],
+            "line_number": 22
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "no_response_model_no_annotation_return_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 31
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "no_response_model_no_annotation_return_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 36
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_no_annotation_return_same_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 41
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_no_annotation_return_exact_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 46
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_no_annotation_return_invalid_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 51
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_no_annotation_return_invalid_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 56
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_no_annotation_return_dict_with_extra_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 63
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_no_annotation_return_submodel_with_extra_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 70
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "no_response_model_annotation_return_same_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "User",
+            "line_number": 75
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "no_response_model_annotation_return_exact_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "User",
+            "line_number": 80
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "no_response_model_annotation_return_invalid_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "User",
+            "line_number": 85
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "no_response_model_annotation_return_invalid_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "User",
+            "line_number": 90
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "no_response_model_annotation_return_dict_with_extra_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "User",
+            "line_number": 95
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "no_response_model_annotation_return_submodel_with_extra_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "User",
+            "line_number": 100
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_none_annotation_return_same_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "User",
+            "line_number": 105
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_none_annotation_return_exact_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "User",
+            "line_number": 110
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_none_annotation_return_invalid_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "User",
+            "line_number": 115
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_none_annotation_return_invalid_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "User",
+            "line_number": 120
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_none_annotation_return_dict_with_extra_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "User",
+            "line_number": 127
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_none_annotation_return_submodel_with_extra_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "User",
+            "line_number": 135
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_model1_annotation_model2_return_same_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "Item",
+            "line_number": 142
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_model1_annotation_model2_return_exact_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "Item",
+            "line_number": 149
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_model1_annotation_model2_return_invalid_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "Item",
+            "line_number": 156
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_model1_annotation_model2_return_invalid_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "Item",
+            "line_number": 163
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_model1_annotation_model2_return_dict_with_extra_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "Item",
+            "line_number": 171
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_model1_annotation_model2_return_submodel_with_extra_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "Item",
+            "line_number": 179
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_filtering_model_annotation_submodel_return_submodel",
+            "docstring": "",
+            "args": [],
+            "return_type": "DBUser",
+            "line_number": 187
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_list_of_model_no_annotation",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 192
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "no_response_model_annotation_list_of_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "list[User]",
+            "line_number": 200
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "no_response_model_annotation_forward_ref_list_of_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "'list[User]'",
+            "line_number": 208
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_union_no_annotation_return_model1",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 219
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "response_model_union_no_annotation_return_model2",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 227
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "no_response_model_annotation_union_return_model1",
+            "docstring": "",
+            "args": [],
+            "return_type": "User | Item",
+            "line_number": 232
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "no_response_model_annotation_union_return_model2",
+            "docstring": "",
+            "args": [],
+            "return_type": "User | Item",
+            "line_number": 237
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "no_response_model_annotation_response_class",
+            "docstring": "",
+            "args": [],
+            "return_type": "Response",
+            "line_number": 242
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "no_response_model_annotation_json_response_class",
+            "docstring": "",
+            "args": [],
+            "return_type": "JSONResponse",
+            "line_number": 247
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_no_response_model_no_annotation_return_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 254
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_no_response_model_no_annotation_return_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 260
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_no_annotation_return_same_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 266
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_no_annotation_return_exact_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 272
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_no_annotation_return_invalid_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 278
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_no_annotation_return_invalid_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 284
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_no_annotation_return_dict_with_extra_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 290
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_no_annotation_return_submodel_with_extra_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 296
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_no_response_model_annotation_return_same_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 304
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_no_response_model_annotation_return_exact_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 310
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_no_response_model_annotation_return_invalid_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 316
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_no_response_model_annotation_return_invalid_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 322
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_no_response_model_annotation_return_dict_with_extra_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 328
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_no_response_model_annotation_return_submodel_with_extra_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 334
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_none_annotation_return_same_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 342
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_none_annotation_return_exact_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 348
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_none_annotation_return_invalid_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 354
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_none_annotation_return_invalid_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 360
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_none_annotation_return_dict_with_extra_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 366
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_none_annotation_return_submodel_with_extra_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 376
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_model1_annotation_model2_return_same_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 388
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_model1_annotation_model2_return_exact_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 394
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_model1_annotation_model2_return_invalid_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 400
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_model1_annotation_model2_return_invalid_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 406
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_model1_annotation_model2_return_dict_with_extra_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 412
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_model1_annotation_model2_return_submodel_with_extra_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 420
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_filtering_model_annotation_submodel_return_submodel",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 428
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_list_of_model_no_annotation",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 436
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_no_response_model_annotation_list_of_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 445
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_no_response_model_annotation_forward_ref_list_of_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 454
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_union_no_annotation_return_model1",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 463
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_model_union_no_annotation_return_model2",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 469
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_no_response_model_annotation_union_return_model1",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 475
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_no_response_model_annotation_union_return_model2",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 481
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_no_response_model_annotation_return_class",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 487
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_no_response_model_annotation_json_response_class",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 493
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_invalid_response_model_field",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 499
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 511
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_root",
+            "docstring": "",
+            "args": [],
+            "return_type": "Response | None",
+            "line_number": 504
+        }
+    ]
+}

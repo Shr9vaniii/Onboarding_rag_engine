@@ -1,0 +1,81 @@
+{
+    "file_path": "tests\\test_security_openid_connect_optional.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "User",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "username",
+                    "type": "str"
+                }
+            ],
+            "line_number": 12
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_current_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "oauth_header",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_current_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "current_user",
+                    "type": "User | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 24
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_security_oauth2",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 33
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_security_oauth2_password_other_header",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 39
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_security_oauth2_password_bearer_no_header",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 45
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 51
+        }
+    ]
+}

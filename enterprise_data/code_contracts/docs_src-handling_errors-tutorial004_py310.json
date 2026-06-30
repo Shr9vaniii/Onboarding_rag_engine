@@ -1,0 +1,55 @@
+{
+    "file_path": "docs_src\\handling_errors\\tutorial004_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "http_exception_handler",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": ""
+                },
+                {
+                    "name": "exc",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 10
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "validation_exception_handler",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": ""
+                },
+                {
+                    "name": "exc",
+                    "type": "RequestValidationError"
+                }
+            ],
+            "return_type": "",
+            "line_number": 15
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item_id",
+                    "type": "int"
+                }
+            ],
+            "return_type": "",
+            "line_number": 23
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "file_path": "docs_src\\dependencies\\tutorial011_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "FixedContentQueryChecker",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 6
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_query_check",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "fixed_content_included",
+                    "type": "bool"
+                }
+            ],
+            "return_type": "",
+            "line_number": 20
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "fixed_content",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 7
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__call__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "q",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 10
+        }
+    ]
+}

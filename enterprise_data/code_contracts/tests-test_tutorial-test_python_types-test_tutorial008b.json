@@ -1,0 +1,33 @@
+{
+    "file_path": "tests\\test_tutorial\\test_python_types\\test_tutorial008b.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_module",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": "pytest.FixtureRequest"
+                }
+            ],
+            "return_type": "",
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_process_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "module",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 22
+        }
+    ]
+}

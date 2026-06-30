@@ -1,0 +1,405 @@
+{
+    "file_path": "tests\\test_request_params\\test_body\\test_list.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_required_list_str",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[list[str], Body(embed=True)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 18
+        },
+        {
+            "type": "class",
+            "name": "BodyModelRequiredListStr",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "p",
+                    "type": "list[str]"
+                }
+            ],
+            "line_number": 22
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_model_required_list_str",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "BodyModelRequiredListStr"
+                }
+            ],
+            "return_type": "",
+            "line_number": 27
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_list_str_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 35
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_list_str_missing",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "json",
+                    "type": "dict | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 58
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_list_str",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 78
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_required_list_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[list[str], Body(embed=True, alias='p_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 90
+        },
+        {
+            "type": "class",
+            "name": "BodyModelRequiredListAlias",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "p",
+                    "type": "list[str]"
+                }
+            ],
+            "line_number": 96
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_model_required_list_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "BodyModelRequiredListAlias"
+                }
+            ],
+            "return_type": "",
+            "line_number": 101
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_list_str_alias_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 112
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_list_alias_missing",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "json",
+                    "type": "dict | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 135
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_list_alias_by_name",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 155
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_list_alias_by_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 175
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_required_list_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[list[str], Body(embed=True, validation_alias='p_val_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 189
+        },
+        {
+            "type": "class",
+            "name": "BodyModelRequiredListValidationAlias",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "p",
+                    "type": "list[str]"
+                }
+            ],
+            "line_number": 195
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_model_required_list_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "BodyModelRequiredListValidationAlias"
+                }
+            ],
+            "return_type": "",
+            "line_number": 203
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_list_validation_alias_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 213
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_list_validation_alias_missing",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "json",
+                    "type": "dict | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 239
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_list_validation_alias_by_name",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 262
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_list_validation_alias_by_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 286
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_required_list_alias_and_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[list[str], Body(embed=True, alias='p_alias', validation_alias='p_val_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 301
+        },
+        {
+            "type": "class",
+            "name": "BodyModelRequiredListAliasAndValidationAlias",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "p",
+                    "type": "list[str]"
+                }
+            ],
+            "line_number": 309
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_model_required_list_alias_and_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "BodyModelRequiredListAliasAndValidationAlias"
+                }
+            ],
+            "return_type": "",
+            "line_number": 317
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_list_alias_and_validation_alias_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 330
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_list_alias_and_validation_alias_missing",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "json",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 356
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_list_alias_and_validation_alias_by_name",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 379
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_list_alias_and_validation_alias_by_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 405
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_list_alias_and_validation_alias_by_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 429
+        }
+    ]
+}

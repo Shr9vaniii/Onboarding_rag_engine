@@ -1,0 +1,67 @@
+{
+    "file_path": "tests\\test_duplicate_models_openapi.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Model",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 9
+        },
+        {
+            "type": "class",
+            "name": "Model2",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "a",
+                    "type": "Model"
+                }
+            ],
+            "line_number": 13
+        },
+        {
+            "type": "class",
+            "name": "Model3",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "c",
+                    "type": "Model"
+                },
+                {
+                    "name": "d",
+                    "type": "Model2"
+                }
+            ],
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "f",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 23
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_api_route",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 30
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 36
+        }
+    ]
+}

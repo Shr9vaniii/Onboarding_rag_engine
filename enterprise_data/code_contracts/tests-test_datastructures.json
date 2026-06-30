@@ -1,0 +1,69 @@
+{
+    "file_path": "tests\\test_datastructures.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_upload_file_invalid_pydantic_v2",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 11
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_default_placeholder_equals",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_default_placeholder_bool",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 23
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_upload_file_is_closed",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "tmp_path",
+                    "type": "Path"
+                }
+            ],
+            "return_type": "",
+            "line_number": 30
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "test_upload_file",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 56
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "create_upload_file",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "file",
+                    "type": "UploadFile"
+                }
+            ],
+            "return_type": "",
+            "line_number": 38
+        }
+    ]
+}

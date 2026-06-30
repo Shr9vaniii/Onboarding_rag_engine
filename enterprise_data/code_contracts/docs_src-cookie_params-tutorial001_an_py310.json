@@ -1,0 +1,19 @@
+{
+    "file_path": "docs_src\\cookie_params\\tutorial001_an_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "ads_id",
+                    "type": "Annotated[str | None, Cookie()]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 9
+        }
+    ]
+}

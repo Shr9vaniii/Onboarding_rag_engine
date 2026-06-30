@@ -1,0 +1,19 @@
+{
+    "file_path": "tests\\test_tutorial\\test_python_types\\test_tutorial001_tutorial002.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_run_module",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "module_name",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 14
+        }
+    ]
+}

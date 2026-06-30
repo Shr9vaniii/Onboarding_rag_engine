@@ -1,0 +1,86 @@
+{
+    "file_path": "tests\\test_stream_cancellation.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "stream_raw",
+            "docstring": "Async generator with no internal await - would hang without checkpoint.",
+            "args": [],
+            "return_type": "AsyncIterable[str]",
+            "line_number": 25
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "stream_jsonl",
+            "docstring": "JSONL async generator with no internal await.",
+            "args": [],
+            "return_type": "AsyncIterable[int]",
+            "line_number": 34
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "_run_asgi_and_cancel",
+            "docstring": "Call the ASGI app for *path* and cancel after *timeout* seconds.\n\nReturns `True` if the cancellation was delivered (i.e. it did not hang).",
+            "args": [
+                {
+                    "name": "app",
+                    "type": "FastAPI"
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "timeout",
+                    "type": "float"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 42
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "test_raw_stream_cancellation",
+            "docstring": "Raw streaming endpoint should be cancellable within a reasonable time.",
+            "args": [],
+            "return_type": "None",
+            "line_number": 78
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "test_jsonl_stream_cancellation",
+            "docstring": "JSONL streaming endpoint should be cancellable within a reasonable time.",
+            "args": [],
+            "return_type": "None",
+            "line_number": 86
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "receive",
+            "docstring": "",
+            "args": [],
+            "return_type": "Message",
+            "line_number": 49
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "send",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "message",
+                    "type": "Message"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 54
+        }
+    ]
+}

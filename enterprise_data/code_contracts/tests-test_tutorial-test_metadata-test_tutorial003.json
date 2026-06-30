@@ -1,0 +1,50 @@
+{
+    "file_path": "tests\\test_tutorial\\test_metadata\\test_tutorial003.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_items",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 9
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 15
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_swagger_ui_default_url",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 43
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_swagger_ui_custom_url",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 48
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_redoc_ui_default_url",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 54
+        }
+    ]
+}

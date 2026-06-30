@@ -1,0 +1,23 @@
+{
+    "file_path": "tests\\test_tutorial\\test_configure_swagger_ui\\test_tutorial003.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_swagger_ui",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 8
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_users",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 41
+        }
+    ]
+}

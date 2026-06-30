@@ -1,0 +1,29 @@
+{
+    "file_path": "docs_src\\python_types\\tutorial011_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "User",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "int"
+                },
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "signup_ts",
+                    "type": "datetime | None"
+                },
+                {
+                    "name": "friends",
+                    "type": "list[int]"
+                }
+            ],
+            "line_number": 6
+        }
+    ]
+}

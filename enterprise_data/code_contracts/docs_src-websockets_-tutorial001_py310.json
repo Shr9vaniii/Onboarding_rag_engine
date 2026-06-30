@@ -1,0 +1,28 @@
+{
+    "file_path": "docs_src\\websockets_\\tutorial001_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 42
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "websocket_endpoint",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                }
+            ],
+            "return_type": "",
+            "line_number": 47
+        }
+    ]
+}

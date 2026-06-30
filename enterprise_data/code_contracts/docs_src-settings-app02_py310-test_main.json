@@ -1,0 +1,23 @@
+{
+    "file_path": "docs_src\\settings\\app02_py310\\test_main.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_settings_override",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 9
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_app",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 16
+        }
+    ]
+}

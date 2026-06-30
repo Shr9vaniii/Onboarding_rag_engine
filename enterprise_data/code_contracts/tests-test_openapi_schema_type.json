@@ -1,0 +1,28 @@
+{
+    "file_path": "tests\\test_openapi_schema_type.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_allowed_schema_type",
+            "docstring": "Test that Schema accepts SchemaType, List[SchemaType] and None for type field.",
+            "args": [
+                {
+                    "name": "type_value",
+                    "type": "SchemaType | list[SchemaType] | None"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 13
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_invalid_type_value",
+            "docstring": "Test that Schema raises ValueError for invalid type values.",
+            "args": [],
+            "return_type": "None",
+            "line_number": 21
+        }
+    ]
+}

@@ -1,0 +1,195 @@
+{
+    "file_path": "scripts\\sponsors.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "SponsorEntity",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "login",
+                    "type": "str"
+                },
+                {
+                    "name": "avatarUrl",
+                    "type": "str"
+                },
+                {
+                    "name": "url",
+                    "type": "str"
+                }
+            ],
+            "line_number": 48
+        },
+        {
+            "type": "class",
+            "name": "Tier",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "monthlyPriceInDollars",
+                    "type": "float"
+                }
+            ],
+            "line_number": 54
+        },
+        {
+            "type": "class",
+            "name": "SponsorshipAsMaintainerNode",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "sponsorEntity",
+                    "type": "SponsorEntity"
+                },
+                {
+                    "name": "tier",
+                    "type": "Tier"
+                }
+            ],
+            "line_number": 59
+        },
+        {
+            "type": "class",
+            "name": "SponsorshipAsMaintainerEdge",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "cursor",
+                    "type": "str"
+                },
+                {
+                    "name": "node",
+                    "type": "SponsorshipAsMaintainerNode"
+                }
+            ],
+            "line_number": 64
+        },
+        {
+            "type": "class",
+            "name": "SponsorshipAsMaintainer",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "edges",
+                    "type": "list[SponsorshipAsMaintainerEdge]"
+                }
+            ],
+            "line_number": 69
+        },
+        {
+            "type": "class",
+            "name": "SponsorsUser",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "sponsorshipsAsMaintainer",
+                    "type": "SponsorshipAsMaintainer"
+                }
+            ],
+            "line_number": 73
+        },
+        {
+            "type": "class",
+            "name": "SponsorsResponseData",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "user",
+                    "type": "SponsorsUser"
+                }
+            ],
+            "line_number": 77
+        },
+        {
+            "type": "class",
+            "name": "SponsorsResponse",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "data",
+                    "type": "SponsorsResponseData"
+                }
+            ],
+            "line_number": 81
+        },
+        {
+            "type": "class",
+            "name": "Settings",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "sponsors_token",
+                    "type": "SecretStr"
+                },
+                {
+                    "name": "pr_token",
+                    "type": "SecretStr"
+                },
+                {
+                    "name": "github_repository",
+                    "type": "str"
+                },
+                {
+                    "name": "httpx_timeout",
+                    "type": "int"
+                }
+            ],
+            "line_number": 85
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_graphql_response",
+            "docstring": "",
+            "args": [],
+            "return_type": "dict[str, Any]",
+            "line_number": 92
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_graphql_sponsor_edges",
+            "docstring": "",
+            "args": [],
+            "return_type": "list[SponsorshipAsMaintainerEdge]",
+            "line_number": 119
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_individual_sponsors",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "settings",
+                    "type": "Settings"
+                }
+            ],
+            "return_type": "defaultdict[float, dict[str, SponsorEntity]]",
+            "line_number": 127
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "update_content",
+            "docstring": "",
+            "args": [],
+            "return_type": "bool",
+            "line_number": 147
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "main",
+            "docstring": "",
+            "args": [],
+            "return_type": "None",
+            "line_number": 159
+        }
+    ]
+}

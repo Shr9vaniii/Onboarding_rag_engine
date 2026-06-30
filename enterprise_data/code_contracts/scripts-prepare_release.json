@@ -1,0 +1,183 @@
+{
+    "file_path": "scripts\\prepare_release.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "parse_version",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "version",
+                    "type": "str"
+                }
+            ],
+            "return_type": "tuple[int, int, int]",
+            "line_number": 26
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_current_version",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "content",
+                    "type": "str"
+                },
+                {
+                    "name": "version_file",
+                    "type": "Path"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 34
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "bump_version",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "version",
+                    "type": "str"
+                },
+                {
+                    "name": "bump",
+                    "type": "BumpType"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 44
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "update_version_file",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "content",
+                    "type": "str"
+                },
+                {
+                    "name": "version",
+                    "type": "str"
+                },
+                {
+                    "name": "version_file",
+                    "type": "Path"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 53
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "update_release_notes",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "content",
+                    "type": "str"
+                },
+                {
+                    "name": "version",
+                    "type": "str"
+                },
+                {
+                    "name": "release_date",
+                    "type": "date"
+                },
+                {
+                    "name": "release_notes_file",
+                    "type": "Path"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 62
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_release_notes_body",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "content",
+                    "type": "str"
+                },
+                {
+                    "name": "version",
+                    "type": "str"
+                },
+                {
+                    "name": "release_notes_file",
+                    "type": "Path"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 84
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "prepare",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "bump",
+                    "type": "Annotated[BumpType, typer.Argument(envvar='PREPARE_RELEASE_BUMP', help='The release bump to make: major, minor, or patch.')]"
+                },
+                {
+                    "name": "version_file",
+                    "type": "Annotated[Path, typer.Option(envvar='PREPARE_RELEASE_VERSION_FILE', exists=True, file_okay=True, dir_okay=False, readable=True, writable=True, help='Path to the Python file containing the __version__ assignment.')]"
+                },
+                {
+                    "name": "release_notes_file",
+                    "type": "Annotated[Path, typer.Option(envvar='PREPARE_RELEASE_RELEASE_NOTES_FILE', exists=True, file_okay=True, dir_okay=False, readable=True, writable=True, help='Path to the release notes Markdown file.')]"
+                },
+                {
+                    "name": "release_date",
+                    "type": "Annotated[str, typer.Option('--date', envvar='PREPARE_RELEASE_DATE', help='Release date in YYYY-MM-DD format. Defaults to today.')]"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 103
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "current_version",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "version_file",
+                    "type": "Annotated[Path, typer.Option(envvar='PREPARE_RELEASE_VERSION_FILE', exists=True, file_okay=True, dir_okay=False, readable=True, help='Path to the Python file containing the __version__ assignment.')]"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 165
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "release_notes",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "version_file",
+                    "type": "Annotated[Path, typer.Option(envvar='PREPARE_RELEASE_VERSION_FILE', exists=True, file_okay=True, dir_okay=False, readable=True, help='Path to the Python file containing the __version__ assignment.')]"
+                },
+                {
+                    "name": "release_notes_file",
+                    "type": "Annotated[Path, typer.Option(envvar='PREPARE_RELEASE_RELEASE_NOTES_FILE', exists=True, file_okay=True, dir_okay=False, readable=True, help='Path to the release notes Markdown file.')]"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 182
+        }
+    ]
+}

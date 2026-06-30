@@ -1,0 +1,69 @@
+{
+    "file_path": "tests\\test_tutorial\\test_path_params_numeric_validations\\test_tutorial001.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_client",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": "pytest.FixtureRequest"
+                }
+            ],
+            "return_type": "TestClient",
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                },
+                {
+                    "name": "path",
+                    "type": ""
+                },
+                {
+                    "name": "expected_response",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 31
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_read_items_invalid_item_id",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 37
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 52
+        }
+    ]
+}

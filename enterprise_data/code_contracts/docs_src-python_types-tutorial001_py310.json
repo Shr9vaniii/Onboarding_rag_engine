@@ -1,0 +1,23 @@
+{
+    "file_path": "docs_src\\python_types\\tutorial001_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_full_name",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "first_name",
+                    "type": ""
+                },
+                {
+                    "name": "last_name",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 1
+        }
+    ]
+}

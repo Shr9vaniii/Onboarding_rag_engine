@@ -1,0 +1,32 @@
+{
+    "file_path": "tests\\test_openapi_route_extensions.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "route_with_extras",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 9
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_route",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 22
+        }
+    ]
+}

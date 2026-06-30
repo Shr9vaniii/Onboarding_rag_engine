@@ -1,0 +1,268 @@
+{
+    "file_path": "tests\\test_schema_extra_examples.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "create_app",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 9
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_call_api",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 216
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "Test that example overrides work:\n\n* pydantic model schema_extra is included\n* Body(example={}) overrides schema_extra in pydantic model\n* Body(examples{}) overrides Body(example={}) and schema_extra in pydantic model",
+            "args": [],
+            "return_type": "",
+            "line_number": 253
+        },
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "data",
+                    "type": "str"
+                }
+            ],
+            "line_number": 12
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "schema_extra",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 20
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "examples",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 30
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "path_examples",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item_id",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 96
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "query_examples",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "data",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 126
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "header_examples",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "data",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 158
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "cookie_examples",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "data",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 193
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "example",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 26
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "example_examples",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 43
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "path_example",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item_id",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 88
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "path_example_examples",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item_id",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 106
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "query_example",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "data",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 117
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "query_example_examples",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "data",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 137
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "header_example",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "data",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 149
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "header_example_examples",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "data",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 172
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "cookie_example",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "data",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 184
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "cookie_example_examples",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "data",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 204
+        }
+    ]
+}

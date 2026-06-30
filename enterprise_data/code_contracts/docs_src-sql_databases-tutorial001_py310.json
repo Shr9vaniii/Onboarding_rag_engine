@@ -1,0 +1,132 @@
+{
+    "file_path": "docs_src\\sql_databases\\tutorial001_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Hero",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "int | None"
+                },
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "age",
+                    "type": "int | None"
+                },
+                {
+                    "name": "secret_name",
+                    "type": "str"
+                }
+            ],
+            "line_number": 5
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "create_db_and_tables",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 19
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_session",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 23
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "on_startup",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 32
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "create_hero",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "hero",
+                    "type": "Hero"
+                },
+                {
+                    "name": "session",
+                    "type": "Session"
+                }
+            ],
+            "return_type": "Hero",
+            "line_number": 37
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_heroes",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "session",
+                    "type": "Session"
+                },
+                {
+                    "name": "offset",
+                    "type": "int"
+                },
+                {
+                    "name": "limit",
+                    "type": "int"
+                }
+            ],
+            "return_type": "list[Hero]",
+            "line_number": 45
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_hero",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "hero_id",
+                    "type": "int"
+                },
+                {
+                    "name": "session",
+                    "type": "Session"
+                }
+            ],
+            "return_type": "Hero",
+            "line_number": 55
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "delete_hero",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "hero_id",
+                    "type": "int"
+                },
+                {
+                    "name": "session",
+                    "type": "Session"
+                }
+            ],
+            "return_type": "",
+            "line_number": 63
+        }
+    ]
+}

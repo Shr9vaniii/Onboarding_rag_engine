@@ -1,0 +1,55 @@
+{
+    "file_path": "tests\\test_security_http_bearer.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_current_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "credentials",
+                    "type": "HTTPAuthorizationCredentials"
+                }
+            ],
+            "return_type": "",
+            "line_number": 12
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_security_http_bearer",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 19
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_security_http_bearer_no_credentials",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 25
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_security_http_bearer_incorrect_scheme_credentials",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 32
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 39
+        }
+    ]
+}

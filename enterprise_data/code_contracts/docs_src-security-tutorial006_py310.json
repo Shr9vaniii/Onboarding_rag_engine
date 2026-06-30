@@ -1,0 +1,19 @@
+{
+    "file_path": "docs_src\\security\\tutorial006_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_current_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "credentials",
+                    "type": "HTTPBasicCredentials"
+                }
+            ],
+            "return_type": "",
+            "line_number": 10
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "file_path": "docs_src\\dependencies\\tutorial002_an_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "CommonQueryParams",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 11
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "commons",
+                    "type": "Annotated[CommonQueryParams, Depends(CommonQueryParams)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 19
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "q",
+                    "type": "str | None"
+                },
+                {
+                    "name": "skip",
+                    "type": "int"
+                },
+                {
+                    "name": "limit",
+                    "type": "int"
+                }
+            ],
+            "return_type": "",
+            "line_number": 12
+        }
+    ]
+}

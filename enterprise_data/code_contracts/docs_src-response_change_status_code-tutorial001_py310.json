@@ -1,0 +1,23 @@
+{
+    "file_path": "docs_src\\response_change_status_code\\tutorial001_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_or_create_task",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "task_id",
+                    "type": "str"
+                },
+                {
+                    "name": "response",
+                    "type": "Response"
+                }
+            ],
+            "return_type": "",
+            "line_number": 9
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "file_path": "docs_src\\dependencies\\tutorial013_an_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "User",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "int | None"
+                },
+                {
+                    "name": "name",
+                    "type": "str"
+                }
+            ],
+            "line_number": 11
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_session",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 19
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "user_id",
+                    "type": "int"
+                },
+                {
+                    "name": "session",
+                    "type": "Annotated[Session, Depends(get_session)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 24
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "generate_stream",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "query",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 30
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "generate",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "query",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 37
+        }
+    ]
+}

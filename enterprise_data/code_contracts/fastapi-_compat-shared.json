@@ -1,0 +1,219 @@
+{
+    "file_path": "fastapi\\_compat\\shared.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "lenient_issubclass",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "cls",
+                    "type": "Any"
+                },
+                {
+                    "name": "class_or_tuple",
+                    "type": "type[_T] | tuple[type[_T], ...] | None"
+                }
+            ],
+            "return_type": "TypeGuard[type[_T]]",
+            "line_number": 47
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_annotation_is_sequence",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "annotation",
+                    "type": "type[Any] | None"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 58
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "field_annotation_is_sequence",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "annotation",
+                    "type": "type[Any] | None"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 64
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "value_is_sequence",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "value",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 76
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_annotation_is_complex",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "annotation",
+                    "type": "type[Any] | None"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 80
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "field_annotation_is_complex",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "annotation",
+                    "type": "type[Any] | None"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 88
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "field_annotation_is_scalar",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "annotation",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 104
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "field_annotation_is_scalar_sequence",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "annotation",
+                    "type": "type[Any] | None"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 109
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "is_bytes_or_nonable_bytes_annotation",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "annotation",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 126
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "is_uploadfile_or_nonable_uploadfile_annotation",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "annotation",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 137
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "is_bytes_sequence_annotation",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "annotation",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 148
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "is_uploadfile_sequence_annotation",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "annotation",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 163
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "is_pydantic_v1_model_instance",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "obj",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 178
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "is_pydantic_v1_model_class",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "cls",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 190
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "annotation_is_pydantic_v1",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "annotation",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 202
+        }
+    ]
+}

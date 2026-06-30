@@ -1,0 +1,14 @@
+{
+    "file_path": "docs_src\\custom_response\\tutorial002_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_items",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 8
+        }
+    ]
+}

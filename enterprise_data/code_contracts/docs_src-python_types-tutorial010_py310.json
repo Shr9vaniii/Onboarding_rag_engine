@@ -1,0 +1,44 @@
+{
+    "file_path": "docs_src\\python_types\\tutorial010_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Person",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 1
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_person_name",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "one_person",
+                    "type": "Person"
+                }
+            ],
+            "return_type": "",
+            "line_number": 6
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "name",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 2
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "file_path": "docs_src\\configure_swagger_ui\\tutorial003_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "username",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 7
+        }
+    ]
+}

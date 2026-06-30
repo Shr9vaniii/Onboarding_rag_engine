@@ -1,0 +1,273 @@
+{
+    "file_path": "tests\\test_response_dependency.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_with_depends_annotated",
+            "docstring": "Response type hint should work with Annotated[Response, Depends(...)].",
+            "args": [],
+            "return_type": "",
+            "line_number": 14
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_with_depends_default",
+            "docstring": "Response type hint should work with Response = Depends(...).",
+            "args": [],
+            "return_type": "",
+            "line_number": 34
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_without_depends",
+            "docstring": "Regular Response injection should still work.",
+            "args": [],
+            "return_type": "",
+            "line_number": 54
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_dependency_chain",
+            "docstring": "Response dependency should work in a chain of dependencies.",
+            "args": [],
+            "return_type": "",
+            "line_number": 71
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response_dependency_returns_different_response_instance",
+            "docstring": "Dependency that returns a different Response instance should work.\n\nWhen a dependency returns a new Response object (e.g., JSONResponse) instead\nof modifying the injected one, the returned response should be used and any\nmodifications to it in the endpoint should be preserved.",
+            "args": [],
+            "return_type": "",
+            "line_number": 97
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_request_with_depends_annotated",
+            "docstring": "Request type hint should work in dependency chain.",
+            "args": [],
+            "return_type": "",
+            "line_number": 125
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_background_tasks_with_depends_annotated",
+            "docstring": "BackgroundTasks type hint should work with Annotated[BackgroundTasks, Depends(...)].",
+            "args": [],
+            "return_type": "",
+            "line_number": 149
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "modify_response",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "response",
+                    "type": "Response"
+                }
+            ],
+            "return_type": "Response",
+            "line_number": 18
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "endpoint",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "response",
+                    "type": "Annotated[Response, Depends(modify_response)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 23
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "modify_response",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "response",
+                    "type": "Response"
+                }
+            ],
+            "return_type": "Response",
+            "line_number": 38
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "endpoint",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "response",
+                    "type": "Response"
+                }
+            ],
+            "return_type": "",
+            "line_number": 43
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "endpoint",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "response",
+                    "type": "Response"
+                }
+            ],
+            "return_type": "",
+            "line_number": 59
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "first_modifier",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "response",
+                    "type": "Response"
+                }
+            ],
+            "return_type": "Response",
+            "line_number": 75
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "second_modifier",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "response",
+                    "type": "Annotated[Response, Depends(first_modifier)]"
+                }
+            ],
+            "return_type": "Response",
+            "line_number": 79
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "endpoint",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "response",
+                    "type": "Annotated[Response, Depends(second_modifier)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 86
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "default_response",
+            "docstring": "",
+            "args": [],
+            "return_type": "Response",
+            "line_number": 106
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "endpoint",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "response",
+                    "type": "Annotated[Response, Depends(default_response)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 112
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "extract_request_info",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": "Request"
+                }
+            ],
+            "return_type": "dict",
+            "line_number": 129
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "endpoint",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "info",
+                    "type": "Annotated[dict, Depends(extract_request_info)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 136
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "background_task",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "message",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 154
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "add_background_task",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "background_tasks",
+                    "type": "BackgroundTasks"
+                }
+            ],
+            "return_type": "BackgroundTasks",
+            "line_number": 157
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "endpoint",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "background_tasks",
+                    "type": "Annotated[BackgroundTasks, Depends(add_background_task)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 162
+        }
+    ]
+}

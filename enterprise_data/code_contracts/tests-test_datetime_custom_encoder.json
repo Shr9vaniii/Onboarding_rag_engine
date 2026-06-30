@@ -1,0 +1,53 @@
+{
+    "file_path": "tests\\test_datetime_custom_encoder.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_pydanticv2",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 8
+        },
+        {
+            "type": "class",
+            "name": "ModelWithDatetimeField",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "dt_field",
+                    "type": "datetime"
+                }
+            ],
+            "line_number": 11
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 22
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "serialize_datetime",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "dt_field",
+                    "type": "datetime"
+                }
+            ],
+            "return_type": "",
+            "line_number": 15
+        }
+    ]
+}

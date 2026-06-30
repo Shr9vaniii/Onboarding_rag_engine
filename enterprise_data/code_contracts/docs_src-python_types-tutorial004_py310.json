@@ -1,0 +1,23 @@
+{
+    "file_path": "docs_src\\python_types\\tutorial004_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_name_with_age",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "age",
+                    "type": "int"
+                }
+            ],
+            "return_type": "",
+            "line_number": 1
+        }
+    ]
+}

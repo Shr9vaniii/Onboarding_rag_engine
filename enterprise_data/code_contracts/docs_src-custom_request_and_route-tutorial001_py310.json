@@ -1,0 +1,75 @@
+{
+    "file_path": "docs_src\\custom_request_and_route\\tutorial001_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "GzipRequest",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 8
+        },
+        {
+            "type": "class",
+            "name": "GzipRoute",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 18
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "sum_numbers",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "numbers",
+                    "type": "list[int]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 34
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "body",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "bytes",
+            "line_number": 9
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_route_handler",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "Callable",
+            "line_number": 19
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "custom_route_handler",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": "Request"
+                }
+            ],
+            "return_type": "Response",
+            "line_number": 22
+        }
+    ]
+}

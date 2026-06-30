@@ -1,0 +1,131 @@
+{
+    "file_path": "fastapi\\param_functions.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "Path",
+            "docstring": "Declare a path parameter for a *path operation*.\n\nRead more about it in the\n[FastAPI docs for Path Parameters and Numeric Validations](https://fastapi.tiangolo.com/tutorial/path-params-numeric-validations/).\n\n```python\nfrom typing import Annotated\n\nfrom fastapi import FastAPI, Path\n\napp = FastAPI()\n\n\n@app.get(\"/items/{item_id}\")\nasync def read_items(\n    item_id: Annotated[int, Path(title=\"The ID of the item to get\")],\n):\n    return {\"item_id\": item_id}\n```",
+            "args": [
+                {
+                    "name": "default",
+                    "type": "Annotated[Any, Doc(\"\\n            Default value if the parameter field is not set.\\n\\n            This doesn't affect `Path` parameters as the value is always required.\\n            The parameter is available only for compatibility.\\n            \")]"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 13
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "Query",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "default",
+                    "type": "Annotated[Any, Doc('\\n            Default value if the parameter field is not set.\\n\\n            Read more about it in the\\n            [FastAPI docs about Query parameters](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#alternative-old-query-as-the-default-value)\\n            ')]"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 357
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "Header",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "default",
+                    "type": "Annotated[Any, Doc('\\n            Default value if the parameter field is not set.\\n            ')]"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 701
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "Cookie",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "default",
+                    "type": "Annotated[Any, Doc('\\n            Default value if the parameter field is not set.\\n            ')]"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 1018
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "Body",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "default",
+                    "type": "Annotated[Any, Doc('\\n            Default value if the parameter field is not set.\\n            ')]"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 1323
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "Form",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "default",
+                    "type": "Annotated[Any, Doc('\\n            Default value if the parameter field is not set.\\n            ')]"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 1653
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "File",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "default",
+                    "type": "Annotated[Any, Doc('\\n            Default value if the parameter field is not set.\\n            ')]"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 1968
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "Depends",
+            "docstring": "Declare a FastAPI dependency.\n\nIt takes a single \"dependable\" callable (like a function).\n\nDon't call it directly, FastAPI will call it for you.\n\nRead more about it in the\n[FastAPI docs for Dependencies](https://fastapi.tiangolo.com/tutorial/dependencies/).\n\n**Example**\n\n```python\nfrom typing import Annotated\n\nfrom fastapi import Depends, FastAPI\n\napp = FastAPI()\n\n\nasync def common_parameters(q: str | None = None, skip: int = 0, limit: int = 100):\n    return {\"q\": q, \"skip\": skip, \"limit\": limit}\n\n\n@app.get(\"/items/\")\nasync def read_items(commons: Annotated[dict, Depends(common_parameters)]):\n    return commons\n```",
+            "args": [
+                {
+                    "name": "dependency",
+                    "type": "Annotated[Callable[..., Any] | None, Doc('\\n            A \"dependable\" callable (like a function).\\n\\n            Don\\'t call it directly, FastAPI will call it for you, just pass the object\\n            directly.\\n\\n            Read more about it in the\\n            [FastAPI docs for Dependencies](https://fastapi.tiangolo.com/tutorial/dependencies/)\\n            ')]"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 2283
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "Security",
+            "docstring": "Declare a FastAPI Security dependency.\n\nThe only difference with a regular dependency is that it can declare OAuth2\nscopes that will be integrated with OpenAPI and the automatic UI docs (by default\nat `/docs`).\n\nIt takes a single \"dependable\" callable (like a function).\n\nDon't call it directly, FastAPI will call it for you.\n\nRead more about it in the\n[FastAPI docs for Security](https://fastapi.tiangolo.com/tutorial/security/) and\nin the\n[FastAPI docs for OAuth2 scopes](https://fastapi.tiangolo.com/advanced/security/oauth2-scopes/).\n\n**Example**\n\n```python\nfrom typing import Annotated\n\nfrom fastapi import Security, FastAPI\n\nfrom .db import User\nfrom .security import get_current_active_user\n\napp = FastAPI()\n\n@app.get(\"/users/me/items/\")\nasync def read_own_items(\n    current_user: Annotated[User, Security(get_current_active_user, scopes=[\"items\"])]\n):\n    return [{\"item_id\": \"Foo\", \"owner\": current_user.username}]\n```",
+            "args": [
+                {
+                    "name": "dependency",
+                    "type": "Annotated[Callable[..., Any] | None, Doc('\\n            A \"dependable\" callable (like a function).\\n\\n            Don\\'t call it directly, FastAPI will call it for you, just pass the object\\n            directly.\\n\\n            Read more about it in the\\n            [FastAPI docs for Dependencies](https://fastapi.tiangolo.com/tutorial/dependencies/)\\n            ')]"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 2372
+        }
+    ]
+}

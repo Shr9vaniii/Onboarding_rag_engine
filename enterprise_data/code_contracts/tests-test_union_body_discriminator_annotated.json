@@ -1,0 +1,130 @@
+{
+    "file_path": "tests\\test_union_body_discriminator_annotated.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "client_fixture",
+            "docstring": "",
+            "args": [],
+            "return_type": "TestClient",
+            "line_number": 13
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_union_body_discriminator_assignment",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 48
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_union_body_discriminator_annotated",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 54
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 60
+        },
+        {
+            "type": "class",
+            "name": "Cat",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "pet_type",
+                    "type": "str"
+                },
+                {
+                    "name": "meows",
+                    "type": "int"
+                }
+            ],
+            "line_number": 17
+        },
+        {
+            "type": "class",
+            "name": "Dog",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "pet_type",
+                    "type": "str"
+                },
+                {
+                    "name": "barks",
+                    "type": "float"
+                }
+            ],
+            "line_number": 21
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_pet_type",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "v",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 25
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "create_pet_assignment",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "pet",
+                    "type": "Pet"
+                }
+            ],
+            "return_type": "",
+            "line_number": 37
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "create_pet_annotated",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "pet",
+                    "type": "Annotated[Pet, Body()]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 41
+        }
+    ]
+}

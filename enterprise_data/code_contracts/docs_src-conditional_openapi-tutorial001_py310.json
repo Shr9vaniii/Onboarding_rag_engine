@@ -1,0 +1,26 @@
+{
+    "file_path": "docs_src\\conditional_openapi\\tutorial001_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Settings",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "openapi_url",
+                    "type": "str"
+                }
+            ],
+            "line_number": 5
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "root",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 15
+        }
+    ]
+}

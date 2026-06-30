@@ -1,0 +1,28 @@
+{
+    "file_path": "docs_src\\settings\\app02_an_py310\\main.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_settings",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 12
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "info",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "settings",
+                    "type": "Annotated[Settings, Depends(get_settings)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 17
+        }
+    ]
+}

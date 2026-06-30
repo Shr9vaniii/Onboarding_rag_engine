@@ -1,0 +1,71 @@
+{
+    "file_path": "tests\\test_validate_response_recursive\\app.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "RecursiveItem",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "sub_items",
+                    "type": "list['RecursiveItem']"
+                },
+                {
+                    "name": "name",
+                    "type": "str"
+                }
+            ],
+            "line_number": 7
+        },
+        {
+            "type": "class",
+            "name": "RecursiveSubitemInSubmodel",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "sub_items2",
+                    "type": "list['RecursiveItemViaSubmodel']"
+                },
+                {
+                    "name": "name",
+                    "type": "str"
+                }
+            ],
+            "line_number": 12
+        },
+        {
+            "type": "class",
+            "name": "RecursiveItemViaSubmodel",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "sub_items1",
+                    "type": "list[RecursiveSubitemInSubmodel]"
+                },
+                {
+                    "name": "name",
+                    "type": "str"
+                }
+            ],
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_recursive",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 28
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_recursive_submodel",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 33
+        }
+    ]
+}

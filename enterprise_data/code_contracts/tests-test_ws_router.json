@@ -1,0 +1,439 @@
+{
+    "file_path": "tests\\test_ws_router.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "index",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                }
+            ],
+            "return_type": "",
+            "line_number": 23
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "routerindex",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                }
+            ],
+            "return_type": "",
+            "line_number": 30
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "routerprefixindex",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                }
+            ],
+            "return_type": "",
+            "line_number": 37
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "routerindex2",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                }
+            ],
+            "return_type": "",
+            "line_number": 44
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "routerindexparams",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                },
+                {
+                    "name": "pathparam",
+                    "type": "str"
+                },
+                {
+                    "name": "queryparam",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 51
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "ws_dependency",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 58
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "router_ws_decorator_depends",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                },
+                {
+                    "name": "data",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 63
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "router_native_prefix_ws",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                }
+            ],
+            "return_type": "",
+            "line_number": 72
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "ws_dependency_err",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 78
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "router_ws_depends_err",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                },
+                {
+                    "name": "data",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 83
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "ws_dependency_validate",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "x_missing",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 87
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "router_ws_depends_validate",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                },
+                {
+                    "name": "data",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 92
+        },
+        {
+            "type": "class",
+            "name": "CustomError",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 98
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "router_ws_custom_error",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                }
+            ],
+            "return_type": "",
+            "line_number": 103
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "make_app",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "app",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 107
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_app",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 118
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_router",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 125
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_prefix_router",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 132
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_native_prefix_router",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 139
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_router2",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 146
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_router_ws_depends",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 153
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_router_ws_depends_with_override",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 159
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_router_with_params",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 166
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_wrong_uri",
+            "docstring": "Verify that a websocket connection to a non-existent endpoint returns in a shutdown",
+            "args": [],
+            "return_type": "",
+            "line_number": 177
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "websocket_middleware",
+            "docstring": "Helper to create a Starlette pure websocket middleware",
+            "args": [
+                {
+                    "name": "middleware_func",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 188
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_depend_validation",
+            "docstring": "Verify that a validation in a dependency invokes the correct exception handler",
+            "args": [],
+            "return_type": "",
+            "line_number": 210
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_depend_err_middleware",
+            "docstring": "Verify that it is possible to write custom WebSocket middleware to catch errors",
+            "args": [],
+            "return_type": "",
+            "line_number": 236
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_depend_err_handler",
+            "docstring": "Verify that it is possible to write custom WebSocket middleware to catch errors",
+            "args": [],
+            "return_type": "",
+            "line_number": 257
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "middleware_constructor",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "app",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 193
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "catcher",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": ""
+                },
+                {
+                    "name": "call_next",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 217
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "errorhandler",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                },
+                {
+                    "name": "call_next",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 242
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "custom_handler",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                },
+                {
+                    "name": "exc",
+                    "type": "CustomError"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 262
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "wrapped_app",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "scope",
+                    "type": ""
+                },
+                {
+                    "name": "receive",
+                    "type": ""
+                },
+                {
+                    "name": "send",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 195
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "call_next",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 199
+        }
+    ]
+}

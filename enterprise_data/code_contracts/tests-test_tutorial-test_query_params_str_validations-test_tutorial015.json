@@ -1,0 +1,89 @@
+{
+    "file_path": "tests\\test_tutorial\\test_query_params_str_validations\\test_tutorial015.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_client",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": "pytest.FixtureRequest"
+                }
+            ],
+            "return_type": "",
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_random_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 26
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 32
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_item_does_not_exist",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 41
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_invalid_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 47
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 65
+        }
+    ]
+}

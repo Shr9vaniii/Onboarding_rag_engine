@@ -1,0 +1,23 @@
+{
+    "file_path": "tests\\test_modules_same_name_body\\app\\a.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "compute",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "a",
+                    "type": "int"
+                },
+                {
+                    "name": "b",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 7
+        }
+    ]
+}

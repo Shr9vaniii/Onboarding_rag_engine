@@ -1,0 +1,302 @@
+{
+    "file_path": "scripts\\contributors.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Author",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "login",
+                    "type": "str"
+                },
+                {
+                    "name": "avatarUrl",
+                    "type": "str"
+                },
+                {
+                    "name": "url",
+                    "type": "str"
+                }
+            ],
+            "line_number": 59
+        },
+        {
+            "type": "class",
+            "name": "LabelNode",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                }
+            ],
+            "line_number": 65
+        },
+        {
+            "type": "class",
+            "name": "Labels",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "nodes",
+                    "type": "list[LabelNode]"
+                }
+            ],
+            "line_number": 69
+        },
+        {
+            "type": "class",
+            "name": "ReviewNode",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "author",
+                    "type": "Author | None"
+                },
+                {
+                    "name": "state",
+                    "type": "str"
+                }
+            ],
+            "line_number": 73
+        },
+        {
+            "type": "class",
+            "name": "Reviews",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "nodes",
+                    "type": "list[ReviewNode]"
+                }
+            ],
+            "line_number": 78
+        },
+        {
+            "type": "class",
+            "name": "PullRequestNode",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "number",
+                    "type": "int"
+                },
+                {
+                    "name": "labels",
+                    "type": "Labels"
+                },
+                {
+                    "name": "author",
+                    "type": "Author | None"
+                },
+                {
+                    "name": "title",
+                    "type": "str"
+                },
+                {
+                    "name": "createdAt",
+                    "type": "datetime"
+                },
+                {
+                    "name": "lastEditedAt",
+                    "type": "datetime | None"
+                },
+                {
+                    "name": "updatedAt",
+                    "type": "datetime | None"
+                },
+                {
+                    "name": "state",
+                    "type": "str"
+                },
+                {
+                    "name": "reviews",
+                    "type": "Reviews"
+                }
+            ],
+            "line_number": 82
+        },
+        {
+            "type": "class",
+            "name": "PullRequestEdge",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "cursor",
+                    "type": "str"
+                },
+                {
+                    "name": "node",
+                    "type": "PullRequestNode"
+                }
+            ],
+            "line_number": 94
+        },
+        {
+            "type": "class",
+            "name": "PullRequests",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "edges",
+                    "type": "list[PullRequestEdge]"
+                }
+            ],
+            "line_number": 99
+        },
+        {
+            "type": "class",
+            "name": "PRsRepository",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "pullRequests",
+                    "type": "PullRequests"
+                }
+            ],
+            "line_number": 103
+        },
+        {
+            "type": "class",
+            "name": "PRsResponseData",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "repository",
+                    "type": "PRsRepository"
+                }
+            ],
+            "line_number": 107
+        },
+        {
+            "type": "class",
+            "name": "PRsResponse",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "data",
+                    "type": "PRsResponseData"
+                }
+            ],
+            "line_number": 111
+        },
+        {
+            "type": "class",
+            "name": "Settings",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "github_token",
+                    "type": "SecretStr"
+                },
+                {
+                    "name": "github_repository",
+                    "type": "str"
+                },
+                {
+                    "name": "httpx_timeout",
+                    "type": "int"
+                }
+            ],
+            "line_number": 115
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_graphql_response",
+            "docstring": "",
+            "args": [],
+            "return_type": "dict[str, Any]",
+            "line_number": 121
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_graphql_pr_edges",
+            "docstring": "",
+            "args": [],
+            "return_type": "list[PullRequestEdge]",
+            "line_number": 148
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_pr_nodes",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "settings",
+                    "type": "Settings"
+                }
+            ],
+            "return_type": "list[PullRequestNode]",
+            "line_number": 156
+        },
+        {
+            "type": "class",
+            "name": "ContributorsResults",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "contributors",
+                    "type": "Counter[str]"
+                },
+                {
+                    "name": "translation_reviewers",
+                    "type": "Counter[str]"
+                },
+                {
+                    "name": "translators",
+                    "type": "Counter[str]"
+                },
+                {
+                    "name": "authors",
+                    "type": "dict[str, Author]"
+                }
+            ],
+            "line_number": 168
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_contributors",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "pr_nodes",
+                    "type": "list[PullRequestNode]"
+                }
+            ],
+            "return_type": "ContributorsResults",
+            "line_number": 175
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_users_to_write",
+            "docstring": "",
+            "args": [],
+            "return_type": "dict[str, Any]",
+            "line_number": 207
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "update_content",
+            "docstring": "",
+            "args": [],
+            "return_type": "bool",
+            "line_number": 226
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "main",
+            "docstring": "",
+            "args": [],
+            "return_type": "None",
+            "line_number": 238
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "file_path": "docs_src\\dependencies\\tutorial001_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "common_parameters",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "q",
+                    "type": "str | None"
+                },
+                {
+                    "name": "skip",
+                    "type": "int"
+                },
+                {
+                    "name": "limit",
+                    "type": "int"
+                }
+            ],
+            "return_type": "",
+            "line_number": 6
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "commons",
+                    "type": "dict"
+                }
+            ],
+            "return_type": "",
+            "line_number": 11
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_users",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "commons",
+                    "type": "dict"
+                }
+            ],
+            "return_type": "",
+            "line_number": 16
+        }
+    ]
+}

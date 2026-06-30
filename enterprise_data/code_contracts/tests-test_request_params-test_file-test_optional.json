@@ -1,0 +1,341 @@
+{
+    "file_path": "tests\\test_request_params\\test_file\\test_optional.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_optional_bytes",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[bytes | None, File()]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_optional_uploadfile",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[UploadFile | None, File()]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 21
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 32
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_missing",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 58
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 72
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_optional_bytes_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[bytes | None, File(alias='p_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 84
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_optional_uploadfile_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[UploadFile | None, File(alias='p_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 91
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_alias_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 104
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_alias_missing",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 130
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_alias_by_name",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 144
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_alias_by_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 158
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_optional_bytes_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[bytes | None, File(validation_alias='p_val_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 172
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_optional_uploadfile_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[UploadFile | None, File(validation_alias='p_val_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 182
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_validation_alias_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 195
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_validation_alias_missing",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 221
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_validation_alias_by_name",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 235
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_validation_alias_by_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 249
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_optional_bytes_alias_and_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[bytes | None, File(alias='p_alias', validation_alias='p_val_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 264
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_optional_uploadfile_alias_and_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[UploadFile | None, File(alias='p_alias', validation_alias='p_val_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 276
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_alias_and_validation_alias_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 291
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_alias_and_validation_alias_missing",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 317
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_alias_and_validation_alias_by_name",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 331
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_alias_and_validation_alias_by_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 345
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_alias_and_validation_alias_by_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 359
+        }
+    ]
+}

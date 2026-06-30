@@ -1,0 +1,129 @@
+{
+    "file_path": "docs_src\\websockets_\\tutorial003_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "ConnectionManager",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 44
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 67
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "websocket_endpoint",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                },
+                {
+                    "name": "client_id",
+                    "type": "int"
+                }
+            ],
+            "return_type": "",
+            "line_number": 72
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 45
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "connect",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                }
+            ],
+            "return_type": "",
+            "line_number": 48
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "disconnect",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                }
+            ],
+            "return_type": "",
+            "line_number": 52
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "send_personal_message",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "message",
+                    "type": "str"
+                },
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                }
+            ],
+            "return_type": "",
+            "line_number": 55
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "broadcast",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "message",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 58
+        }
+    ]
+}

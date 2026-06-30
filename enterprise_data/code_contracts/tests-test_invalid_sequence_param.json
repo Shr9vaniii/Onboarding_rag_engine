@@ -1,0 +1,145 @@
+{
+    "file_path": "tests\\test_invalid_sequence_param.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_invalid_sequence",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 6
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_invalid_tuple",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 21
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_invalid_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 36
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_invalid_simple_dict",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 51
+        },
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "title",
+                    "type": "str"
+                }
+            ],
+            "line_number": 13
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "q",
+                    "type": "list[Item]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 17
+        },
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "title",
+                    "type": "str"
+                }
+            ],
+            "line_number": 28
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "q",
+                    "type": "tuple[Item, Item]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 32
+        },
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "title",
+                    "type": "str"
+                }
+            ],
+            "line_number": 43
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "q",
+                    "type": "dict[str, Item]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 47
+        },
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "title",
+                    "type": "str"
+                }
+            ],
+            "line_number": 58
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "q",
+                    "type": "dict | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 62
+        }
+    ]
+}

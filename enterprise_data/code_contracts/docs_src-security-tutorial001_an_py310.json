@@ -1,0 +1,19 @@
+{
+    "file_path": "docs_src\\security\\tutorial001_an_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "token",
+                    "type": "Annotated[str, Depends(oauth2_scheme)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 12
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "file_path": "tests\\test_tutorial\\test_custom_response\\test_tutorial009.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "tmp_path",
+                    "type": "Path"
+                }
+            ],
+            "return_type": "",
+            "line_number": 12
+        }
+    ]
+}

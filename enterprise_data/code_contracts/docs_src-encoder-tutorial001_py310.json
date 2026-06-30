@@ -1,0 +1,43 @@
+{
+    "file_path": "docs_src\\encoder\\tutorial001_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "title",
+                    "type": "str"
+                },
+                {
+                    "name": "timestamp",
+                    "type": "datetime"
+                },
+                {
+                    "name": "description",
+                    "type": "str | None"
+                }
+            ],
+            "line_number": 10
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "update_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "id",
+                    "type": "str"
+                },
+                {
+                    "name": "item",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 20
+        }
+    ]
+}

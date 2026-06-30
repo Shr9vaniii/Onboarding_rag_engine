@@ -1,0 +1,145 @@
+{
+    "file_path": "tests\\test_response_model_data_filter_no_inheritance.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "UserCreate",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "email",
+                    "type": "str"
+                },
+                {
+                    "name": "password",
+                    "type": "str"
+                }
+            ],
+            "line_number": 8
+        },
+        {
+            "type": "class",
+            "name": "UserDB",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "email",
+                    "type": "str"
+                },
+                {
+                    "name": "hashed_password",
+                    "type": "str"
+                }
+            ],
+            "line_number": 13
+        },
+        {
+            "type": "class",
+            "name": "User",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "email",
+                    "type": "str"
+                }
+            ],
+            "line_number": 18
+        },
+        {
+            "type": "class",
+            "name": "PetDB",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "owner",
+                    "type": "UserDB"
+                }
+            ],
+            "line_number": 22
+        },
+        {
+            "type": "class",
+            "name": "PetOut",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "owner",
+                    "type": "User"
+                }
+            ],
+            "line_number": 27
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "create_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "user",
+                    "type": "UserCreate"
+                }
+            ],
+            "return_type": "",
+            "line_number": 33
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_pet",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "pet_id",
+                    "type": "int"
+                }
+            ],
+            "return_type": "",
+            "line_number": 38
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_pets",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 48
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_filter_top_level_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 61
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_filter_second_level_model",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 68
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_list_of_models",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 76
+        }
+    ]
+}

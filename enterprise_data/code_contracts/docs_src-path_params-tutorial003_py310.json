@@ -1,0 +1,28 @@
+{
+    "file_path": "docs_src\\path_params\\tutorial003_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_user_me",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 7
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "user_id",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 12
+        }
+    ]
+}

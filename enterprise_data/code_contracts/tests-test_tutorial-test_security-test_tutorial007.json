@@ -1,0 +1,117 @@
+{
+    "file_path": "tests\\test_tutorial\\test_security\\test_tutorial007.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_client",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": "pytest.FixtureRequest"
+                }
+            ],
+            "return_type": "",
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_security_http_basic",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 21
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_security_http_basic_no_credentials",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 27
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_security_http_basic_invalid_credentials",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 34
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_security_http_basic_non_basic_credentials",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 43
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_security_http_basic_invalid_username",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 52
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_security_http_basic_invalid_password",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 59
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 66
+        }
+    ]
+}

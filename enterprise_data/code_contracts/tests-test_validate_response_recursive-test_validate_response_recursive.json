@@ -1,0 +1,14 @@
+{
+    "file_path": "tests\\test_validate_response_recursive\\test_validate_response_recursive.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_recursive",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 6
+        }
+    ]
+}

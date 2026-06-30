@@ -1,0 +1,61 @@
+{
+    "file_path": "tests\\test_tutorial\\test_dependencies\\test_tutorial008b.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_client",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": "pytest.FixtureRequest"
+                }
+            ],
+            "return_type": "",
+            "line_number": 14
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_no_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 21
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_owner_error",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 27
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 33
+        }
+    ]
+}

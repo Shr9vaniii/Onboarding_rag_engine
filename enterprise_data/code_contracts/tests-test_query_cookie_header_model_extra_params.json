@@ -1,0 +1,148 @@
+{
+    "file_path": "tests\\test_query_cookie_header_model_extra_params.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Model",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "param",
+                    "type": "str"
+                }
+            ],
+            "line_number": 8
+        },
+        {
+            "type": "class",
+            "name": "AuthHeaders",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "x_user_id",
+                    "type": "str"
+                }
+            ],
+            "line_number": 14
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "query_model_with_extra",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "data",
+                    "type": "Model"
+                }
+            ],
+            "return_type": "",
+            "line_number": 19
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "header_model_with_extra",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "data",
+                    "type": "Model"
+                }
+            ],
+            "return_type": "",
+            "line_number": 24
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "cookies_model_with_extra",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "data",
+                    "type": "Model"
+                }
+            ],
+            "return_type": "",
+            "line_number": 29
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "header_model_requires_hyphen",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "data",
+                    "type": "AuthHeaders"
+                }
+            ],
+            "return_type": "",
+            "line_number": 34
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_query_pass_extra_list",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 38
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_query_pass_extra_single",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 54
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_header_pass_extra_list",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 70
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_header_pass_extra_single",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 87
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_header_model_prefers_hyphenated_header_with_convert_underscores",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 103
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_header_model_rejects_underscore_header_with_convert_underscores",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 118
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_cookie_pass_extra_list",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 129
+        }
+    ]
+}

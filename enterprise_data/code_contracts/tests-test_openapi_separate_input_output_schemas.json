@@ -1,0 +1,199 @@
+{
+    "file_path": "tests\\test_openapi_separate_input_output_schemas.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "SubItem",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "subname",
+                    "type": "str"
+                },
+                {
+                    "name": "sub_description",
+                    "type": "str | None"
+                },
+                {
+                    "name": "tags",
+                    "type": "list[str]"
+                }
+            ],
+            "line_number": 7
+        },
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "description",
+                    "type": "str | None"
+                },
+                {
+                    "name": "sub",
+                    "type": "SubItem | None"
+                }
+            ],
+            "line_number": 14
+        },
+        {
+            "type": "class",
+            "name": "WithComputedField",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                }
+            ],
+            "line_number": 21
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_app_client",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "separate_input_output_schemas",
+                    "type": "bool"
+                }
+            ],
+            "return_type": "TestClient",
+            "line_number": 30
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_create_item",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 62
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_create_item_with_sub",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 75
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_create_item_list",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 96
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_read_items",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 123
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_with_computed_field",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 143
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 159
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema_no_separate",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 441
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "computed_field",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "str",
+            "line_number": 26
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "create_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "Item",
+            "line_number": 34
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "create_item_list",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item",
+                    "type": "list[Item]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 38
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_items",
+            "docstring": "",
+            "args": [],
+            "return_type": "list[Item]",
+            "line_number": 42
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "create_with_computed_field",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "with_computed_field",
+                    "type": "WithComputedField"
+                }
+            ],
+            "return_type": "WithComputedField",
+            "line_number": 53
+        }
+    ]
+}

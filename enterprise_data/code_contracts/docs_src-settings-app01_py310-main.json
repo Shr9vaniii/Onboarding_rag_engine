@@ -1,0 +1,14 @@
+{
+    "file_path": "docs_src\\settings\\app01_py310\\main.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "info",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 9
+        }
+    ]
+}

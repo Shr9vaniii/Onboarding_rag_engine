@@ -1,0 +1,58 @@
+{
+    "file_path": "scripts\\topic_repos.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Settings",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "github_repository",
+                    "type": "str"
+                },
+                {
+                    "name": "github_token",
+                    "type": "SecretStr"
+                }
+            ],
+            "line_number": 12
+        },
+        {
+            "type": "class",
+            "name": "Repo",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "html_url",
+                    "type": "str"
+                },
+                {
+                    "name": "stars",
+                    "type": "int"
+                },
+                {
+                    "name": "owner_login",
+                    "type": "str"
+                },
+                {
+                    "name": "owner_html_url",
+                    "type": "str"
+                }
+            ],
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "main",
+            "docstring": "",
+            "args": [],
+            "return_type": "None",
+            "line_number": 25
+        }
+    ]
+}

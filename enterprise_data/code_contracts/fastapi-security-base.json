@@ -1,0 +1,21 @@
+{
+    "file_path": "fastapi\\security\\base.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "SecurityBase",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "model",
+                    "type": "SecurityBaseModel"
+                },
+                {
+                    "name": "scheme_name",
+                    "type": "str"
+                }
+            ],
+            "line_number": 4
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "file_path": "fastapi\\openapi\\docs.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_html_safe_json",
+            "docstring": "Serialize a value to JSON with HTML special characters escaped.\n\nThis prevents injection when the JSON is embedded inside a <script> tag.",
+            "args": [
+                {
+                    "name": "value",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 9
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_swagger_ui_html",
+            "docstring": "Generate and return the HTML  that loads Swagger UI for the interactive\nAPI docs (normally served at `/docs`).\n\nYou would only call this function yourself if you needed to override some parts,\nfor example the URLs to use to load Swagger UI's JavaScript and CSS.\n\nRead more about it in the\n[FastAPI docs for Configure Swagger UI](https://fastapi.tiangolo.com/how-to/configure-swagger-ui/)\nand the [FastAPI docs for Custom Docs UI Static Assets (Self-Hosting)](https://fastapi.tiangolo.com/how-to/custom-docs-ui-assets/).",
+            "args": [],
+            "return_type": "HTMLResponse",
+            "line_number": 40
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_redoc_html",
+            "docstring": "Generate and return the HTML response that loads ReDoc for the alternative\nAPI docs (normally served at `/redoc`).\n\nYou would only call this function yourself if you needed to override some parts,\nfor example the URLs to use to load ReDoc's JavaScript and CSS.\n\nRead more about it in the\n[FastAPI docs for Custom Docs UI Static Assets (Self-Hosting)](https://fastapi.tiangolo.com/how-to/custom-docs-ui-assets/).",
+            "args": [],
+            "return_type": "HTMLResponse",
+            "line_number": 197
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_swagger_ui_oauth2_redirect_html",
+            "docstring": "Generate the HTML response with the OAuth2 redirection for Swagger UI.\n\nYou normally don't need to use or change this.",
+            "args": [],
+            "return_type": "HTMLResponse",
+            "line_number": 301
+        }
+    ]
+}

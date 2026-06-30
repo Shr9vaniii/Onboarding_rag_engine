@@ -1,0 +1,18 @@
+{
+    "id": 15764,
+    "title": "0.137.0: `APIRoute.tags` invisible to type checkers in generate_unique_id_function (regression from #15745)",
+    "url": "https://github.com/fastapi/fastapi/issues/15764",
+    "body": "\n### Discussed in https://github.com/fastapi/fastapi/discussions/15749\n\n<div type='discussions-op-text'>\n\n<sup>Originally posted by **tedserbinski** June 15, 2026</sup>\n### First check\n\n- I searched existing discussions and issues — no existing report for this.\n- This is about a **type-checker regression in 0.137.0**, not a runtime bug (runtime is unaffected).\n\n### Summary\n\nIn **0.137.0**, the documented `generate_unique_id_function` pattern from [Advanced → Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/) — which reads `route.tags` — now fails static type checking. Type checkers report that `APIRoute` has no attribute `tags`, even though the docs still show exactly this code and it works fine at runtime.\n\nThis appears to be an unintended side-effect of #15745 (\"Refactor internals to preserve APIRouter and APIRoute instances\"): `APIRoute.__init__` was changed to delegate state-setting to a helper that receives `self` cast to the `_APIRouteLike` Protocol, and `APIRoute` itself no longer carries a class-level `tags` annotation. So the attribute is still assigned at runtime, but it's invisible to type checkers looking at the `APIRoute` type.\n\n### Reproducible example\n\nThis is the docs' own example (`docs_src/generate_clients/tutorial003_py310.py`):\n\n```python\nfrom fastapi import FastAPI\nfrom fastapi.routing import APIRoute\n\n\ndef custom_generate_unique_id(route: APIRoute) -> str:\n    return f\"{route.tags[0]}-{route.name}\"\n\n\napp = FastAPI(generate_unique_id_function=custom_generate_unique_id)\n```\n\nRunning a type checker (`ty`) over it on 0.137.0:\n\n```\nerror[unresolved-attribute]: Object of type `APIRoute` has no attribute `tags`\n --> repro.py:6:15\n  |\n6 |     return f\"{route.tags[0]}-{route.name}\"\n  |               ^^^^^^^^^^\n```\n\nAt runtime the same code builds the app and generates operation IDs correctly — only the static type surface is affected. `route.name` resolves fine; only `route.tags` is missing.\n\n### Expected behavior\n\n`route.tags` should remain visible to type checkers as a public attribute of `APIRoute` (it's part of the documented public callback contract), as it was in 0.136.x where `APIRoute.__init__` assigned `self.tags = tags or []` directly.\n\n### Environment\n\n- FastAPI: **0.137.0**\n- Python: 3.14\n- Type checker: `ty` 0.0.49 (also reproduces with strict Pyright per the same root cause); mypy may differ\n- OS: macOS\n\n### Possible fix\n\nAdd the lost class-level annotation back to `APIRoute` (e.g. `tags: list[str | Enum]`) so it matches what the `_APIRouteLike` Protocol already declares. Happy to open a PR if that direction is welcome.\n\nThanks for FastAPI! 🙏\n</div>",
+    "labels": [
+        "bug"
+    ],
+    "state": "closed",
+    "comments": [
+        {
+            "author": "tiangolo",
+            "body": "This should be fixed in https://github.com/fastapi/fastapi/pull/15765 , available in FastAPI 0.137.1, just released. 🚀 ",
+            "created_at": "2026-06-15T11:29:04Z"
+        }
+    ],
+    "comment_count": 1
+}

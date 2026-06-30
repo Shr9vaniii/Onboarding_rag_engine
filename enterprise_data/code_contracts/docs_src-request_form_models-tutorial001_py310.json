@@ -1,0 +1,35 @@
+{
+    "file_path": "docs_src\\request_form_models\\tutorial001_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "FormData",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "username",
+                    "type": "str"
+                },
+                {
+                    "name": "password",
+                    "type": "str"
+                }
+            ],
+            "line_number": 7
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "login",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "data",
+                    "type": "FormData"
+                }
+            ],
+            "return_type": "",
+            "line_number": 13
+        }
+    ]
+}

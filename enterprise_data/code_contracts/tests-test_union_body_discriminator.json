@@ -1,0 +1,64 @@
+{
+    "file_path": "tests\\test_union_body_discriminator.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_discriminator_pydantic_v2",
+            "docstring": "",
+            "args": [],
+            "return_type": "None",
+            "line_number": 10
+        },
+        {
+            "type": "class",
+            "name": "FirstItem",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "value",
+                    "type": "Literal['first']"
+                },
+                {
+                    "name": "price",
+                    "type": "int"
+                }
+            ],
+            "line_number": 15
+        },
+        {
+            "type": "class",
+            "name": "OtherItem",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "value",
+                    "type": "Literal['other']"
+                },
+                {
+                    "name": "price",
+                    "type": "float"
+                }
+            ],
+            "line_number": 19
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "save_union_body_discriminator",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item",
+                    "type": "Item"
+                },
+                {
+                    "name": "q",
+                    "type": "Annotated[str, Field(description='Query string')]"
+                }
+            ],
+            "return_type": "dict[str, Any]",
+            "line_number": 29
+        }
+    ]
+}

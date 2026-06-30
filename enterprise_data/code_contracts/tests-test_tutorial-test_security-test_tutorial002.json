@@ -1,0 +1,61 @@
+{
+    "file_path": "tests\\test_tutorial\\test_security\\test_tutorial002.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_client",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": "pytest.FixtureRequest"
+                }
+            ],
+            "return_type": "",
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_no_token",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 23
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_token",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 30
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 41
+        }
+    ]
+}

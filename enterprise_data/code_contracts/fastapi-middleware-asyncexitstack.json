@@ -1,0 +1,60 @@
+{
+    "file_path": "fastapi\\middleware\\asyncexitstack.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "AsyncExitStackMiddleware",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 8
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "app",
+                    "type": "ASGIApp"
+                },
+                {
+                    "name": "context_name",
+                    "type": "str"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 9
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "__call__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                },
+                {
+                    "name": "receive",
+                    "type": "Receive"
+                },
+                {
+                    "name": "send",
+                    "type": "Send"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 15
+        }
+    ]
+}

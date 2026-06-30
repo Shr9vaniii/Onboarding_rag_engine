@@ -1,0 +1,19 @@
+{
+    "file_path": "docs_src\\python_types\\tutorial008_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "process_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "prices",
+                    "type": "dict[str, float]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 1
+        }
+    ]
+}

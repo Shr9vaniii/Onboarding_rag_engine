@@ -1,0 +1,14 @@
+{
+    "file_path": "docs_src\\debugging\\tutorial001_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "root",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 8
+        }
+    ]
+}

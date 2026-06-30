@@ -1,0 +1,252 @@
+{
+    "file_path": "tests\\test_tutorial\\test_security\\test_tutorial004.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_mod",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": "pytest.FixtureRequest"
+                }
+            ],
+            "return_type": "",
+            "line_number": 19
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_access_token",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 25
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_login",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "mod",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 33
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_login_incorrect_password",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "mod",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 42
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_login_incorrect_username",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "mod",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 51
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_no_token",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "mod",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 58
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_token",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "mod",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 66
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_incorrect_token",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "mod",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 81
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_incorrect_token_type",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "mod",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 89
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_verify_password",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "mod",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 99
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_password_hash",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "mod",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 105
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_create_access_token",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "mod",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 109
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_token_no_sub",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "mod",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 114
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_token_no_username",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "mod",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 128
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_token_nonexistent_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "mod",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 142
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_token_inactive_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "mod",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 156
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "mod",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 176
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "mod",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 186
+        }
+    ]
+}

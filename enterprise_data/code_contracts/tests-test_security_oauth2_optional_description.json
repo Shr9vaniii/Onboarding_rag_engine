@@ -1,0 +1,136 @@
+{
+    "file_path": "tests\\test_security_oauth2_optional_description.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "User",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "username",
+                    "type": "str"
+                }
+            ],
+            "line_number": 22
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_current_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "oauth_header",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 26
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "login",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "form_data",
+                    "type": "OAuth2PasswordRequestFormStrict"
+                }
+            ],
+            "return_type": "",
+            "line_number": 34
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_users_me",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "current_user",
+                    "type": "User | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 39
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_security_oauth2",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 48
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_security_oauth2_password_other_header",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 54
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_security_oauth2_password_bearer_no_header",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 60
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_strict_login_None",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 66
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_strict_login_no_grant_type",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 93
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_strict_login_incorrect_grant_type",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "grant_type",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 116
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_strict_login_correct_correct_grant_type",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 135
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 151
+        }
+    ]
+}

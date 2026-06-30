@@ -1,0 +1,69 @@
+{
+    "file_path": "tests\\test_tutorial\\test_settings\\test_app03.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_mod_path",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": "pytest.FixtureRequest"
+                }
+            ],
+            "return_type": "",
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_main_mod",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "mod_path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "ModuleType",
+            "line_number": 22
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_settings",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "main_mod",
+                    "type": "ModuleType"
+                },
+                {
+                    "name": "monkeypatch",
+                    "type": "MonkeyPatch"
+                }
+            ],
+            "return_type": "",
+            "line_number": 27
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_endpoint",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "main_mod",
+                    "type": "ModuleType"
+                },
+                {
+                    "name": "monkeypatch",
+                    "type": "MonkeyPatch"
+                }
+            ],
+            "return_type": "",
+            "line_number": 35
+        }
+    ]
+}

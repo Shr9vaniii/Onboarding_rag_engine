@@ -1,0 +1,39 @@
+{
+    "file_path": "docs_src\\custom_response\\tutorial009c_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "CustomORJSONResponse",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 9
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "main",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 18
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "render",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "content",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "bytes",
+            "line_number": 12
+        }
+    ]
+}

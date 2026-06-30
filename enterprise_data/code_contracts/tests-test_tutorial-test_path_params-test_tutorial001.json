@@ -1,0 +1,32 @@
+{
+    "file_path": "tests\\test_tutorial\\test_path_params\\test_tutorial001.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item_id",
+                    "type": ""
+                },
+                {
+                    "name": "expected_response",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 23
+        }
+    ]
+}

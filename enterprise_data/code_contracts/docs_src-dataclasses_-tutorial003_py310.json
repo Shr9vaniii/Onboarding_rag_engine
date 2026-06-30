@@ -1,0 +1,64 @@
+{
+    "file_path": "docs_src\\dataclasses_\\tutorial003_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "description",
+                    "type": "str | None"
+                }
+            ],
+            "line_number": 8
+        },
+        {
+            "type": "class",
+            "name": "Author",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "items",
+                    "type": "list[Item]"
+                }
+            ],
+            "line_number": 14
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "create_author_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "author_id",
+                    "type": "str"
+                },
+                {
+                    "name": "items",
+                    "type": "list[Item]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 23
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_authors",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 28
+        }
+    ]
+}

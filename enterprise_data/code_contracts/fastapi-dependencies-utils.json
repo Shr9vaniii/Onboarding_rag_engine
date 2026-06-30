@@ -1,0 +1,395 @@
+{
+    "file_path": "fastapi\\dependencies\\utils.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "ensure_multipart_is_installed",
+            "docstring": "",
+            "args": [],
+            "return_type": "None",
+            "line_number": 94
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_parameterless_sub_dependant",
+            "docstring": "",
+            "args": [],
+            "return_type": "Dependant",
+            "line_number": 123
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_flat_dependant",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "dependant",
+                    "type": "Dependant"
+                }
+            ],
+            "return_type": "Dependant",
+            "line_number": 138
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_get_flat_fields_from_params",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "fields",
+                    "type": "list[ModelField]"
+                }
+            ],
+            "return_type": "list[ModelField]",
+            "line_number": 192
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_flat_params",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "dependant",
+                    "type": "Dependant"
+                }
+            ],
+            "return_type": "list[ModelField]",
+            "line_number": 204
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_get_signature",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "call",
+                    "type": "Callable[..., Any]"
+                }
+            ],
+            "return_type": "inspect.Signature",
+            "line_number": 213
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_typed_signature",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "call",
+                    "type": "Callable[..., Any]"
+                }
+            ],
+            "return_type": "inspect.Signature",
+            "line_number": 228
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_typed_annotation",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "annotation",
+                    "type": "Any"
+                },
+                {
+                    "name": "globalns",
+                    "type": "dict[str, Any]"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 245
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_typed_return_annotation",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "call",
+                    "type": "Callable[..., Any]"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 254
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_stream_item_type",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "annotation",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "Any | None",
+            "line_number": 276
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_dependant",
+            "docstring": "",
+            "args": [],
+            "return_type": "Dependant",
+            "line_number": 286
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "add_non_field_param_to_dependency",
+            "docstring": "",
+            "args": [],
+            "return_type": "bool | None",
+            "line_number": 362
+        },
+        {
+            "type": "class",
+            "name": "ParamDetails",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "type_annotation",
+                    "type": "Any"
+                },
+                {
+                    "name": "depends",
+                    "type": "params.Depends | None"
+                },
+                {
+                    "name": "field",
+                    "type": "ModelField | None"
+                }
+            ],
+            "line_number": 387
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "analyze_param",
+            "docstring": "",
+            "args": [],
+            "return_type": "ParamDetails",
+            "line_number": 393
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "add_param_to_fields",
+            "docstring": "",
+            "args": [],
+            "return_type": "None",
+            "line_number": 562
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "_solve_generator",
+            "docstring": "",
+            "args": [],
+            "return_type": "Any",
+            "line_number": 578
+        },
+        {
+            "type": "class",
+            "name": "SolvedDependency",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "values",
+                    "type": "dict[str, Any]"
+                },
+                {
+                    "name": "errors",
+                    "type": "list[Any]"
+                },
+                {
+                    "name": "background_tasks",
+                    "type": "StarletteBackgroundTasks | None"
+                },
+                {
+                    "name": "response",
+                    "type": "Response"
+                },
+                {
+                    "name": "dependency_cache",
+                    "type": "dict[DependencyCacheKey, Any]"
+                }
+            ],
+            "line_number": 590
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "solve_dependencies",
+            "docstring": "",
+            "args": [],
+            "return_type": "SolvedDependency",
+            "line_number": 598
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_validate_value_with_model_field",
+            "docstring": "",
+            "args": [],
+            "return_type": "tuple[Any, list[Any]]",
+            "line_number": 738
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_is_json_field",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "field",
+                    "type": "ModelField"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 749
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_get_multidict_value",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "field",
+                    "type": "ModelField"
+                },
+                {
+                    "name": "values",
+                    "type": "Mapping[str, Any]"
+                },
+                {
+                    "name": "alias",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 753
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "request_params_to_args",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "fields",
+                    "type": "Sequence[ModelField]"
+                },
+                {
+                    "name": "received_params",
+                    "type": "Mapping[str, Any] | QueryParams | Headers"
+                }
+            ],
+            "return_type": "tuple[dict[str, Any], list[Any]]",
+            "line_number": 784
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "is_union_of_base_models",
+            "docstring": "Check if field type is a Union where all members are BaseModel subclasses.",
+            "args": [
+                {
+                    "name": "field_type",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 873
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_should_embed_body_fields",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "fields",
+                    "type": "list[ModelField]"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 892
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "_extract_form_body",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "body_fields",
+                    "type": "list[ModelField]"
+                },
+                {
+                    "name": "received_body",
+                    "type": "FormData"
+                }
+            ],
+            "return_type": "dict[str, Any]",
+            "line_number": 916
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "request_body_to_args",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "body_fields",
+                    "type": "list[ModelField]"
+                },
+                {
+                    "name": "received_body",
+                    "type": "dict[str, Any] | FormData | bytes | None"
+                },
+                {
+                    "name": "embed_body_fields",
+                    "type": "bool"
+                }
+            ],
+            "return_type": "tuple[dict[str, Any], list[dict[str, Any]]]",
+            "line_number": 955
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_body_field",
+            "docstring": "Get a ModelField representing the request body for a path operation, combining\nall body parameters into a single field if necessary.\n\nUsed to check if it's form data (with `isinstance(body_field, params.Form)`)\nor JSON and to generate the JSON Schema for a request body.\n\nThis is **not** used to validate/parse the request body, that's done with each\nindividual body parameter.",
+            "args": [],
+            "return_type": "ModelField | None",
+            "line_number": 1005
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "field",
+                    "type": "ModelField"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 1059
+        }
+    ]
+}

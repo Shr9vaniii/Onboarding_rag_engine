@@ -1,0 +1,123 @@
+{
+    "file_path": "tests\\test_ws_dependencies.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "dependency_list",
+            "docstring": "",
+            "args": [],
+            "return_type": "list[str]",
+            "line_number": 8
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "create_dependency",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "name",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 15
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "index",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                },
+                {
+                    "name": "deps",
+                    "type": "DepList"
+                }
+            ],
+            "return_type": "",
+            "line_number": 28
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "routerindex",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                },
+                {
+                    "name": "deps",
+                    "type": "DepList"
+                }
+            ],
+            "return_type": "",
+            "line_number": 35
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "routerprefixindex",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                },
+                {
+                    "name": "deps",
+                    "type": "DepList"
+                }
+            ],
+            "return_type": "",
+            "line_number": 42
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_index",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 54
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_routerindex",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 61
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_routerprefixindex",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 68
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "fun",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "deps",
+                    "type": "DepList"
+                }
+            ],
+            "return_type": "",
+            "line_number": 16
+        }
+    ]
+}

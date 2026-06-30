@@ -1,0 +1,14 @@
+{
+    "file_path": "docs_src\\behind_a_proxy\\tutorial001_01_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_items",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 7
+        }
+    ]
+}

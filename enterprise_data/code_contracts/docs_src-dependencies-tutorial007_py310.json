@@ -1,0 +1,14 @@
+{
+    "file_path": "docs_src\\dependencies\\tutorial007_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_db",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 1
+        }
+    ]
+}

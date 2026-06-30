@@ -1,0 +1,33 @@
+{
+    "file_path": "docs_src\\security\\tutorial007_an_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_current_username",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "credentials",
+                    "type": "Annotated[HTTPBasicCredentials, Depends(security)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 12
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_current_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "username",
+                    "type": "Annotated[str, Depends(get_current_username)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 35
+        }
+    ]
+}

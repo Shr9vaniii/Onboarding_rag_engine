@@ -1,0 +1,39 @@
+{
+    "file_path": "docs_src\\additional_responses\\tutorial004_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "str"
+                },
+                {
+                    "name": "value",
+                    "type": "str"
+                }
+            ],
+            "line_number": 6
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item_id",
+                    "type": "str"
+                },
+                {
+                    "name": "img",
+                    "type": "bool | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 26
+        }
+    ]
+}

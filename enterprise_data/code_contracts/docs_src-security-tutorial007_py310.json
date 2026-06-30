@@ -1,0 +1,33 @@
+{
+    "file_path": "docs_src\\security\\tutorial007_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_current_username",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "credentials",
+                    "type": "HTTPBasicCredentials"
+                }
+            ],
+            "return_type": "",
+            "line_number": 11
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_current_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "username",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 32
+        }
+    ]
+}

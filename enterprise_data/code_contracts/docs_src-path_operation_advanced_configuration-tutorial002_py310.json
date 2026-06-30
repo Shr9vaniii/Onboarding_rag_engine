@@ -1,0 +1,28 @@
+{
+    "file_path": "docs_src\\path_operation_advanced_configuration\\tutorial002_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "custom_generate_unique_id",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "route",
+                    "type": "APIRoute"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 5
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_items",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 13
+        }
+    ]
+}

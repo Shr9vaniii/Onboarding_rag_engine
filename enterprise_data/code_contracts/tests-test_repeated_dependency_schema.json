@@ -1,0 +1,59 @@
+{
+    "file_path": "tests\\test_repeated_dependency_schema.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_header",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 8
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_something_else",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 12
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_deps",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "dep1",
+                    "type": "str"
+                },
+                {
+                    "name": "dep2",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 24
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 30
+        }
+    ]
+}

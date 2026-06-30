@@ -1,0 +1,30 @@
+{
+    "file_path": "docs_src\\path_operation_configuration\\tutorial002b_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Tags",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 8
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_items",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 14
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_users",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 19
+        }
+    ]
+}

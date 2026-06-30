@@ -1,0 +1,513 @@
+{
+    "file_path": "scripts\\doc_parsing_utils.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "CodeIncludeInfo",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "line_no",
+                    "type": "int"
+                },
+                {
+                    "name": "line",
+                    "type": "str"
+                }
+            ],
+            "line_number": 37
+        },
+        {
+            "type": "class",
+            "name": "HeaderPermalinkInfo",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "line_no",
+                    "type": "int"
+                },
+                {
+                    "name": "hashes",
+                    "type": "str"
+                },
+                {
+                    "name": "title",
+                    "type": "str"
+                },
+                {
+                    "name": "permalink",
+                    "type": "str"
+                }
+            ],
+            "line_number": 42
+        },
+        {
+            "type": "class",
+            "name": "MarkdownLinkInfo",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "line_no",
+                    "type": "int"
+                },
+                {
+                    "name": "url",
+                    "type": "str"
+                },
+                {
+                    "name": "text",
+                    "type": "str"
+                },
+                {
+                    "name": "title",
+                    "type": "str | None"
+                },
+                {
+                    "name": "attributes",
+                    "type": "str | None"
+                },
+                {
+                    "name": "full_match",
+                    "type": "str"
+                }
+            ],
+            "line_number": 49
+        },
+        {
+            "type": "class",
+            "name": "HTMLLinkAttribute",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "quote",
+                    "type": "str"
+                },
+                {
+                    "name": "value",
+                    "type": "str"
+                }
+            ],
+            "line_number": 58
+        },
+        {
+            "type": "class",
+            "name": "HtmlLinkInfo",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "line_no",
+                    "type": "int"
+                },
+                {
+                    "name": "full_tag",
+                    "type": "str"
+                },
+                {
+                    "name": "attributes",
+                    "type": "list[HTMLLinkAttribute]"
+                },
+                {
+                    "name": "text",
+                    "type": "str"
+                }
+            ],
+            "line_number": 64
+        },
+        {
+            "type": "class",
+            "name": "MultilineCodeBlockInfo",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "lang",
+                    "type": "str"
+                },
+                {
+                    "name": "start_line_no",
+                    "type": "int"
+                },
+                {
+                    "name": "content",
+                    "type": "list[str]"
+                }
+            ],
+            "line_number": 71
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "extract_code_includes",
+            "docstring": "Extract lines that contain code includes.\n\nReturn list of CodeIncludeInfo, where each dict contains:\n- `line_no` - line number (1-based)\n- `line` - text of the line",
+            "args": [
+                {
+                    "name": "lines",
+                    "type": "list[str]"
+                }
+            ],
+            "return_type": "list[CodeIncludeInfo]",
+            "line_number": 81
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "replace_code_includes_with_placeholders",
+            "docstring": "Replace code includes with placeholders.",
+            "args": [
+                {
+                    "name": "text",
+                    "type": "list[str]"
+                }
+            ],
+            "return_type": "list[str]",
+            "line_number": 97
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "replace_placeholders_with_code_includes",
+            "docstring": "Replace code includes placeholders with actual code includes from the original (English) document.\nFail if the number of placeholders does not match the number of original includes.",
+            "args": [
+                {
+                    "name": "text",
+                    "type": "list[str]"
+                },
+                {
+                    "name": "original_includes",
+                    "type": "list[CodeIncludeInfo]"
+                }
+            ],
+            "return_type": "list[str]",
+            "line_number": 109
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "extract_header_permalinks",
+            "docstring": "Extract list of header permalinks from the given lines.\n\nReturn list of HeaderPermalinkInfo, where each dict contains:\n- `line_no` - line number (1-based)\n- `hashes` - string of hashes representing header level (e.g., \"###\")\n- `permalink` - permalink string (e.g., \"{#permalink}\")",
+            "args": [
+                {
+                    "name": "lines",
+                    "type": "list[str]"
+                }
+            ],
+            "return_type": "list[HeaderPermalinkInfo]",
+            "line_number": 141
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "remove_header_permalinks",
+            "docstring": "Remove permalinks from headers in the given lines.",
+            "args": [
+                {
+                    "name": "lines",
+                    "type": "list[str]"
+                }
+            ],
+            "return_type": "list[str]",
+            "line_number": 192
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "replace_header_permalinks",
+            "docstring": "Replace permalinks in the given text with the permalinks from the original document.\n\nFail if the number or level of headers does not match the original.",
+            "args": [
+                {
+                    "name": "text",
+                    "type": "list[str]"
+                },
+                {
+                    "name": "header_permalinks",
+                    "type": "list[HeaderPermalinkInfo]"
+                },
+                {
+                    "name": "original_header_permalinks",
+                    "type": "list[HeaderPermalinkInfo]"
+                }
+            ],
+            "return_type": "list[str]",
+            "line_number": 209
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "extract_markdown_links",
+            "docstring": "Extract all markdown links from the given lines.\n\nReturn list of MarkdownLinkInfo, where each dict contains:\n- `line_no` - line number (1-based)\n- `url` - link URL\n- `text` - link text\n- `title` - link title (if any)",
+            "args": [
+                {
+                    "name": "lines",
+                    "type": "list[str]"
+                }
+            ],
+            "return_type": "list[MarkdownLinkInfo]",
+            "line_number": 252
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_add_lang_code_to_url",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "url",
+                    "type": "str"
+                },
+                {
+                    "name": "lang_code",
+                    "type": "str"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 279
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_construct_markdown_link",
+            "docstring": "Construct a markdown link, adjusting the URL for the given language code if needed.",
+            "args": [
+                {
+                    "name": "url",
+                    "type": "str"
+                },
+                {
+                    "name": "text",
+                    "type": "str"
+                },
+                {
+                    "name": "title",
+                    "type": "str | None"
+                },
+                {
+                    "name": "attributes",
+                    "type": "str | None"
+                },
+                {
+                    "name": "lang_code",
+                    "type": "str"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 287
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "replace_markdown_links",
+            "docstring": "Replace markdown links in the given text with the original links.\n\nFail if the number of links does not match the original.",
+            "args": [
+                {
+                    "name": "text",
+                    "type": "list[str]"
+                },
+                {
+                    "name": "links",
+                    "type": "list[MarkdownLinkInfo]"
+                },
+                {
+                    "name": "original_links",
+                    "type": "list[MarkdownLinkInfo]"
+                },
+                {
+                    "name": "lang_code",
+                    "type": "str"
+                }
+            ],
+            "return_type": "list[str]",
+            "line_number": 310
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "extract_html_links",
+            "docstring": "Extract all HTML links from the given lines.\n\nReturn list of HtmlLinkInfo, where each dict contains:\n- `line_no` - line number (1-based)\n- `full_tag` - full HTML link tag\n- `attributes` - list of HTMLLinkAttribute (name, quote, value)\n- `text` - link text",
+            "args": [
+                {
+                    "name": "lines",
+                    "type": "list[str]"
+                }
+            ],
+            "return_type": "list[HtmlLinkInfo]",
+            "line_number": 357
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_construct_html_link",
+            "docstring": "Reconstruct HTML link, adjusting the URL for the given language code if needed.",
+            "args": [
+                {
+                    "name": "link_text",
+                    "type": "str"
+                },
+                {
+                    "name": "attributes",
+                    "type": "list[HTMLLinkAttribute]"
+                },
+                {
+                    "name": "lang_code",
+                    "type": "str"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 406
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "replace_html_links",
+            "docstring": "Replace HTML links in the given text with the links from the original document.\n\nAdjust URLs for the given language code.\nFail if the number of links does not match the original.",
+            "args": [
+                {
+                    "name": "text",
+                    "type": "list[str]"
+                },
+                {
+                    "name": "links",
+                    "type": "list[HtmlLinkInfo]"
+                },
+                {
+                    "name": "original_links",
+                    "type": "list[HtmlLinkInfo]"
+                },
+                {
+                    "name": "lang_code",
+                    "type": "str"
+                }
+            ],
+            "return_type": "list[str]",
+            "line_number": 433
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_code_block_lang",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "line",
+                    "type": "str"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 475
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "extract_multiline_code_blocks",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "text",
+                    "type": "list[str]"
+                }
+            ],
+            "return_type": "list[MultilineCodeBlockInfo]",
+            "line_number": 482
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_split_hash_comment",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "line",
+                    "type": "str"
+                }
+            ],
+            "return_type": "tuple[str, str | None]",
+            "line_number": 552
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_split_slashes_comment",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "line",
+                    "type": "str"
+                }
+            ],
+            "return_type": "tuple[str, str | None]",
+            "line_number": 561
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "replace_multiline_code_block",
+            "docstring": "Replace multiline code block `a` with block `b` leaving comments intact.\n\nSyntax of comments depends on the language of the code block.\nRaises ValueError if the blocks are not compatible (different languages or different number of lines).",
+            "args": [
+                {
+                    "name": "block_a",
+                    "type": "MultilineCodeBlockInfo"
+                },
+                {
+                    "name": "block_b",
+                    "type": "MultilineCodeBlockInfo"
+                }
+            ],
+            "return_type": "list[str]",
+            "line_number": 570
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "replace_multiline_code_blocks_in_text",
+            "docstring": "Update each code block in `text` with the corresponding code block from\n`original_code_blocks` with comments taken from `code_blocks`.\n\nRaises ValueError if the number, language, or shape of code blocks do not match.",
+            "args": [
+                {
+                    "name": "text",
+                    "type": "list[str]"
+                },
+                {
+                    "name": "code_blocks",
+                    "type": "list[MultilineCodeBlockInfo]"
+                },
+                {
+                    "name": "original_code_blocks",
+                    "type": "list[MultilineCodeBlockInfo]"
+                }
+            ],
+            "return_type": "list[str]",
+            "line_number": 643
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "check_translation",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "doc_lines",
+                    "type": "list[str]"
+                },
+                {
+                    "name": "en_doc_lines",
+                    "type": "list[str]"
+                },
+                {
+                    "name": "lang_code",
+                    "type": "str"
+                },
+                {
+                    "name": "auto_fix",
+                    "type": "bool"
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "list[str]",
+            "line_number": 676
+        }
+    ]
+}

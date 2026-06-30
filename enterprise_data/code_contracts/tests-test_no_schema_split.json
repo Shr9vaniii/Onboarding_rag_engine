@@ -1,0 +1,92 @@
+{
+    "file_path": "tests\\test_no_schema_split.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "MessageEventType",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 13
+        },
+        {
+            "type": "class",
+            "name": "MessageEvent",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "event_type",
+                    "type": "MessageEventType"
+                },
+                {
+                    "name": "output",
+                    "type": "str"
+                }
+            ],
+            "line_number": 18
+        },
+        {
+            "type": "class",
+            "name": "MessageOutput",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "body",
+                    "type": "str"
+                },
+                {
+                    "name": "events",
+                    "type": "list[MessageEvent]"
+                }
+            ],
+            "line_number": 23
+        },
+        {
+            "type": "class",
+            "name": "Message",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "input",
+                    "type": "str"
+                },
+                {
+                    "name": "output",
+                    "type": "MessageOutput"
+                }
+            ],
+            "line_number": 28
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "create_message",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "input_message",
+                    "type": "str"
+                }
+            ],
+            "return_type": "Message",
+            "line_number": 37
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_create_message",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 47
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 56
+        }
+    ]
+}

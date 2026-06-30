@@ -1,0 +1,257 @@
+{
+    "file_path": "fastapi\\dependencies\\models.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_unwrapped_call",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "call",
+                    "type": "Callable[..., Any] | None"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 18
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_impartial",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "func",
+                    "type": "Callable[..., Any]"
+                }
+            ],
+            "return_type": "Callable[..., Any]",
+            "line_number": 25
+        },
+        {
+            "type": "class",
+            "name": "Dependant",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "path_params",
+                    "type": "list[ModelField]"
+                },
+                {
+                    "name": "query_params",
+                    "type": "list[ModelField]"
+                },
+                {
+                    "name": "header_params",
+                    "type": "list[ModelField]"
+                },
+                {
+                    "name": "cookie_params",
+                    "type": "list[ModelField]"
+                },
+                {
+                    "name": "body_params",
+                    "type": "list[ModelField]"
+                },
+                {
+                    "name": "dependencies",
+                    "type": "list['Dependant']"
+                },
+                {
+                    "name": "name",
+                    "type": "str | None"
+                },
+                {
+                    "name": "call",
+                    "type": "Callable[..., Any] | None"
+                },
+                {
+                    "name": "request_param_name",
+                    "type": "str | None"
+                },
+                {
+                    "name": "websocket_param_name",
+                    "type": "str | None"
+                },
+                {
+                    "name": "http_connection_param_name",
+                    "type": "str | None"
+                },
+                {
+                    "name": "response_param_name",
+                    "type": "str | None"
+                },
+                {
+                    "name": "background_tasks_param_name",
+                    "type": "str | None"
+                },
+                {
+                    "name": "security_scopes_param_name",
+                    "type": "str | None"
+                },
+                {
+                    "name": "own_oauth_scopes",
+                    "type": "list[str] | None"
+                },
+                {
+                    "name": "parent_oauth_scopes",
+                    "type": "list[str] | None"
+                },
+                {
+                    "name": "use_cache",
+                    "type": "bool"
+                },
+                {
+                    "name": "path",
+                    "type": "str | None"
+                },
+                {
+                    "name": "scope",
+                    "type": "Literal['function', 'request'] | None"
+                }
+            ],
+            "line_number": 32
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "oauth_scopes",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "list[str]",
+            "line_number": 54
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "cache_key",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "DependencyCacheKey",
+            "line_number": 63
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_uses_scopes",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 74
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_is_security_scheme",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 87
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_security_scheme",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "SecurityBase",
+            "line_number": 95
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_security_dependencies",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "list['Dependant']",
+            "line_number": 101
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "is_gen_callable",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 106
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "is_async_gen_callable",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 132
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "is_coroutine_callable",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 158
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "computed_scope",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "str | None",
+            "line_number": 188
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "file_path": "docs_src\\request_files\\tutorial003_an_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "create_files",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "files",
+                    "type": "Annotated[list[bytes], File(description='Multiple files as bytes')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 10
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "create_upload_files",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "files",
+                    "type": "Annotated[list[UploadFile], File(description='Multiple files as UploadFile')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "main",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 26
+        }
+    ]
+}

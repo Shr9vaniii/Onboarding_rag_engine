@@ -1,0 +1,32 @@
+{
+    "file_path": "tests\\test_empty_router.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_empty",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 12
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_use_empty",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 22
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_include_empty",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 33
+        }
+    ]
+}

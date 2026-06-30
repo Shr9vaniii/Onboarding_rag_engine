@@ -1,0 +1,42 @@
+{
+    "file_path": "docs_src\\graphql_\\tutorial001_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "User",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "age",
+                    "type": "int"
+                }
+            ],
+            "line_number": 7
+        },
+        {
+            "type": "class",
+            "name": "Query",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 13
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "User",
+            "line_number": 15
+        }
+    ]
+}

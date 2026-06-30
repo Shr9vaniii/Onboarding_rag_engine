@@ -1,0 +1,23 @@
+{
+    "file_path": "docs_src\\query_params\\tutorial001_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "skip",
+                    "type": "int"
+                },
+                {
+                    "name": "limit",
+                    "type": "int"
+                }
+            ],
+            "return_type": "",
+            "line_number": 9
+        }
+    ]
+}

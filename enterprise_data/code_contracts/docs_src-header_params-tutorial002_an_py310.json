@@ -1,0 +1,19 @@
+{
+    "file_path": "docs_src\\header_params\\tutorial002_an_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "strange_header",
+                    "type": "Annotated[str | None, Header(convert_underscores=False)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 9
+        }
+    ]
+}

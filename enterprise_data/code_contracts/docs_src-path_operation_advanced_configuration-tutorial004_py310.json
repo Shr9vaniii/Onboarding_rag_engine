@@ -1,0 +1,47 @@
+{
+    "file_path": "docs_src\\path_operation_advanced_configuration\\tutorial004_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "description",
+                    "type": "str | None"
+                },
+                {
+                    "name": "price",
+                    "type": "float"
+                },
+                {
+                    "name": "tax",
+                    "type": "float | None"
+                },
+                {
+                    "name": "tags",
+                    "type": "set[str]"
+                }
+            ],
+            "line_number": 7
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "create_item",
+            "docstring": "Create an item with all the information:\n\n- **name**: each item must have a name\n- **description**: a long description\n- **price**: required\n- **tax**: if the item doesn't have tax, you can omit this\n- **tags**: a set of unique tag strings for this item\n\f\n:param item: User input.",
+            "args": [
+                {
+                    "name": "item",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "Item",
+            "line_number": 16
+        }
+    ]
+}

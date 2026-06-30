@@ -1,0 +1,63 @@
+{
+    "file_path": "docs_src\\response_model\\tutorial003_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "UserIn",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "username",
+                    "type": "str"
+                },
+                {
+                    "name": "password",
+                    "type": "str"
+                },
+                {
+                    "name": "email",
+                    "type": "EmailStr"
+                },
+                {
+                    "name": "full_name",
+                    "type": "str | None"
+                }
+            ],
+            "line_number": 9
+        },
+        {
+            "type": "class",
+            "name": "UserOut",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "username",
+                    "type": "str"
+                },
+                {
+                    "name": "email",
+                    "type": "EmailStr"
+                },
+                {
+                    "name": "full_name",
+                    "type": "str | None"
+                }
+            ],
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "create_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "user",
+                    "type": "UserIn"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 23
+        }
+    ]
+}

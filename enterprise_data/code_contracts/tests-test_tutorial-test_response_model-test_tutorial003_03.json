@@ -1,0 +1,23 @@
+{
+    "file_path": "tests\\test_tutorial\\test_response_model\\test_tutorial003_03.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_portal",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 9
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 15
+        }
+    ]
+}

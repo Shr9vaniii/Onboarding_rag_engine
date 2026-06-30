@@ -1,0 +1,50 @@
+{
+    "file_path": "tests\\test_tutorial\\test_path_params\\test_tutorial005.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_enums_alexnet",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 9
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_enums_lenet",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 15
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_enums_resnet",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 21
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_enums_invalid",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 27
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 43
+        }
+    ]
+}

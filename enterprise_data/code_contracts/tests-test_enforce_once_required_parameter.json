@@ -1,0 +1,78 @@
+{
+    "file_path": "tests\\test_enforce_once_required_parameter.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_get_client_key",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client_id",
+                    "type": "str"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 8
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_get_client_tag",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client_id",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "str | None",
+            "line_number": 12
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "foo_handler",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client_key",
+                    "type": "str"
+                },
+                {
+                    "name": "client_tag",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 19
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_invalid",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 29
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_valid",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 34
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 40
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "file_path": "tests\\test_typing_python39.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_typing",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 8
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_endpoint",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "input",
+                    "type": "test_type"
+                }
+            ],
+            "return_type": "",
+            "line_number": 19
+        }
+    ]
+}

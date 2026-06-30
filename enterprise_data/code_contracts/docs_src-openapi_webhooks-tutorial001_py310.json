@@ -1,0 +1,48 @@
+{
+    "file_path": "docs_src\\openapi_webhooks\\tutorial001_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Subscription",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "username",
+                    "type": "str"
+                },
+                {
+                    "name": "monthly_fee",
+                    "type": "float"
+                },
+                {
+                    "name": "start_date",
+                    "type": "datetime"
+                }
+            ],
+            "line_number": 9
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "new_subscription",
+            "docstring": "When a new user subscribes to your service we'll send you a POST request with this\ndata to the URL that you register for the event `new-subscription` in the dashboard.",
+            "args": [
+                {
+                    "name": "body",
+                    "type": "Subscription"
+                }
+            ],
+            "return_type": "",
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_users",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 24
+        }
+    ]
+}

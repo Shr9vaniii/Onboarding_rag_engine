@@ -1,0 +1,77 @@
+{
+    "file_path": "docs_src\\stream_data\\tutorial001_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "stream_story",
+            "docstring": "",
+            "args": [],
+            "return_type": "AsyncIterable[str]",
+            "line_number": 21
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "stream_story_no_async",
+            "docstring": "",
+            "args": [],
+            "return_type": "Iterable[str]",
+            "line_number": 27
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "stream_story_no_annotation",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 33
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "stream_story_no_async_no_annotation",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 39
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "stream_story_bytes",
+            "docstring": "",
+            "args": [],
+            "return_type": "AsyncIterable[bytes]",
+            "line_number": 45
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "stream_story_no_async_bytes",
+            "docstring": "",
+            "args": [],
+            "return_type": "Iterable[bytes]",
+            "line_number": 51
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "stream_story_no_annotation_bytes",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 57
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "stream_story_no_async_no_annotation_bytes",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 63
+        }
+    ]
+}

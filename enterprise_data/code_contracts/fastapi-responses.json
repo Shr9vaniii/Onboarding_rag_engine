@@ -1,0 +1,114 @@
+{
+    "file_path": "fastapi\\responses.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "_UjsonModule",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 16
+        },
+        {
+            "type": "class",
+            "name": "_OrjsonModule",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "OPT_NON_STR_KEYS",
+                    "type": "int"
+                },
+                {
+                    "name": "OPT_SERIALIZE_NUMPY",
+                    "type": "int"
+                }
+            ],
+            "line_number": 20
+        },
+        {
+            "type": "class",
+            "name": "UJSONResponse",
+            "docstring": "JSON response using the ujson library to serialize data to JSON.\n\n**Deprecated**: `UJSONResponse` is deprecated. FastAPI now serializes data\ndirectly to JSON bytes via Pydantic when a return type or response model is\nset, which is faster and doesn't need a custom response class.\n\nRead more in the\n[FastAPI docs for Custom Response](https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model)\nand the\n[FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).\n\n**Note**: `ujson` is not included with FastAPI and must be installed\nseparately, e.g. `pip install ujson`.",
+            "attributes": [],
+            "line_number": 48
+        },
+        {
+            "type": "class",
+            "name": "ORJSONResponse",
+            "docstring": "JSON response using the orjson library to serialize data to JSON.\n\n**Deprecated**: `ORJSONResponse` is deprecated. FastAPI now serializes data\ndirectly to JSON bytes via Pydantic when a return type or response model is\nset, which is faster and doesn't need a custom response class.\n\nRead more in the\n[FastAPI docs for Custom Response](https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model)\nand the\n[FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).\n\n**Note**: `orjson` is not included with FastAPI and must be installed\nseparately, e.g. `pip install orjson`.",
+            "attributes": [],
+            "line_number": 78
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "dumps",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "__obj",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "dumps",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "__obj",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "bytes",
+            "line_number": 24
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "render",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "content",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "bytes",
+            "line_number": 64
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "render",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "content",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "bytes",
+            "line_number": 94
+        }
+    ]
+}

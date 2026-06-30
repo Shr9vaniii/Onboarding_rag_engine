@@ -1,0 +1,49 @@
+{
+    "file_path": "scripts\\tests\\test_translation_fixer\\test_code_blocks\\test_code_blocks_wrong_lang_code.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_wrong_lang_code_1",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "runner",
+                    "type": "CliRunner"
+                },
+                {
+                    "name": "root_dir",
+                    "type": "Path"
+                },
+                {
+                    "name": "copy_test_files",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 18
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_wrong_lang_code_2",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "runner",
+                    "type": "CliRunner"
+                },
+                {
+                    "name": "root_dir",
+                    "type": "Path"
+                },
+                {
+                    "name": "copy_test_files",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 42
+        }
+    ]
+}

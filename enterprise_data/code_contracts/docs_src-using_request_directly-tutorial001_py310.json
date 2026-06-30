@@ -1,0 +1,23 @@
+{
+    "file_path": "docs_src\\using_request_directly\\tutorial001_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_root",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item_id",
+                    "type": "str"
+                },
+                {
+                    "name": "request",
+                    "type": "Request"
+                }
+            ],
+            "return_type": "",
+            "line_number": 7
+        }
+    ]
+}

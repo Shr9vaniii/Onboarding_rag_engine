@@ -1,0 +1,229 @@
+{
+    "file_path": "docs_src\\security\\tutorial004_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Token",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "access_token",
+                    "type": "str"
+                },
+                {
+                    "name": "token_type",
+                    "type": "str"
+                }
+            ],
+            "line_number": 28
+        },
+        {
+            "type": "class",
+            "name": "TokenData",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "username",
+                    "type": "str | None"
+                }
+            ],
+            "line_number": 33
+        },
+        {
+            "type": "class",
+            "name": "User",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "username",
+                    "type": "str"
+                },
+                {
+                    "name": "email",
+                    "type": "str | None"
+                },
+                {
+                    "name": "full_name",
+                    "type": "str | None"
+                },
+                {
+                    "name": "disabled",
+                    "type": "bool | None"
+                }
+            ],
+            "line_number": 37
+        },
+        {
+            "type": "class",
+            "name": "UserInDB",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "hashed_password",
+                    "type": "str"
+                }
+            ],
+            "line_number": 44
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "verify_password",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "plain_password",
+                    "type": ""
+                },
+                {
+                    "name": "hashed_password",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 57
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_password_hash",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "password",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 61
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "db",
+                    "type": ""
+                },
+                {
+                    "name": "username",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 65
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "authenticate_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "fake_db",
+                    "type": ""
+                },
+                {
+                    "name": "username",
+                    "type": "str"
+                },
+                {
+                    "name": "password",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 71
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "create_access_token",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "data",
+                    "type": "dict"
+                },
+                {
+                    "name": "expires_delta",
+                    "type": "timedelta | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 81
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_current_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "token",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 92
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_current_active_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "current_user",
+                    "type": "User"
+                }
+            ],
+            "return_type": "",
+            "line_number": 112
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "login_for_access_token",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "form_data",
+                    "type": "OAuth2PasswordRequestForm"
+                }
+            ],
+            "return_type": "Token",
+            "line_number": 119
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_users_me",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "current_user",
+                    "type": "User"
+                }
+            ],
+            "return_type": "User",
+            "line_number": 137
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_own_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "current_user",
+                    "type": "User"
+                }
+            ],
+            "return_type": "",
+            "line_number": 142
+        }
+    ]
+}

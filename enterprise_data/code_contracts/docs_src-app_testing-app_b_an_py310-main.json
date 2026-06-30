@@ -1,0 +1,61 @@
+{
+    "file_path": "docs_src\\app_testing\\app_b_an_py310\\main.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "id",
+                    "type": "str"
+                },
+                {
+                    "name": "title",
+                    "type": "str"
+                },
+                {
+                    "name": "description",
+                    "type": "str | None"
+                }
+            ],
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_main",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item_id",
+                    "type": "str"
+                },
+                {
+                    "name": "x_token",
+                    "type": "Annotated[str, Header()]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 23
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "create_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item",
+                    "type": "Item"
+                },
+                {
+                    "name": "x_token",
+                    "type": "Annotated[str, Header()]"
+                }
+            ],
+            "return_type": "Item",
+            "line_number": 32
+        }
+    ]
+}

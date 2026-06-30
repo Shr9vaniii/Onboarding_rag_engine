@@ -1,0 +1,44 @@
+{
+    "file_path": "docs_src\\separate_openapi_schemas\\tutorial001_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "description",
+                    "type": "str | None"
+                }
+            ],
+            "line_number": 5
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "create_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 14
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_items",
+            "docstring": "",
+            "args": [],
+            "return_type": "list[Item]",
+            "line_number": 19
+        }
+    ]
+}

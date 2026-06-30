@@ -1,0 +1,19 @@
+{
+    "file_path": "docs_src\\response_headers\\tutorial002_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_headers",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "response",
+                    "type": "Response"
+                }
+            ],
+            "return_type": "",
+            "line_number": 7
+        }
+    ]
+}

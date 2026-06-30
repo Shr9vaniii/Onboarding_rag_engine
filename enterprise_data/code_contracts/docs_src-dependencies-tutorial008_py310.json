@@ -1,0 +1,42 @@
+{
+    "file_path": "docs_src\\dependencies\\tutorial008_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "dependency_a",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 4
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "dependency_b",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "dep_a",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 12
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "dependency_c",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "dep_b",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 20
+        }
+    ]
+}

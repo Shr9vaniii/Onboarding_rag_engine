@@ -1,0 +1,46 @@
+{
+    "file_path": "docs_src\\custom_docs_ui\\tutorial002_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "custom_swagger_ui_html",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 15
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "swagger_ui_redirect",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 26
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "redoc_html",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 31
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "username",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 40
+        }
+    ]
+}

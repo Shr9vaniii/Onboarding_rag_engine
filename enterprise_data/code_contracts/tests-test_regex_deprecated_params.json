@@ -1,0 +1,64 @@
+{
+    "file_path": "tests\\test_regex_deprecated_params.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_client",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 12
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_query_params_str_validations_no_query",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 30
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_query_params_str_validations_q_fixedquery",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 38
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_query_params_str_validations_item_query_nonregexquery",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 46
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 64
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "q",
+                    "type": "Annotated[str | None, Query(regex='^fixedquery$')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 17
+        }
+    ]
+}

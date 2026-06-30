@@ -1,0 +1,3004 @@
+{
+    "file_path": "fastapi\\routing.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "request_response",
+            "docstring": "Takes a function or coroutine `func(request) -> response`,\nand returns an ASGI application.",
+            "args": [
+                {
+                    "name": "func",
+                    "type": "Callable[[Request], Awaitable[Response] | Response]"
+                }
+            ],
+            "return_type": "ASGIApp",
+            "line_number": 113
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "websocket_session",
+            "docstring": "Takes a coroutine `func(session)`, and returns an ASGI application.",
+            "args": [
+                {
+                    "name": "func",
+                    "type": "Callable[[WebSocket], Awaitable[None]]"
+                }
+            ],
+            "return_type": "ASGIApp",
+            "line_number": 157
+        },
+        {
+            "type": "class",
+            "name": "_AsyncLiftContextManager",
+            "docstring": "Wraps a synchronous context manager to make it async.\n\nThis is vendored from Starlette to avoid importing private symbols.",
+            "attributes": [],
+            "line_number": 185
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_wrap_gen_lifespan_context",
+            "docstring": "Wrap a generator-based lifespan context into an async context manager.\n\nThis is vendored from Starlette to avoid importing private symbols.",
+            "args": [
+                {
+                    "name": "lifespan_context",
+                    "type": "Callable[[Any], Generator[Any, Any, Any]]"
+                }
+            ],
+            "return_type": "Callable[[Any], AbstractAsyncContextManager[Any]]",
+            "line_number": 208
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_merge_lifespan_context",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "original_context",
+                    "type": "Lifespan[Any]"
+                },
+                {
+                    "name": "nested_context",
+                    "type": "Lifespan[Any]"
+                }
+            ],
+            "return_type": "Lifespan[Any]",
+            "line_number": 225
+        },
+        {
+            "type": "class",
+            "name": "_DefaultLifespan",
+            "docstring": "Default lifespan context manager that runs on_startup and on_shutdown handlers.\n\nThis is a copy of the Starlette _DefaultLifespan class that was removed\nin Starlette. FastAPI keeps it to maintain backward compatibility with\non_startup and on_shutdown event handlers.\n\nRef: https://github.com/Kludex/starlette/pull/3117",
+            "attributes": [],
+            "line_number": 242
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_extract_endpoint_context",
+            "docstring": "Extract endpoint context with caching to avoid repeated file I/O.",
+            "args": [
+                {
+                    "name": "func",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "EndpointContext",
+            "line_number": 270
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "serialize_response",
+            "docstring": "",
+            "args": [],
+            "return_type": "Any",
+            "line_number": 293
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "run_endpoint_function",
+            "docstring": "",
+            "args": [],
+            "return_type": "Any",
+            "line_number": 336
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_build_response_args",
+            "docstring": "",
+            "args": [],
+            "return_type": "dict[str, Any]",
+            "line_number": 349
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_request_handler",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "dependant",
+                    "type": "Dependant"
+                },
+                {
+                    "name": "body_field",
+                    "type": "ModelField | None"
+                },
+                {
+                    "name": "status_code",
+                    "type": "int | None"
+                },
+                {
+                    "name": "response_class",
+                    "type": "type[Response] | DefaultPlaceholder"
+                },
+                {
+                    "name": "response_field",
+                    "type": "ModelField | None"
+                },
+                {
+                    "name": "response_model_include",
+                    "type": "IncEx | None"
+                },
+                {
+                    "name": "response_model_exclude",
+                    "type": "IncEx | None"
+                },
+                {
+                    "name": "response_model_by_alias",
+                    "type": "bool"
+                },
+                {
+                    "name": "response_model_exclude_unset",
+                    "type": "bool"
+                },
+                {
+                    "name": "response_model_exclude_defaults",
+                    "type": "bool"
+                },
+                {
+                    "name": "response_model_exclude_none",
+                    "type": "bool"
+                },
+                {
+                    "name": "dependency_overrides_provider",
+                    "type": "Any | None"
+                },
+                {
+                    "name": "embed_body_fields",
+                    "type": "bool"
+                },
+                {
+                    "name": "strict_content_type",
+                    "type": "bool | DefaultPlaceholder"
+                },
+                {
+                    "name": "stream_item_field",
+                    "type": "ModelField | None"
+                },
+                {
+                    "name": "is_json_stream",
+                    "type": "bool"
+                }
+            ],
+            "return_type": "Callable[[Request], Coroutine[Any, Any, Response]]",
+            "line_number": 367
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_websocket_app",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "dependant",
+                    "type": "Dependant"
+                },
+                {
+                    "name": "dependency_overrides_provider",
+                    "type": "Any | None"
+                },
+                {
+                    "name": "embed_body_fields",
+                    "type": "bool"
+                }
+            ],
+            "return_type": "Callable[[WebSocket], Coroutine[Any, Any, Any]]",
+            "line_number": 748
+        },
+        {
+            "type": "class",
+            "name": "APIWebSocketRoute",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 785
+        },
+        {
+            "type": "class",
+            "name": "_RouteWithPath",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "line_number": 837
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_get_fastapi_scope",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "dict[str, Any]",
+            "line_number": 841
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_update_scope",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                },
+                {
+                    "name": "child_scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 847
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_get_scope_effective_route_context",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "Any | None",
+            "line_number": 856
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_get_scope_included_router",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "Any | None",
+            "line_number": 860
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_restore_fastapi_scope_key",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                },
+                {
+                    "name": "key",
+                    "type": "str"
+                },
+                {
+                    "name": "previous",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 864
+        },
+        {
+            "type": "class",
+            "name": "_APIRouteLike",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "endpoint",
+                    "type": "Callable[..., Any]"
+                },
+                {
+                    "name": "stream_item_type",
+                    "type": "Any | None"
+                },
+                {
+                    "name": "response_model",
+                    "type": "Any"
+                },
+                {
+                    "name": "summary",
+                    "type": "str | None"
+                },
+                {
+                    "name": "response_description",
+                    "type": "str"
+                },
+                {
+                    "name": "deprecated",
+                    "type": "bool | None"
+                },
+                {
+                    "name": "operation_id",
+                    "type": "str | None"
+                },
+                {
+                    "name": "response_model_include",
+                    "type": "IncEx | None"
+                },
+                {
+                    "name": "response_model_exclude",
+                    "type": "IncEx | None"
+                },
+                {
+                    "name": "response_model_by_alias",
+                    "type": "bool"
+                },
+                {
+                    "name": "response_model_exclude_unset",
+                    "type": "bool"
+                },
+                {
+                    "name": "response_model_exclude_defaults",
+                    "type": "bool"
+                },
+                {
+                    "name": "response_model_exclude_none",
+                    "type": "bool"
+                },
+                {
+                    "name": "include_in_schema",
+                    "type": "bool"
+                },
+                {
+                    "name": "response_class",
+                    "type": "type[Response] | DefaultPlaceholder"
+                },
+                {
+                    "name": "dependency_overrides_provider",
+                    "type": "Any | None"
+                },
+                {
+                    "name": "callbacks",
+                    "type": "list[BaseRoute] | None"
+                },
+                {
+                    "name": "openapi_extra",
+                    "type": "dict[str, Any] | None"
+                },
+                {
+                    "name": "generate_unique_id_function",
+                    "type": "Callable[[Any], str] | DefaultPlaceholder"
+                },
+                {
+                    "name": "strict_content_type",
+                    "type": "bool | DefaultPlaceholder"
+                },
+                {
+                    "name": "tags",
+                    "type": "list[str | Enum]"
+                },
+                {
+                    "name": "responses",
+                    "type": "dict[int | str, dict[str, Any]]"
+                },
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "path_regex",
+                    "type": "Any"
+                },
+                {
+                    "name": "path_format",
+                    "type": "str"
+                },
+                {
+                    "name": "param_convertors",
+                    "type": "dict[str, Any]"
+                },
+                {
+                    "name": "methods",
+                    "type": "set[str]"
+                },
+                {
+                    "name": "unique_id",
+                    "type": "str"
+                },
+                {
+                    "name": "status_code",
+                    "type": "int | None"
+                },
+                {
+                    "name": "response_field",
+                    "type": "ModelField | None"
+                },
+                {
+                    "name": "stream_item_field",
+                    "type": "ModelField | None"
+                },
+                {
+                    "name": "dependencies",
+                    "type": "list[params.Depends]"
+                },
+                {
+                    "name": "description",
+                    "type": "str"
+                },
+                {
+                    "name": "response_fields",
+                    "type": "dict[int | str, ModelField]"
+                },
+                {
+                    "name": "dependant",
+                    "type": "Dependant"
+                },
+                {
+                    "name": "_flat_dependant",
+                    "type": "Dependant"
+                },
+                {
+                    "name": "_embed_body_fields",
+                    "type": "bool"
+                },
+                {
+                    "name": "body_field",
+                    "type": "ModelField | None"
+                },
+                {
+                    "name": "is_sse_stream",
+                    "type": "bool"
+                },
+                {
+                    "name": "is_json_stream",
+                    "type": "bool"
+                }
+            ],
+            "line_number": 874
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_populate_api_route_state",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "route",
+                    "type": "_APIRouteLike"
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "endpoint",
+                    "type": "Callable[..., Any]"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 918
+        },
+        {
+            "type": "class",
+            "name": "APIRoute",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "stream_item_type",
+                    "type": "Any | None"
+                },
+                {
+                    "name": "response_model",
+                    "type": "Any"
+                },
+                {
+                    "name": "summary",
+                    "type": "str | None"
+                },
+                {
+                    "name": "response_description",
+                    "type": "str"
+                },
+                {
+                    "name": "deprecated",
+                    "type": "bool | None"
+                },
+                {
+                    "name": "operation_id",
+                    "type": "str | None"
+                },
+                {
+                    "name": "response_model_include",
+                    "type": "IncEx | None"
+                },
+                {
+                    "name": "response_model_exclude",
+                    "type": "IncEx | None"
+                },
+                {
+                    "name": "response_model_by_alias",
+                    "type": "bool"
+                },
+                {
+                    "name": "response_model_exclude_unset",
+                    "type": "bool"
+                },
+                {
+                    "name": "response_model_exclude_defaults",
+                    "type": "bool"
+                },
+                {
+                    "name": "response_model_exclude_none",
+                    "type": "bool"
+                },
+                {
+                    "name": "include_in_schema",
+                    "type": "bool"
+                },
+                {
+                    "name": "response_class",
+                    "type": "type[Response] | DefaultPlaceholder"
+                },
+                {
+                    "name": "dependency_overrides_provider",
+                    "type": "Any | None"
+                },
+                {
+                    "name": "callbacks",
+                    "type": "list[BaseRoute] | None"
+                },
+                {
+                    "name": "openapi_extra",
+                    "type": "dict[str, Any] | None"
+                },
+                {
+                    "name": "generate_unique_id_function",
+                    "type": "Callable[[Any], str] | DefaultPlaceholder"
+                },
+                {
+                    "name": "strict_content_type",
+                    "type": "bool | DefaultPlaceholder"
+                },
+                {
+                    "name": "tags",
+                    "type": "list[str | Enum]"
+                },
+                {
+                    "name": "responses",
+                    "type": "dict[int | str, dict[str, Any]]"
+                },
+                {
+                    "name": "unique_id",
+                    "type": "str"
+                },
+                {
+                    "name": "status_code",
+                    "type": "int | None"
+                },
+                {
+                    "name": "response_field",
+                    "type": "ModelField | None"
+                },
+                {
+                    "name": "stream_item_field",
+                    "type": "ModelField | None"
+                },
+                {
+                    "name": "dependencies",
+                    "type": "list[params.Depends]"
+                },
+                {
+                    "name": "description",
+                    "type": "str"
+                },
+                {
+                    "name": "response_fields",
+                    "type": "dict[int | str, ModelField]"
+                },
+                {
+                    "name": "dependant",
+                    "type": "Dependant"
+                },
+                {
+                    "name": "_flat_dependant",
+                    "type": "Dependant"
+                },
+                {
+                    "name": "_embed_body_fields",
+                    "type": "bool"
+                },
+                {
+                    "name": "body_field",
+                    "type": "ModelField | None"
+                },
+                {
+                    "name": "is_sse_stream",
+                    "type": "bool"
+                },
+                {
+                    "name": "is_json_stream",
+                    "type": "bool"
+                }
+            ],
+            "line_number": 1085
+        },
+        {
+            "type": "class",
+            "name": "_RouterIncludeContext",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "included_router",
+                    "type": "'APIRouter'"
+                },
+                {
+                    "name": "prefix",
+                    "type": "str"
+                },
+                {
+                    "name": "tags",
+                    "type": "list[str | Enum]"
+                },
+                {
+                    "name": "dependencies",
+                    "type": "list[params.Depends]"
+                },
+                {
+                    "name": "default_response_class",
+                    "type": "type[Response] | DefaultPlaceholder"
+                },
+                {
+                    "name": "responses",
+                    "type": "dict[int | str, dict[str, Any]]"
+                },
+                {
+                    "name": "callbacks",
+                    "type": "list[BaseRoute]"
+                },
+                {
+                    "name": "deprecated",
+                    "type": "bool | None"
+                },
+                {
+                    "name": "include_in_schema",
+                    "type": "bool"
+                },
+                {
+                    "name": "generate_unique_id_function",
+                    "type": "Callable[[APIRoute], str] | DefaultPlaceholder"
+                },
+                {
+                    "name": "strict_content_type",
+                    "type": "bool | DefaultPlaceholder"
+                },
+                {
+                    "name": "dependency_overrides_provider",
+                    "type": "Any | None"
+                }
+            ],
+            "line_number": 1245
+        },
+        {
+            "type": "class",
+            "name": "_EffectiveRouteContext",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "original_route",
+                    "type": "BaseRoute"
+                },
+                {
+                    "name": "starlette_route",
+                    "type": "BaseRoute | None"
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "endpoint",
+                    "type": "Callable[..., Any] | None"
+                },
+                {
+                    "name": "stream_item_type",
+                    "type": "Any | None"
+                },
+                {
+                    "name": "response_model",
+                    "type": "Any"
+                },
+                {
+                    "name": "summary",
+                    "type": "str | None"
+                },
+                {
+                    "name": "response_description",
+                    "type": "str"
+                },
+                {
+                    "name": "deprecated",
+                    "type": "bool | None"
+                },
+                {
+                    "name": "operation_id",
+                    "type": "str | None"
+                },
+                {
+                    "name": "response_model_include",
+                    "type": "IncEx | None"
+                },
+                {
+                    "name": "response_model_exclude",
+                    "type": "IncEx | None"
+                },
+                {
+                    "name": "response_model_by_alias",
+                    "type": "bool"
+                },
+                {
+                    "name": "response_model_exclude_unset",
+                    "type": "bool"
+                },
+                {
+                    "name": "response_model_exclude_defaults",
+                    "type": "bool"
+                },
+                {
+                    "name": "response_model_exclude_none",
+                    "type": "bool"
+                },
+                {
+                    "name": "include_in_schema",
+                    "type": "bool"
+                },
+                {
+                    "name": "response_class",
+                    "type": "type[Response] | DefaultPlaceholder"
+                },
+                {
+                    "name": "dependency_overrides_provider",
+                    "type": "Any | None"
+                },
+                {
+                    "name": "callbacks",
+                    "type": "list[BaseRoute] | None"
+                },
+                {
+                    "name": "openapi_extra",
+                    "type": "dict[str, Any] | None"
+                },
+                {
+                    "name": "generate_unique_id_function",
+                    "type": "Callable[[Any], str] | DefaultPlaceholder"
+                },
+                {
+                    "name": "strict_content_type",
+                    "type": "bool | DefaultPlaceholder"
+                },
+                {
+                    "name": "tags",
+                    "type": "list[str | Enum]"
+                },
+                {
+                    "name": "responses",
+                    "type": "dict[int | str, dict[str, Any]]"
+                },
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "path_regex",
+                    "type": "Any"
+                },
+                {
+                    "name": "path_format",
+                    "type": "str"
+                },
+                {
+                    "name": "param_convertors",
+                    "type": "dict[str, Any]"
+                },
+                {
+                    "name": "methods",
+                    "type": "set[str]"
+                },
+                {
+                    "name": "unique_id",
+                    "type": "str"
+                },
+                {
+                    "name": "status_code",
+                    "type": "int | None"
+                },
+                {
+                    "name": "response_field",
+                    "type": "ModelField | None"
+                },
+                {
+                    "name": "stream_item_field",
+                    "type": "ModelField | None"
+                },
+                {
+                    "name": "dependencies",
+                    "type": "list[params.Depends]"
+                },
+                {
+                    "name": "description",
+                    "type": "str"
+                },
+                {
+                    "name": "response_fields",
+                    "type": "dict[int | str, ModelField]"
+                },
+                {
+                    "name": "dependant",
+                    "type": "Dependant | None"
+                },
+                {
+                    "name": "_flat_dependant",
+                    "type": "Dependant | None"
+                },
+                {
+                    "name": "_embed_body_fields",
+                    "type": "bool"
+                },
+                {
+                    "name": "body_field",
+                    "type": "ModelField | None"
+                },
+                {
+                    "name": "is_sse_stream",
+                    "type": "bool"
+                },
+                {
+                    "name": "is_json_stream",
+                    "type": "bool"
+                }
+            ],
+            "line_number": 1334
+        },
+        {
+            "type": "class",
+            "name": "RouteContext",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "route",
+                    "type": "BaseRoute"
+                },
+                {
+                    "name": "_route_context",
+                    "type": "_EffectiveRouteContext | None"
+                }
+            ],
+            "line_number": 1477
+        },
+        {
+            "type": "class",
+            "name": "_IncludedRouter",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "original_router",
+                    "type": "'APIRouter'"
+                },
+                {
+                    "name": "include_context",
+                    "type": "_RouterIncludeContext"
+                },
+                {
+                    "name": "_effective_candidates",
+                    "type": "list['_EffectiveRouteContext | _IncludedRouter']"
+                },
+                {
+                    "name": "_effective_candidates_version",
+                    "type": "int | None"
+                },
+                {
+                    "name": "_effective_low_priority_routes",
+                    "type": "list['_EffectiveRouteContext']"
+                },
+                {
+                    "name": "_effective_low_priority_routes_version",
+                    "type": "int | None"
+                }
+            ],
+            "line_number": 1518
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_iter_included_route_candidates",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "routes",
+                    "type": "Sequence[BaseRoute]"
+                }
+            ],
+            "return_type": "Iterator[BaseRoute]",
+            "line_number": 1740
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "iter_route_contexts",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "routes",
+                    "type": "Sequence[BaseRoute | RouteContext]"
+                }
+            ],
+            "return_type": "Iterator[RouteContext]",
+            "line_number": 1748
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_iter_routes_with_context",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "routes",
+                    "type": "Sequence[BaseRoute]"
+                }
+            ],
+            "return_type": "Iterator[tuple[BaseRoute, _EffectiveRouteContext | None]]",
+            "line_number": 1762
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_normalize_frontend_path",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 1773
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_join_frontend_paths",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "prefix",
+                    "type": "str"
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 1783
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_frontend_path_specificity",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "int",
+            "line_number": 1791
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_get_resolved_absolute_path",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str | os.PathLike[str]"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 1797
+        },
+        {
+            "type": "class",
+            "name": "_FrontendStaticFiles",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 1801
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_iter_accept_media_types",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "accept",
+                    "type": "str"
+                }
+            ],
+            "return_type": "Iterator[tuple[str, float]]",
+            "line_number": 1904
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_is_frontend_navigation_request",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 1921
+        },
+        {
+            "type": "class",
+            "name": "_FrontendRoute",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 1942
+        },
+        {
+            "type": "class",
+            "name": "_FrontendRouteGroup",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 1994
+        },
+        {
+            "type": "class",
+            "name": "APIRouter",
+            "docstring": "`APIRouter` class, used to group *path operations*, for example to structure\nan app in multiple files. It would then be included in the `FastAPI` app, or\nin another `APIRouter` (ultimately included in the app).\n\nRead more about it in the\n[FastAPI docs for Bigger Applications - Multiple Files](https://fastapi.tiangolo.com/tutorial/bigger-applications/).\n\n## Example\n\n```python\nfrom fastapi import APIRouter, FastAPI\n\napp = FastAPI()\nrouter = APIRouter()\n\n\n@router.get(\"/users/\", tags=[\"users\"])\nasync def read_users():\n    return [{\"username\": \"Rick\"}, {\"username\": \"Morty\"}]\n\n\napp.include_router(router)\n```",
+            "attributes": [],
+            "line_number": 2061
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "app",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                },
+                {
+                    "name": "receive",
+                    "type": "Receive"
+                },
+                {
+                    "name": "send",
+                    "type": "Send"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 126
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "app",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                },
+                {
+                    "name": "receive",
+                    "type": "Receive"
+                },
+                {
+                    "name": "send",
+                    "type": "Send"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 165
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "cm",
+                    "type": "AbstractContextManager[_T]"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 192
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "__aenter__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "_T",
+            "line_number": 195
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "__aexit__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "exc_type",
+                    "type": "type[BaseException] | None"
+                },
+                {
+                    "name": "exc_value",
+                    "type": "BaseException | None"
+                },
+                {
+                    "name": "traceback",
+                    "type": "types.TracebackType | None"
+                }
+            ],
+            "return_type": "bool | None",
+            "line_number": 198
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "wrapper",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "app",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "_AsyncLiftContextManager[Any]",
+            "line_number": 219
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "merged_lifespan",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "app",
+                    "type": "AppType"
+                }
+            ],
+            "return_type": "AsyncIterator[Mapping[str, Any] | None]",
+            "line_number": 229
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "router",
+                    "type": "'APIRouter'"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 253
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "__aenter__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "None",
+            "line_number": 256
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "__aexit__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "None",
+            "line_number": 259
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__call__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": "_T"
+                },
+                {
+                    "name": "app",
+                    "type": "object"
+                }
+            ],
+            "return_type": "_T",
+            "line_number": 262
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "app",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": "Request"
+                }
+            ],
+            "return_type": "Response",
+            "line_number": 398
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "app",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 753
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "endpoint",
+                    "type": "Callable[..., Any]"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 786
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "matches",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "tuple[Match, Scope]",
+            "line_number": 820
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "endpoint",
+                    "type": "Callable[..., Any]"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 1121
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_route_handler",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "Callable[[Request], Coroutine[Any, Any, Response]]",
+            "line_number": 1185
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "matches",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "tuple[Match, Scope]",
+            "line_number": 1211
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "handle",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                },
+                {
+                    "name": "receive",
+                    "type": "Receive"
+                },
+                {
+                    "name": "send",
+                    "type": "Send"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 1221
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "for_include",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "cls",
+                    "type": ""
+                }
+            ],
+            "return_type": "'_RouterIncludeContext'",
+            "line_number": 1266
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "combine",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "child_context",
+                    "type": "'_RouterIncludeContext'"
+                }
+            ],
+            "return_type": "'_RouterIncludeContext'",
+            "line_number": 1303
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "path_for",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "route",
+                    "type": "_RouteWithPath"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 1329
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "from_api_route",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "cls",
+                    "type": ""
+                }
+            ],
+            "return_type": "'_EffectiveRouteContext'",
+            "line_number": 1386
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "matches",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "tuple[Match, Scope]",
+            "line_number": 1439
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "url_path_for",
+            "docstring": "",
+            "args": [],
+            "return_type": "Any",
+            "line_number": 1460
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "original_route",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "BaseRoute",
+            "line_number": 1482
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_effective_route",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "BaseRoute | _EffectiveRouteContext",
+            "line_number": 1488
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "path",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "str | None",
+            "line_number": 1494
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "path_format",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "str | None",
+            "line_number": 1498
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "name",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "str | None",
+            "line_number": 1502
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "methods",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "set[str] | None",
+            "line_number": 1506
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "endpoint",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "Callable[..., Any] | None",
+            "line_number": 1510
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__getattr__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "name",
+                    "type": "str"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 1513
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "effective_candidates",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "list['_EffectiveRouteContext | _IncludedRouter']",
+            "line_number": 1530
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "effective_low_priority_routes",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "list['_EffectiveRouteContext']",
+            "line_number": 1551
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_build_effective_context",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "route",
+                    "type": "BaseRoute"
+                }
+            ],
+            "return_type": "_EffectiveRouteContext | None",
+            "line_number": 1573
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_match",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "tuple[Match, Scope, BaseRoute | None, _EffectiveRouteContext | None]",
+            "line_number": 1648
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "matches",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "tuple[Match, Scope]",
+            "line_number": 1684
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "handle",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                },
+                {
+                    "name": "receive",
+                    "type": "Receive"
+                },
+                {
+                    "name": "send",
+                    "type": "Send"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 1698
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "_handle_selected",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                },
+                {
+                    "name": "receive",
+                    "type": "Receive"
+                },
+                {
+                    "name": "send",
+                    "type": "Send"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 1702
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "effective_route_contexts",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "Iterator[_EffectiveRouteContext]",
+            "line_number": 1724
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "url_path_for",
+            "docstring": "",
+            "args": [],
+            "return_type": "Any",
+            "line_number": 1731
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "None",
+            "line_number": 1802
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_check_fallback_file",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "fallback",
+                    "type": "str"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 1824
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_get_resolved_directory",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "str",
+            "line_number": 1833
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_path",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 1837
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_response",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "Response",
+            "line_number": 1842
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_fallback_file_exists",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "fallback",
+                    "type": "str"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 1885
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "_fallback_response",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "fallback",
+                    "type": "str"
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "Response",
+            "line_number": 1889
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 1943
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "with_path",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "'_FrontendRoute'",
+            "line_number": 1961
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "matches",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "tuple[Match, Scope]",
+            "line_number": 1966
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_get_frontend_path",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "route_path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "str | None",
+            "line_number": 1977
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "handle",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                },
+                {
+                    "name": "receive",
+                    "type": "Receive"
+                },
+                {
+                    "name": "send",
+                    "type": "Send"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 1987
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "url_path_for",
+            "docstring": "",
+            "args": [],
+            "return_type": "URLPath",
+            "line_number": 1990
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "None",
+            "line_number": 1995
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "add_frontend_route",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 1998
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "with_prefix",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "prefix",
+                    "type": "str"
+                }
+            ],
+            "return_type": "'_FrontendRouteGroup'",
+            "line_number": 2015
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "matches",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "tuple[Match, Scope]",
+            "line_number": 2023
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_match",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "tuple[Match, Scope, _FrontendRoute | None]",
+            "line_number": 2027
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "handle",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                },
+                {
+                    "name": "receive",
+                    "type": "Receive"
+                },
+                {
+                    "name": "send",
+                    "type": "Send"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 2050
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "url_path_for",
+            "docstring": "",
+            "args": [],
+            "return_type": "URLPath",
+            "line_number": 2057
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "None",
+            "line_number": 2088
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_mark_routes_changed",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "None",
+            "line_number": 2376
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_get_routes_version",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "seen",
+                    "type": "set[int] | None"
+                }
+            ],
+            "return_type": "int",
+            "line_number": 2379
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_contains_router",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "router",
+                    "type": "'APIRouter'"
+                },
+                {
+                    "name": "seen",
+                    "type": "set[int] | None"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 2392
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "add_route",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "endpoint",
+                    "type": "Callable[[Request], Awaitable[Response] | Response]"
+                },
+                {
+                    "name": "methods",
+                    "type": "Collection[str] | None"
+                },
+                {
+                    "name": "name",
+                    "type": "str | None"
+                },
+                {
+                    "name": "include_in_schema",
+                    "type": "bool"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 2410
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "add_websocket_route",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "endpoint",
+                    "type": "Callable[[WebSocket], Awaitable[None]]"
+                },
+                {
+                    "name": "name",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 2427
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "frontend",
+            "docstring": "Serve a static frontend build as low-priority routes.\n\nUse this for frontend tools that build static files into a directory,\nsuch as `dist`. **FastAPI** path operations are checked first, and\nthe frontend files are checked only if no normal route matched.\n\nA typical project could look like this:\n\n```text\n.\n├── pyproject.toml\n├── app\n│   ├── __init__.py\n│   └── main.py\n└── dist\n    ├── index.html\n    └── assets\n        └── app.js\n```\n\nThen in `app/main.py`:\n\n```python\nfrom fastapi import APIRouter, FastAPI\n\napp = FastAPI()\nrouter = APIRouter()\nrouter.frontend(\"/\", directory=\"dist\")\napp.include_router(router)\n```",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "Annotated[str, Doc('\\n                The URL path prefix where the frontend build should be served.\\n                ')]"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 2436
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "app",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                },
+                {
+                    "name": "receive",
+                    "type": "Receive"
+                },
+                {
+                    "name": "send",
+                    "type": "Send"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 2516
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "handle",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                },
+                {
+                    "name": "receive",
+                    "type": "Receive"
+                },
+                {
+                    "name": "send",
+                    "type": "Send"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 2580
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "matches",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "tuple[Match, Scope]",
+            "line_number": 2590
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_iter_low_priority_routes",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "Iterator[BaseRoute | _EffectiveRouteContext]",
+            "line_number": 2600
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_match_low_priority",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                }
+            ],
+            "return_type": "tuple[Match, Scope, BaseRoute | None, _EffectiveRouteContext | None]",
+            "line_number": 2608
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "route",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "methods",
+                    "type": "Collection[str] | None"
+                },
+                {
+                    "name": "name",
+                    "type": "str | None"
+                },
+                {
+                    "name": "include_in_schema",
+                    "type": "bool"
+                }
+            ],
+            "return_type": "Callable[[DecoratedCallable], DecoratedCallable]",
+            "line_number": 2654
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "add_api_route",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "endpoint",
+                    "type": "Callable[..., Any]"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 2673
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "api_route",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "Callable[[DecoratedCallable], DecoratedCallable]",
+            "line_number": 2757
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "add_api_websocket_route",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "endpoint",
+                    "type": "Callable[..., Any]"
+                },
+                {
+                    "name": "name",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 2819
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "websocket",
+            "docstring": "Decorate a WebSocket function.\n\nRead more about it in the\n[FastAPI docs for WebSockets](https://fastapi.tiangolo.com/advanced/websockets/).\n\n**Example**\n\n## Example\n\n```python\nfrom fastapi import APIRouter, FastAPI, WebSocket\n\napp = FastAPI()\nrouter = APIRouter()\n\n@router.websocket(\"/ws\")\nasync def websocket_endpoint(websocket: WebSocket):\n    await websocket.accept()\n    while True:\n        data = await websocket.receive_text()\n        await websocket.send_text(f\"Message text was: {data}\")\n\napp.include_router(router)\n```",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "Annotated[str, Doc('\\n                WebSocket path.\\n                ')]"
+                },
+                {
+                    "name": "name",
+                    "type": "Annotated[str | None, Doc('\\n                A name for the WebSocket. Only used internally.\\n                ')]"
+                }
+            ],
+            "return_type": "Callable[[DecoratedCallable], DecoratedCallable]",
+            "line_number": 2841
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "websocket_route",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "name",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "Callable[[DecoratedCallable], DecoratedCallable]",
+            "line_number": 2908
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "include_router",
+            "docstring": "Include another `APIRouter` in the same current `APIRouter`.\n\nRead more about it in the\n[FastAPI docs for Bigger Applications](https://fastapi.tiangolo.com/tutorial/bigger-applications/).\n\n## Example\n\n```python\nfrom fastapi import APIRouter, FastAPI\n\napp = FastAPI()\ninternal_router = APIRouter()\nusers_router = APIRouter()\n\n@users_router.get(\"/users/\")\ndef read_users():\n    return [{\"name\": \"Rick\"}, {\"name\": \"Morty\"}]\n\ninternal_router.include_router(users_router)\napp.include_router(internal_router)\n```",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "router",
+                    "type": "Annotated['APIRouter', Doc('The `APIRouter` to include.')]"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 2917
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get",
+            "docstring": "Add a *path operation* using an HTTP GET operation.\n\n## Example\n\n```python\nfrom fastapi import APIRouter, FastAPI\n\napp = FastAPI()\nrouter = APIRouter()\n\n@router.get(\"/items/\")\ndef read_items():\n    return [{\"name\": \"Empanada\"}, {\"name\": \"Arepa\"}]\n\napp.include_router(router)\n```",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "Annotated[str, Doc('\\n                The URL path to be used for this *path operation*.\\n\\n                For example, in `http://example.com/items`, the path is `/items`.\\n                ')]"
+                }
+            ],
+            "return_type": "Callable[[DecoratedCallable], DecoratedCallable]",
+            "line_number": 3106
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "put",
+            "docstring": "Add a *path operation* using an HTTP PUT operation.\n\n## Example\n\n```python\nfrom fastapi import APIRouter, FastAPI\nfrom pydantic import BaseModel\n\nclass Item(BaseModel):\n    name: str\n    description: str | None = None\n\napp = FastAPI()\nrouter = APIRouter()\n\n@router.put(\"/items/{item_id}\")\ndef replace_item(item_id: str, item: Item):\n    return {\"message\": \"Item replaced\", \"id\": item_id}\n\napp.include_router(router)\n```",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "Annotated[str, Doc('\\n                The URL path to be used for this *path operation*.\\n\\n                For example, in `http://example.com/items`, the path is `/items`.\\n                ')]"
+                }
+            ],
+            "return_type": "Callable[[DecoratedCallable], DecoratedCallable]",
+            "line_number": 3483
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post",
+            "docstring": "Add a *path operation* using an HTTP POST operation.\n\n## Example\n\n```python\nfrom fastapi import APIRouter, FastAPI\nfrom pydantic import BaseModel\n\nclass Item(BaseModel):\n    name: str\n    description: str | None = None\n\napp = FastAPI()\nrouter = APIRouter()\n\n@router.post(\"/items/\")\ndef create_item(item: Item):\n    return {\"message\": \"Item created\"}\n\napp.include_router(router)\n```",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "Annotated[str, Doc('\\n                The URL path to be used for this *path operation*.\\n\\n                For example, in `http://example.com/items`, the path is `/items`.\\n                ')]"
+                }
+            ],
+            "return_type": "Callable[[DecoratedCallable], DecoratedCallable]",
+            "line_number": 3865
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "delete",
+            "docstring": "Add a *path operation* using an HTTP DELETE operation.\n\n## Example\n\n```python\nfrom fastapi import APIRouter, FastAPI\n\napp = FastAPI()\nrouter = APIRouter()\n\n@router.delete(\"/items/{item_id}\")\ndef delete_item(item_id: str):\n    return {\"message\": \"Item deleted\"}\n\napp.include_router(router)\n```",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "Annotated[str, Doc('\\n                The URL path to be used for this *path operation*.\\n\\n                For example, in `http://example.com/items`, the path is `/items`.\\n                ')]"
+                }
+            ],
+            "return_type": "Callable[[DecoratedCallable], DecoratedCallable]",
+            "line_number": 4247
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "options",
+            "docstring": "Add a *path operation* using an HTTP OPTIONS operation.\n\n## Example\n\n```python\nfrom fastapi import APIRouter, FastAPI\n\napp = FastAPI()\nrouter = APIRouter()\n\n@router.options(\"/items/\")\ndef get_item_options():\n    return {\"additions\": [\"Aji\", \"Guacamole\"]}\n\napp.include_router(router)\n```",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "Annotated[str, Doc('\\n                The URL path to be used for this *path operation*.\\n\\n                For example, in `http://example.com/items`, the path is `/items`.\\n                ')]"
+                }
+            ],
+            "return_type": "Callable[[DecoratedCallable], DecoratedCallable]",
+            "line_number": 4624
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "head",
+            "docstring": "Add a *path operation* using an HTTP HEAD operation.\n\n## Example\n\n```python\nfrom fastapi import APIRouter, FastAPI\nfrom pydantic import BaseModel\n\nclass Item(BaseModel):\n    name: str\n    description: str | None = None\n\napp = FastAPI()\nrouter = APIRouter()\n\n@router.head(\"/items/\", status_code=204)\ndef get_items_headers(response: Response):\n    response.headers[\"X-Cat-Dog\"] = \"Alone in the world\"\n\napp.include_router(router)\n```",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "Annotated[str, Doc('\\n                The URL path to be used for this *path operation*.\\n\\n                For example, in `http://example.com/items`, the path is `/items`.\\n                ')]"
+                }
+            ],
+            "return_type": "Callable[[DecoratedCallable], DecoratedCallable]",
+            "line_number": 5001
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "patch",
+            "docstring": "Add a *path operation* using an HTTP PATCH operation.\n\n## Example\n\n```python\nfrom fastapi import APIRouter, FastAPI\nfrom pydantic import BaseModel\n\nclass Item(BaseModel):\n    name: str\n    description: str | None = None\n\napp = FastAPI()\nrouter = APIRouter()\n\n@router.patch(\"/items/\")\ndef update_item(item: Item):\n    return {\"message\": \"Item updated in place\"}\n\napp.include_router(router)\n```",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "Annotated[str, Doc('\\n                The URL path to be used for this *path operation*.\\n\\n                For example, in `http://example.com/items`, the path is `/items`.\\n                ')]"
+                }
+            ],
+            "return_type": "Callable[[DecoratedCallable], DecoratedCallable]",
+            "line_number": 5383
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "trace",
+            "docstring": "Add a *path operation* using an HTTP TRACE operation.\n\n## Example\n\n```python\nfrom fastapi import APIRouter, FastAPI\nfrom pydantic import BaseModel\n\nclass Item(BaseModel):\n    name: str\n    description: str | None = None\n\napp = FastAPI()\nrouter = APIRouter()\n\n@router.trace(\"/items/{item_id}\")\ndef trace_item(item_id: str):\n    return None\n\napp.include_router(router)\n```",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "path",
+                    "type": "Annotated[str, Doc('\\n                The URL path to be used for this *path operation*.\\n\\n                For example, in `http://example.com/items`, the path is `/items`.\\n                ')]"
+                }
+            ],
+            "return_type": "Callable[[DecoratedCallable], DecoratedCallable]",
+            "line_number": 5765
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "_startup",
+            "docstring": "Run any `.on_startup` event handlers.\n\nThis method is kept for backward compatibility after Starlette removed\nsupport for on_startup/on_shutdown handlers.\n\nRef: https://github.com/Kludex/starlette/pull/3117",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "None",
+            "line_number": 6148
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "_shutdown",
+            "docstring": "Run any `.on_shutdown` event handlers.\n\nThis method is kept for backward compatibility after Starlette removed\nsupport for on_startup/on_shutdown handlers.\n\nRef: https://github.com/Kludex/starlette/pull/3117",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "None",
+            "line_number": 6164
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "add_event_handler",
+            "docstring": "Add an event handler function for startup or shutdown.\n\nThis method is kept for backward compatibility after Starlette removed\nsupport for on_startup/on_shutdown handlers.\n\nRef: https://github.com/Kludex/starlette/pull/3117",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "event_type",
+                    "type": "str"
+                },
+                {
+                    "name": "func",
+                    "type": "Callable[[], Any]"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 6180
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "on_event",
+            "docstring": "Add an event handler for the router.\n\n`on_event` is deprecated, use `lifespan` event handlers instead.\n\nRead more about it in the\n[FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/#alternative-events-deprecated).",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "event_type",
+                    "type": "Annotated[str, Doc('\\n                The type of event. `startup` or `shutdown`.\\n                ')]"
+                }
+            ],
+            "return_type": "Callable[[DecoratedCallable], DecoratedCallable]",
+            "line_number": 6207
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "app",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                },
+                {
+                    "name": "receive",
+                    "type": "Receive"
+                },
+                {
+                    "name": "send",
+                    "type": "Send"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 129
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "app",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "scope",
+                    "type": "Scope"
+                },
+                {
+                    "name": "receive",
+                    "type": "Receive"
+                },
+                {
+                    "name": "send",
+                    "type": "Send"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 168
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "decorator",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "func",
+                    "type": "DecoratedCallable"
+                }
+            ],
+            "return_type": "DecoratedCallable",
+            "line_number": 2661
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "decorator",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "func",
+                    "type": "DecoratedCallable"
+                }
+            ],
+            "return_type": "DecoratedCallable",
+            "line_number": 2787
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "decorator",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "func",
+                    "type": "DecoratedCallable"
+                }
+            ],
+            "return_type": "DecoratedCallable",
+            "line_number": 2900
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "decorator",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "func",
+                    "type": "DecoratedCallable"
+                }
+            ],
+            "return_type": "DecoratedCallable",
+            "line_number": 2911
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "decorator",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "func",
+                    "type": "DecoratedCallable"
+                }
+            ],
+            "return_type": "DecoratedCallable",
+            "line_number": 6227
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_serialize_data",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "data",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "bytes",
+            "line_number": 487
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_serialize_sse_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "bytes",
+            "line_number": 516
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "_sse_producer_cm",
+            "docstring": "",
+            "args": [],
+            "return_type": "AsyncIterator[ObjectReceiveStream[bytes]]",
+            "line_number": 551
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "_sse_with_checkpoints",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "stream",
+                    "type": "ObjectReceiveStream[bytes]"
+                }
+            ],
+            "return_type": "AsyncIterator[bytes]",
+            "line_number": 613
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "_producer",
+            "docstring": "",
+            "args": [],
+            "return_type": "None",
+            "line_number": 572
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "_keepalive_inserter",
+            "docstring": "Read from the producer and forward to the output,\ninserting keepalive comments on timeout.",
+            "args": [],
+            "return_type": "None",
+            "line_number": 581
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_serialize_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item",
+                    "type": "Any"
+                }
+            ],
+            "return_type": "bytes",
+            "line_number": 640
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "_async_stream_jsonl",
+            "docstring": "",
+            "args": [],
+            "return_type": "AsyncIterator[bytes]",
+            "line_number": 645
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "_sync_stream_jsonl",
+            "docstring": "",
+            "args": [],
+            "return_type": "Iterator[bytes]",
+            "line_number": 657
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "_async_stream_raw",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "async_gen",
+                    "type": "AsyncIterator[Any]"
+                }
+            ],
+            "return_type": "AsyncIterator[Any]",
+            "line_number": 674
+        }
+    ]
+}

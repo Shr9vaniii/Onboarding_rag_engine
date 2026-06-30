@@ -1,0 +1,32 @@
+{
+    "file_path": "tests\\test_swagger_ui_init_oauth.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_items",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 10
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_swagger_ui",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_response",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 26
+        }
+    ]
+}

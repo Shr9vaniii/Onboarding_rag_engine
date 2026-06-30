@@ -1,0 +1,39 @@
+{
+    "file_path": "docs_src\\pydantic_v1_in_v2\\tutorial004_an_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "description",
+                    "type": "str | None"
+                },
+                {
+                    "name": "size",
+                    "type": "float"
+                }
+            ],
+            "line_number": 8
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "create_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item",
+                    "type": "Annotated[Item, Body(embed=True)]"
+                }
+            ],
+            "return_type": "Item",
+            "line_number": 18
+        }
+    ]
+}

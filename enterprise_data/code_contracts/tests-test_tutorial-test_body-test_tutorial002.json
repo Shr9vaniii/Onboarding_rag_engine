@@ -1,0 +1,83 @@
+{
+    "file_path": "tests\\test_tutorial\\test_body\\test_tutorial002.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_client",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": "pytest.FixtureRequest"
+                }
+            ],
+            "return_type": "",
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_post_with_tax",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                },
+                {
+                    "name": "price",
+                    "type": "str | float"
+                }
+            ],
+            "return_type": "",
+            "line_number": 24
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_post_without_tax",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                },
+                {
+                    "name": "price",
+                    "type": "str | float"
+                }
+            ],
+            "return_type": "",
+            "line_number": 40
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_post_with_no_data",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 53
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 74
+        }
+    ]
+}

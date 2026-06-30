@@ -1,0 +1,23 @@
+{
+    "file_path": "docs_src\\custom_response\\tutorial004_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "generate_html_response",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 7
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_items",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 22
+        }
+    ]
+}

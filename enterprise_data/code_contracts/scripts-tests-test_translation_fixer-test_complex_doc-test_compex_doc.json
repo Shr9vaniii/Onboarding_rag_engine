@@ -1,0 +1,27 @@
+{
+    "file_path": "scripts\\tests\\test_translation_fixer\\test_complex_doc\\test_compex_doc.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_fix",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "runner",
+                    "type": "CliRunner"
+                },
+                {
+                    "name": "root_dir",
+                    "type": "Path"
+                },
+                {
+                    "name": "copy_test_files",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 18
+        }
+    ]
+}

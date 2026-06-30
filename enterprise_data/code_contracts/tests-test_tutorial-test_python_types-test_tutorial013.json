@@ -1,0 +1,14 @@
+{
+    "file_path": "tests\\test_tutorial\\test_python_types\\test_tutorial013.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_say_hello",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 4
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "file_path": "tests\\test_top_level_security_scheme_in_openapi.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_root",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 15
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_root",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 22
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_root_no_token",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 28
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 34
+        }
+    ]
+}

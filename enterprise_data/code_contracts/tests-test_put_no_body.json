@@ -1,0 +1,46 @@
+{
+    "file_path": "tests\\test_put_no_body.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "save_item_no_body",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item_id",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 9
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_put_no_body",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_put_no_body_with_body",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 22
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 28
+        }
+    ]
+}

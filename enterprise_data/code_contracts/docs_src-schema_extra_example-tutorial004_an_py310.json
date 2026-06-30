@@ -1,0 +1,38 @@
+{
+    "file_path": "docs_src\\schema_extra_example\\tutorial004_an_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "description",
+                    "type": "str | None"
+                },
+                {
+                    "name": "price",
+                    "type": "float"
+                },
+                {
+                    "name": "tax",
+                    "type": "float | None"
+                }
+            ],
+            "line_number": 9
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "update_item",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 17
+        }
+    ]
+}

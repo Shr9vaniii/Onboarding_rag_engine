@@ -1,0 +1,97 @@
+{
+    "file_path": "tests\\test_request_params\\test_path\\test_required_str.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_required_str",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[str, Path()]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 12
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_required_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[str, Path(alias='p_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_required_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[str, Path(validation_alias='p_val_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 22
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_required_alias_and_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[str, Path(alias='p_alias', validation_alias='p_val_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 29
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                },
+                {
+                    "name": "expected_name",
+                    "type": "str"
+                },
+                {
+                    "name": "expected_title",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 56
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_success",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 84
+        }
+    ]
+}

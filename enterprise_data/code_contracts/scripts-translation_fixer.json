@@ -1,0 +1,88 @@
+{
+    "file_path": "scripts\\translation_fixer.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "callback",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 27
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "iter_all_lang_paths",
+            "docstring": "Iterate on the markdown files to translate in order of priority.",
+            "args": [
+                {
+                    "name": "lang_path_root",
+                    "type": "Path"
+                }
+            ],
+            "return_type": "Iterable[Path]",
+            "line_number": 31
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_all_paths",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "lang",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 56
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "process_one_page",
+            "docstring": "Fix one translated document by comparing it to the English version.\n\nReturns True if processed successfully, False otherwise.",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "Path"
+                }
+            ],
+            "return_type": "bool",
+            "line_number": 66
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "fix_all",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "ctx",
+                    "type": "typer.Context"
+                },
+                {
+                    "name": "language",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 103
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "fix_pages",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "doc_paths",
+                    "type": "Annotated[list[Path], typer.Argument(help='List of paths to documents.')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 117
+        }
+    ]
+}

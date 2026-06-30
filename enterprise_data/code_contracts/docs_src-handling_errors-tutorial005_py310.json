@@ -1,0 +1,53 @@
+{
+    "file_path": "docs_src\\handling_errors\\tutorial005_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "validation_exception_handler",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": "Request"
+                },
+                {
+                    "name": "exc",
+                    "type": "RequestValidationError"
+                }
+            ],
+            "return_type": "",
+            "line_number": 11
+        },
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "title",
+                    "type": "str"
+                },
+                {
+                    "name": "size",
+                    "type": "int"
+                }
+            ],
+            "line_number": 18
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "create_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 24
+        }
+    ]
+}

@@ -1,0 +1,117 @@
+{
+    "file_path": "tests\\test_tutorial\\test_testing_dependencies\\test_tutorial001.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_test_module",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": "pytest.FixtureRequest"
+                }
+            ],
+            "return_type": "ModuleType",
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_override_in_items_run",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "test_module",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 23
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_override_in_items_with_q_run",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "test_module",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 29
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_override_in_items_with_params_run",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "test_module",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 35
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_override_in_users",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "test_module",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 41
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_override_in_users_with_q",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "test_module",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 51
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_override_in_users_with_params",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "test_module",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 61
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_normal_app",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "test_module",
+                    "type": "ModuleType"
+                }
+            ],
+            "return_type": "",
+            "line_number": 71
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "file_path": "scripts\\playwright\\cookie_param_models\\image01.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "run",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "playwright",
+                    "type": "Playwright"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 9
+        }
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "file_path": "docs_src\\extra_models\\tutorial002_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "UserBase",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "username",
+                    "type": "str"
+                },
+                {
+                    "name": "email",
+                    "type": "EmailStr"
+                },
+                {
+                    "name": "full_name",
+                    "type": "str | None"
+                }
+            ],
+            "line_number": 7
+        },
+        {
+            "type": "class",
+            "name": "UserIn",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "password",
+                    "type": "str"
+                }
+            ],
+            "line_number": 13
+        },
+        {
+            "type": "class",
+            "name": "UserOut",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 17
+        },
+        {
+            "type": "class",
+            "name": "UserInDB",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "hashed_password",
+                    "type": "str"
+                }
+            ],
+            "line_number": 21
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "fake_password_hasher",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "raw_password",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 25
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "fake_save_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "user_in",
+                    "type": "UserIn"
+                }
+            ],
+            "return_type": "",
+            "line_number": 29
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "create_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "user_in",
+                    "type": "UserIn"
+                }
+            ],
+            "return_type": "",
+            "line_number": 37
+        }
+    ]
+}

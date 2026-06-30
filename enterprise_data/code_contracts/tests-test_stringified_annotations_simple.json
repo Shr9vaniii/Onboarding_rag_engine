@@ -1,0 +1,53 @@
+{
+    "file_path": "tests\\test_stringified_annotations_simple.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Dep",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 11
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_stringified_annotations",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__call__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "request",
+                    "type": "Request"
+                }
+            ],
+            "return_type": "",
+            "line_number": 12
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "call",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "test",
+                    "type": "Annotated[str, Depends(Dep())]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 23
+        }
+    ]
+}

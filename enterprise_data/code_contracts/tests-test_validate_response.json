@@ -1,0 +1,129 @@
+{
+    "file_path": "tests\\test_validate_response.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "price",
+                    "type": "float | None"
+                },
+                {
+                    "name": "owner_ids",
+                    "type": "list[int] | None"
+                }
+            ],
+            "line_number": 10
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_invalid",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_invalid_none",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 22
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_valid_none",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "send_none",
+                    "type": "bool"
+                }
+            ],
+            "return_type": "",
+            "line_number": 27
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_innerinvalid",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 35
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_invalidlist",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 40
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_invalid",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 51
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_invalid_none",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 56
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_valid_none_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 61
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_valid_none_none",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 68
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_double_invalid",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 75
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_invalid_list",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 80
+        }
+    ]
+}

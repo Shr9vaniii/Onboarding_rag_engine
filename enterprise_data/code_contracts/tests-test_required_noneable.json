@@ -1,0 +1,110 @@
+{
+    "file_path": "tests\\test_required_noneable.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_query",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "q",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 8
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_explicit_query",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "q",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 13
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "send_body_embed",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "b",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 18
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_nonable_query_invalid",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 25
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_noneable_query_value",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 30
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_nonable_explicit_query_invalid",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 36
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_nonable_explicit_query_value",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 41
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_nonable_body_embed_no_content",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 47
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_nonable_body_embed_invalid",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 52
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_noneable_body_embed_value",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 57
+        }
+    ]
+}

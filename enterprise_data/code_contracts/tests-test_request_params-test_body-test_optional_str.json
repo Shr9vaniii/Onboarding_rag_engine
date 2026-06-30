@@ -1,0 +1,461 @@
+{
+    "file_path": "tests\\test_request_params\\test_body\\test_optional_str.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_optional_str",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[str | None, Body(embed=True)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 17
+        },
+        {
+            "type": "class",
+            "name": "BodyModelOptionalStr",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "p",
+                    "type": "str | None"
+                }
+            ],
+            "line_number": 21
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_model_optional_str",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "BodyModelOptionalStr"
+                }
+            ],
+            "return_type": "",
+            "line_number": 26
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_str_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 34
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_str_missing",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 50
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_model_optional_str_missing",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 57
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_str_missing_empty_dict",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 77
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_str",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 88
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_optional_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[str | None, Body(embed=True, alias='p_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 100
+        },
+        {
+            "type": "class",
+            "name": "BodyModelOptionalAlias",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "p",
+                    "type": "str | None"
+                }
+            ],
+            "line_number": 106
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_model_optional_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "BodyModelOptionalAlias"
+                }
+            ],
+            "return_type": "",
+            "line_number": 111
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_str_alias_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 122
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_alias_missing",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 138
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_model_optional_alias_missing",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 145
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_model_optional_alias_missing_empty_dict",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 165
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_alias_by_name",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 176
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_alias_by_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 187
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_optional_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[str | None, Body(embed=True, validation_alias='p_val_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 199
+        },
+        {
+            "type": "class",
+            "name": "BodyModelOptionalValidationAlias",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "p",
+                    "type": "str | None"
+                }
+            ],
+            "line_number": 205
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_model_optional_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "BodyModelOptionalValidationAlias"
+                }
+            ],
+            "return_type": "",
+            "line_number": 212
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_validation_alias_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 222
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_validation_alias_missing",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 238
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_model_optional_validation_alias_missing",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 245
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_model_optional_validation_alias_missing_empty_dict",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 265
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_validation_alias_by_name",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 279
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_validation_alias_by_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 293
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_optional_alias_and_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[str | None, Body(embed=True, alias='p_alias', validation_alias='p_val_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 308
+        },
+        {
+            "type": "class",
+            "name": "BodyModelOptionalAliasAndValidationAlias",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "p",
+                    "type": "str | None"
+                }
+            ],
+            "line_number": 316
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_model_optional_alias_and_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "BodyModelOptionalAliasAndValidationAlias"
+                }
+            ],
+            "return_type": "",
+            "line_number": 324
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_alias_and_validation_alias_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 337
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_alias_and_validation_alias_missing",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 353
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_model_optional_alias_and_validation_alias_missing",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 360
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_model_optional_alias_and_validation_alias_missing_empty_dict",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 383
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_alias_and_validation_alias_by_name",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 397
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_alias_and_validation_alias_by_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 411
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_optional_alias_and_validation_alias_by_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 425
+        }
+    ]
+}

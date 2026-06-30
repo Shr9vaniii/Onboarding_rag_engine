@@ -1,0 +1,410 @@
+{
+    "file_path": "scripts\\people.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "RateLimiter",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 27
+        },
+        {
+            "type": "class",
+            "name": "Author",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "login",
+                    "type": "str"
+                },
+                {
+                    "name": "avatarUrl",
+                    "type": "str | None"
+                },
+                {
+                    "name": "url",
+                    "type": "str | None"
+                }
+            ],
+            "line_number": 130
+        },
+        {
+            "type": "class",
+            "name": "CommentsNode",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "createdAt",
+                    "type": "datetime"
+                },
+                {
+                    "name": "author",
+                    "type": "Author | None"
+                },
+                {
+                    "name": "minimizedReason",
+                    "type": "LowerStr | None"
+                }
+            ],
+            "line_number": 136
+        },
+        {
+            "type": "class",
+            "name": "Replies",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "totalCount",
+                    "type": "int"
+                },
+                {
+                    "name": "nodes",
+                    "type": "list[CommentsNode]"
+                }
+            ],
+            "line_number": 142
+        },
+        {
+            "type": "class",
+            "name": "DiscussionsCommentsNode",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "minimizedReason",
+                    "type": "LowerStr | None"
+                },
+                {
+                    "name": "replies",
+                    "type": "Replies"
+                }
+            ],
+            "line_number": 147
+        },
+        {
+            "type": "class",
+            "name": "DiscussionsComments",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "totalCount",
+                    "type": "int"
+                },
+                {
+                    "name": "nodes",
+                    "type": "list[DiscussionsCommentsNode]"
+                }
+            ],
+            "line_number": 152
+        },
+        {
+            "type": "class",
+            "name": "DiscussionsNode",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "number",
+                    "type": "int"
+                },
+                {
+                    "name": "author",
+                    "type": "Author | None"
+                },
+                {
+                    "name": "title",
+                    "type": "str | None"
+                },
+                {
+                    "name": "createdAt",
+                    "type": "datetime"
+                },
+                {
+                    "name": "comments",
+                    "type": "DiscussionsComments"
+                }
+            ],
+            "line_number": 157
+        },
+        {
+            "type": "class",
+            "name": "DiscussionsEdge",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "cursor",
+                    "type": "str"
+                },
+                {
+                    "name": "node",
+                    "type": "DiscussionsNode"
+                }
+            ],
+            "line_number": 165
+        },
+        {
+            "type": "class",
+            "name": "Discussions",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "edges",
+                    "type": "list[DiscussionsEdge]"
+                }
+            ],
+            "line_number": 170
+        },
+        {
+            "type": "class",
+            "name": "DiscussionsRepository",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "discussions",
+                    "type": "Discussions"
+                }
+            ],
+            "line_number": 174
+        },
+        {
+            "type": "class",
+            "name": "DiscussionsResponseData",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "repository",
+                    "type": "DiscussionsRepository"
+                }
+            ],
+            "line_number": 178
+        },
+        {
+            "type": "class",
+            "name": "DiscussionsResponse",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "data",
+                    "type": "DiscussionsResponseData"
+                }
+            ],
+            "line_number": 182
+        },
+        {
+            "type": "class",
+            "name": "Settings",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "github_token",
+                    "type": "SecretStr"
+                },
+                {
+                    "name": "github_repository",
+                    "type": "str"
+                },
+                {
+                    "name": "httpx_timeout",
+                    "type": "int"
+                },
+                {
+                    "name": "speed_multiplier",
+                    "type": "float"
+                }
+            ],
+            "line_number": 186
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_graphql_response",
+            "docstring": "",
+            "args": [],
+            "return_type": "dict[str, Any]",
+            "line_number": 193
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_graphql_question_discussion_edges",
+            "docstring": "",
+            "args": [],
+            "return_type": "list[DiscussionsEdge]",
+            "line_number": 223
+        },
+        {
+            "type": "class",
+            "name": "DiscussionExpertsResults",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "commenters",
+                    "type": "Counter[str]"
+                },
+                {
+                    "name": "last_month_commenters",
+                    "type": "Counter[str]"
+                },
+                {
+                    "name": "three_months_commenters",
+                    "type": "Counter[str]"
+                },
+                {
+                    "name": "six_months_commenters",
+                    "type": "Counter[str]"
+                },
+                {
+                    "name": "one_year_commenters",
+                    "type": "Counter[str]"
+                },
+                {
+                    "name": "authors",
+                    "type": "dict[str, Author]"
+                }
+            ],
+            "line_number": 245
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_discussion_nodes",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "settings",
+                    "type": "Settings"
+                }
+            ],
+            "return_type": "list[DiscussionsNode]",
+            "line_number": 254
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_discussions_experts",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "discussion_nodes",
+                    "type": "list[DiscussionsNode]"
+                }
+            ],
+            "return_type": "DiscussionExpertsResults",
+            "line_number": 268
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_top_users",
+            "docstring": "",
+            "args": [],
+            "return_type": "list[dict[str, Any]]",
+            "line_number": 337
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_users_to_write",
+            "docstring": "",
+            "args": [],
+            "return_type": "list[dict[str, Any]]",
+            "line_number": 361
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "update_content",
+            "docstring": "",
+            "args": [],
+            "return_type": "bool",
+            "line_number": 383
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "main",
+            "docstring": "",
+            "args": [],
+            "return_type": "None",
+            "line_number": 395
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "None",
+            "line_number": 28
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__enter__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "'RateLimiter'",
+            "line_number": 35
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__exit__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "exc_type",
+                    "type": ""
+                },
+                {
+                    "name": "exc_val",
+                    "type": ""
+                },
+                {
+                    "name": "exc_tb",
+                    "type": ""
+                }
+            ],
+            "return_type": "None",
+            "line_number": 62
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "update_request_info",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "cost",
+                    "type": "int"
+                },
+                {
+                    "name": "remaining",
+                    "type": "int"
+                },
+                {
+                    "name": "reset_at",
+                    "type": "str"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 65
+        }
+    ]
+}

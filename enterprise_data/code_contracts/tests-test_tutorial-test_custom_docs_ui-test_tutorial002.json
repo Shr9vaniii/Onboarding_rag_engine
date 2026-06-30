@@ -1,0 +1,70 @@
+{
+    "file_path": "tests\\test_tutorial\\test_custom_docs_ui\\test_tutorial002.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "client",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 11
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_swagger_ui_html",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 23
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_swagger_ui_oauth2_redirect_html",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 31
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_redoc_html",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 38
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_api",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "client",
+                    "type": "TestClient"
+                }
+            ],
+            "return_type": "",
+            "line_number": 45
+        }
+    ]
+}

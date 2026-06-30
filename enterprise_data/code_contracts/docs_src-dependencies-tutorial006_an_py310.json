@@ -1,0 +1,42 @@
+{
+    "file_path": "docs_src\\dependencies\\tutorial006_an_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "verify_token",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "x_token",
+                    "type": "Annotated[str, Header()]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 8
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "verify_key",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "x_key",
+                    "type": "Annotated[str, Header()]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 13
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_items",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 20
+        }
+    ]
+}

@@ -1,0 +1,240 @@
+{
+    "file_path": "fastapi\\security\\http.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "HTTPBasicCredentials",
+            "docstring": "The HTTP Basic credentials given as the result of using `HTTPBasic` in a\ndependency.\n\nRead more about it in the\n[FastAPI docs for HTTP Basic Auth](https://fastapi.tiangolo.com/advanced/security/http-basic-auth/).",
+            "attributes": [
+                {
+                    "name": "username",
+                    "type": "Annotated[str, Doc('The HTTP Basic username.')]"
+                },
+                {
+                    "name": "password",
+                    "type": "Annotated[str, Doc('The HTTP Basic password.')]"
+                }
+            ],
+            "line_number": 16
+        },
+        {
+            "type": "class",
+            "name": "HTTPAuthorizationCredentials",
+            "docstring": "The HTTP authorization credentials in the result of using `HTTPBearer` or\n`HTTPDigest` in a dependency.\n\nThe HTTP authorization header value is split by the first space.\n\nThe first part is the `scheme`, the second part is the `credentials`.\n\nFor example, in an HTTP Bearer token scheme, the client will send a header\nlike:\n\n```\nAuthorization: Bearer deadbeef12346\n```\n\nIn this case:\n\n* `scheme` will have the value `\"Bearer\"`\n* `credentials` will have the value `\"deadbeef12346\"`",
+            "attributes": [
+                {
+                    "name": "scheme",
+                    "type": "Annotated[str, Doc('\\n            The HTTP authorization scheme extracted from the header value.\\n            ')]"
+                },
+                {
+                    "name": "credentials",
+                    "type": "Annotated[str, Doc('\\n            The HTTP authorization credentials extracted from the header value.\\n            ')]"
+                }
+            ],
+            "line_number": 29
+        },
+        {
+            "type": "class",
+            "name": "HTTPBase",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "model",
+                    "type": "HTTPBaseModel"
+                }
+            ],
+            "line_number": 69
+        },
+        {
+            "type": "class",
+            "name": "HTTPBasic",
+            "docstring": "HTTP Basic authentication.\n\nRef: https://datatracker.ietf.org/doc/html/rfc7617\n\n## Usage\n\nCreate an instance object and use that object as the dependency in `Depends()`.\n\nThe dependency result will be an `HTTPBasicCredentials` object containing the\n`username` and the `password`.\n\nRead more about it in the\n[FastAPI docs for HTTP Basic Auth](https://fastapi.tiangolo.com/advanced/security/http-basic-auth/).\n\n## Example\n\n```python\nfrom typing import Annotated\n\nfrom fastapi import Depends, FastAPI\nfrom fastapi.security import HTTPBasic, HTTPBasicCredentials\n\napp = FastAPI()\n\nsecurity = HTTPBasic()\n\n\n@app.get(\"/users/me\")\ndef read_current_user(credentials: Annotated[HTTPBasicCredentials, Depends(security)]):\n    return {\"username\": credentials.username, \"password\": credentials.password}\n```",
+            "attributes": [],
+            "line_number": 105
+        },
+        {
+            "type": "class",
+            "name": "HTTPBearer",
+            "docstring": "HTTP Bearer token authentication.\n\n## Usage\n\nCreate an instance object and use that object as the dependency in `Depends()`.\n\nThe dependency result will be an `HTTPAuthorizationCredentials` object containing\nthe `scheme` and the `credentials`.\n\n## Example\n\n```python\nfrom typing import Annotated\n\nfrom fastapi import Depends, FastAPI\nfrom fastapi.security import HTTPAuthorizationCredentials, HTTPBearer\n\napp = FastAPI()\n\nsecurity = HTTPBearer()\n\n\n@app.get(\"/users/me\")\ndef read_current_user(\n    credentials: Annotated[HTTPAuthorizationCredentials, Depends(security)]\n):\n    return {\"scheme\": credentials.scheme, \"credentials\": credentials.credentials}\n```",
+            "attributes": [],
+            "line_number": 222
+        },
+        {
+            "type": "class",
+            "name": "HTTPDigest",
+            "docstring": "HTTP Digest authentication.\n\n**Warning**: this is only a stub to connect the components with OpenAPI in FastAPI,\nbut it doesn't implement the full Digest scheme, you would need to subclass it\nand implement it in your code.\n\nRef: https://datatracker.ietf.org/doc/html/rfc7616\n\n## Usage\n\nCreate an instance object and use that object as the dependency in `Depends()`.\n\nThe dependency result will be an `HTTPAuthorizationCredentials` object containing\nthe `scheme` and the `credentials`.\n\n## Example\n\n```python\nfrom typing import Annotated\n\nfrom fastapi import Depends, FastAPI\nfrom fastapi.security import HTTPAuthorizationCredentials, HTTPDigest\n\napp = FastAPI()\n\nsecurity = HTTPDigest()\n\n\n@app.get(\"/users/me\")\ndef read_current_user(\n    credentials: Annotated[HTTPAuthorizationCredentials, Depends(security)]\n):\n    return {\"scheme\": credentials.scheme, \"credentials\": credentials.credentials}\n```",
+            "attributes": [],
+            "line_number": 319
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 72
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "make_authenticate_headers",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "dict[str, str]",
+            "line_number": 84
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "make_not_authenticated_error",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "HTTPException",
+            "line_number": 87
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "__call__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "request",
+                    "type": "Request"
+                }
+            ],
+            "return_type": "HTTPAuthorizationCredentials | None",
+            "line_number": 94
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 140
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "make_authenticate_headers",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "dict[str, str]",
+            "line_number": 197
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "__call__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "request",
+                    "type": "Request"
+                }
+            ],
+            "return_type": "HTTPBasicCredentials | None",
+            "line_number": 202
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 254
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "__call__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "request",
+                    "type": "Request"
+                }
+            ],
+            "return_type": "HTTPAuthorizationCredentials | None",
+            "line_number": 303
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 357
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "__call__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                },
+                {
+                    "name": "request",
+                    "type": "Request"
+                }
+            ],
+            "return_type": "HTTPAuthorizationCredentials | None",
+            "line_number": 404
+        }
+    ]
+}

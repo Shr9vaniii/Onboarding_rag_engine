@@ -1,0 +1,28 @@
+{
+    "file_path": "docs_src\\dependencies\\tutorial008e_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_username",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 6
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_user_me",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "username",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 14
+        }
+    ]
+}

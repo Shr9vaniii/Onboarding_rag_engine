@@ -1,0 +1,44 @@
+{
+    "file_path": "tests\\test_stringified_annotation_dependency_py314.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_stringified_annotation",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 14
+        },
+        {
+            "type": "class",
+            "name": "DummyUser",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 10
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_current_user",
+            "docstring": "",
+            "args": [],
+            "return_type": "DummyUser | None",
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "current_user",
+                    "type": "Annotated[DummyUser | None, Depends(get_current_user)]"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 24
+        }
+    ]
+}

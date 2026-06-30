@@ -1,0 +1,495 @@
+{
+    "file_path": "tests\\test_generate_unique_id_function.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "custom_generate_unique_id",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "route",
+                    "type": "APIRoute"
+                }
+            ],
+            "return_type": "",
+            "line_number": 10
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "custom_generate_unique_id2",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "route",
+                    "type": "APIRoute"
+                }
+            ],
+            "return_type": "",
+            "line_number": 14
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "custom_generate_unique_id3",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "route",
+                    "type": "APIRoute"
+                }
+            ],
+            "return_type": "",
+            "line_number": 18
+        },
+        {
+            "type": "class",
+            "name": "Item",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "price",
+                    "type": "float"
+                }
+            ],
+            "line_number": 22
+        },
+        {
+            "type": "class",
+            "name": "Message",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "title",
+                    "type": "str"
+                },
+                {
+                    "name": "description",
+                    "type": "str"
+                }
+            ],
+            "line_number": 27
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_top_level_generate_unique_id",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 32
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_router_overrides_generate_unique_id",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 242
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_router_include_overrides_generate_unique_id",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 452
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_subrouter_top_level_include_overrides_generate_unique_id",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 662
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_router_path_operation_overrides_generate_unique_id",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 947
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_app_path_operation_overrides_generate_unique_id",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 1160
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_callback_override_generate_unique_id",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 1377
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_warn_duplicate_operation_id",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 1672
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_root",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                },
+                {
+                    "name": "item2",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 37
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_router",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                },
+                {
+                    "name": "item2",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 43
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_root",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                },
+                {
+                    "name": "item2",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 247
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_router",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                },
+                {
+                    "name": "item2",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 253
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_root",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                },
+                {
+                    "name": "item2",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 457
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_router",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                },
+                {
+                    "name": "item2",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 463
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_root",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                },
+                {
+                    "name": "item2",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 668
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_router",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                },
+                {
+                    "name": "item2",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 674
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_subrouter",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                },
+                {
+                    "name": "item2",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 682
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_root",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                },
+                {
+                    "name": "item2",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 952
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_router",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                },
+                {
+                    "name": "item2",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 961
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_root",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                },
+                {
+                    "name": "item2",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 1170
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_router",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                },
+                {
+                    "name": "item2",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 1178
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_callback",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                },
+                {
+                    "name": "item2",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 1387
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_root",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                },
+                {
+                    "name": "item2",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 1397
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_with_callback",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                },
+                {
+                    "name": "item2",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 1405
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "broken_operation_id",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "route",
+                    "type": "APIRoute"
+                }
+            ],
+            "return_type": "",
+            "line_number": 1673
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_root",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 1679
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_second",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 1683
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "post_third",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item1",
+                    "type": "Item"
+                }
+            ],
+            "return_type": "",
+            "line_number": 1687
+        }
+    ]
+}

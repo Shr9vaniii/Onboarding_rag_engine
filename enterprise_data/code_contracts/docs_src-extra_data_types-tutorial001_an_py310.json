@@ -1,0 +1,35 @@
+{
+    "file_path": "docs_src\\extra_data_types\\tutorial001_an_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item_id",
+                    "type": "UUID"
+                },
+                {
+                    "name": "start_datetime",
+                    "type": "Annotated[datetime, Body()]"
+                },
+                {
+                    "name": "end_datetime",
+                    "type": "Annotated[datetime, Body()]"
+                },
+                {
+                    "name": "process_after",
+                    "type": "Annotated[timedelta, Body()]"
+                },
+                {
+                    "name": "repeat_at",
+                    "type": "Annotated[time | None, Body()]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 11
+        }
+    ]
+}

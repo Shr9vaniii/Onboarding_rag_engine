@@ -1,0 +1,86 @@
+{
+    "file_path": "tests\\test_route_scope.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "user_id",
+                    "type": "str"
+                },
+                {
+                    "name": "request",
+                    "type": "Request"
+                }
+            ],
+            "return_type": "",
+            "line_number": 10
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "websocket_item",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item_id",
+                    "type": "str"
+                },
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                }
+            ],
+            "return_type": "",
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 25
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_invalid_method_doesnt_match",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 31
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_invalid_path_doesnt_match",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 36
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_websocket",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 41
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_websocket_invalid_path_doesnt_match",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 47
+        }
+    ]
+}

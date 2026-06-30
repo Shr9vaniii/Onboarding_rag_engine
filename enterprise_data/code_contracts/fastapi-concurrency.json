@@ -1,0 +1,19 @@
+{
+    "file_path": "fastapi\\concurrency.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "contextmanager_in_threadpool",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "cm",
+                    "type": "AbstractContextManager[_T]"
+                }
+            ],
+            "return_type": "AsyncGenerator[_T, None]",
+            "line_number": 18
+        }
+    ]
+}

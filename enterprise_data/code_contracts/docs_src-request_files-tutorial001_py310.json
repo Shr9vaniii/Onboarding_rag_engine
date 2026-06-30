@@ -1,0 +1,33 @@
+{
+    "file_path": "docs_src\\request_files\\tutorial001_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "create_file",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "file",
+                    "type": "bytes"
+                }
+            ],
+            "return_type": "",
+            "line_number": 7
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "create_upload_file",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "file",
+                    "type": "UploadFile"
+                }
+            ],
+            "return_type": "",
+            "line_number": 12
+        }
+    ]
+}

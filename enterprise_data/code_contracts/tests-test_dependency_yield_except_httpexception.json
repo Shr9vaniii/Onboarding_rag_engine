@@ -1,0 +1,85 @@
+{
+    "file_path": "tests\\test_dependency_yield_except_httpexception.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_database",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "put_invalid_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "user_id",
+                    "type": "str"
+                },
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "db",
+                    "type": "dict"
+                }
+            ],
+            "return_type": "",
+            "line_number": 29
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "put_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "user_id",
+                    "type": "str"
+                },
+                {
+                    "name": "name",
+                    "type": "str"
+                },
+                {
+                    "name": "db",
+                    "type": "dict"
+                }
+            ],
+            "return_type": "",
+            "line_number": 37
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "reset_state_and_db",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 43
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_dependency_gets_exception",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 53
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_dependency_no_exception",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 64
+        }
+    ]
+}

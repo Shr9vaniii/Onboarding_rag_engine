@@ -1,0 +1,49 @@
+{
+    "file_path": "scripts\\tests\\test_translation_fixer\\test_header_permalinks\\test_header_number_mismatch.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_gt",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "runner",
+                    "type": "CliRunner"
+                },
+                {
+                    "name": "root_dir",
+                    "type": "Path"
+                },
+                {
+                    "name": "copy_test_files",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 18
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_lt",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "runner",
+                    "type": "CliRunner"
+                },
+                {
+                    "name": "root_dir",
+                    "type": "Path"
+                },
+                {
+                    "name": "copy_test_files",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 43
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "file_path": "docs_src\\websockets_\\tutorial002_an_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 62
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_cookie_or_token",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "websocket",
+                    "type": "WebSocket"
+                },
+                {
+                    "name": "session",
+                    "type": "Annotated[str | None, Cookie()]"
+                },
+                {
+                    "name": "token",
+                    "type": "Annotated[str | None, Query()]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 66
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "websocket_endpoint",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 77
+        }
+    ]
+}

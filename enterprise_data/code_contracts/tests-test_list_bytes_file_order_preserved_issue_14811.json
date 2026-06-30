@@ -1,0 +1,51 @@
+{
+    "file_path": "tests\\test_list_bytes_file_order_preserved_issue_14811.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_list_bytes_file_preserves_order",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "monkeypatch",
+                    "type": "pytest.MonkeyPatch"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "upload",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "files",
+                    "type": "Annotated[list[bytes], File()]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 22
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "patched_read",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": "StarletteUploadFile"
+                },
+                {
+                    "name": "size",
+                    "type": "int"
+                }
+            ],
+            "return_type": "bytes",
+            "line_number": 28
+        }
+    ]
+}

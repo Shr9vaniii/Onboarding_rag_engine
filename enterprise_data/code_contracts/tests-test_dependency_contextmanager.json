@@ -1,0 +1,623 @@
+{
+    "file_path": "tests\\test_dependency_contextmanager.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_state",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 23
+        },
+        {
+            "type": "class",
+            "name": "AsyncDependencyError",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 27
+        },
+        {
+            "type": "class",
+            "name": "SyncDependencyError",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 31
+        },
+        {
+            "type": "class",
+            "name": "OtherDependencyError",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 35
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "asyncgen_state",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "dict[str, str]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 39
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "generator_state",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "dict[str, str]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 45
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "asyncgen_state_try",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "dict[str, str]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 51
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "generator_state_try",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "dict[str, str]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 62
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "context_a",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "dict"
+                }
+            ],
+            "return_type": "",
+            "line_number": 73
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "context_b",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "dict"
+                }
+            ],
+            "return_type": "",
+            "line_number": 81
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_async",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 90
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_sync",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 95
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_async_raise",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 100
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_sync_raise",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 106
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_async_raise_other",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 112
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_sync_raise_other",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 118
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_context_b",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "dict"
+                }
+            ],
+            "return_type": "",
+            "line_number": 124
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_context_b_raise",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "dict"
+                }
+            ],
+            "return_type": "",
+            "line_number": 129
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_context_b_bg",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "tasks",
+                    "type": "BackgroundTasks"
+                },
+                {
+                    "name": "state",
+                    "type": "dict"
+                }
+            ],
+            "return_type": "",
+            "line_number": 136
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_sync_async",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 148
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_sync_sync",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 153
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_sync_async_raise",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 158
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_sync_sync_raise",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 164
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_sync_async_raise_other",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 170
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_sync_sync_raise_other",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 176
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_sync_context_b",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "dict"
+                }
+            ],
+            "return_type": "",
+            "line_number": 182
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_sync_context_b_raise",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "dict"
+                }
+            ],
+            "return_type": "",
+            "line_number": 187
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_sync_context_b_bg",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "tasks",
+                    "type": "BackgroundTasks"
+                },
+                {
+                    "name": "state",
+                    "type": "dict"
+                }
+            ],
+            "return_type": "",
+            "line_number": 194
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "middleware",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": ""
+                },
+                {
+                    "name": "call_next",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 207
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_async_state",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 216
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_sync_state",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 224
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_async_raise_other",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 232
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_sync_raise_other",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 240
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_async_raise_raises",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 248
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_async_raise_server_error",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 256
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_context_b",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 265
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_context_b_raise",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 274
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_background_tasks",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 281
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_sync_raise_raises",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 296
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_sync_raise_server_error",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 304
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_sync_async_state",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 313
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_sync_sync_state",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 320
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_sync_async_raise_other",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 327
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_sync_sync_raise_other",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 334
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_sync_async_raise_raises",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 341
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_sync_async_raise_server_error",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 349
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_sync_sync_raise_raises",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 358
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_sync_sync_raise_server_error",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 366
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_sync_context_b",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 375
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_sync_context_b_raise",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 384
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_sync_background_tasks",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 391
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "bg",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "dict"
+                }
+            ],
+            "return_type": "",
+            "line_number": 137
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "bg",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "state",
+                    "type": "dict"
+                }
+            ],
+            "return_type": "",
+            "line_number": 197
+        }
+    ]
+}

@@ -1,0 +1,389 @@
+{
+    "file_path": "tests\\test_request_params\\test_form\\test_required_str.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_required_str",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[str, Form()]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 18
+        },
+        {
+            "type": "class",
+            "name": "FormModelRequiredStr",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "p",
+                    "type": "str"
+                }
+            ],
+            "line_number": 22
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_model_required_str",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[FormModelRequiredStr, Form()]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 27
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_str_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 35
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_str_missing",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 53
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_str",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 73
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_required_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[str, Form(alias='p_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 85
+        },
+        {
+            "type": "class",
+            "name": "FormModelRequiredAlias",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "p",
+                    "type": "str"
+                }
+            ],
+            "line_number": 89
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_model_required_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[FormModelRequiredAlias, Form()]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 94
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_str_alias_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 105
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_alias_missing",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 123
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_alias_by_name",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 143
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_alias_by_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 163
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_required_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[str, Form(validation_alias='p_val_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 175
+        },
+        {
+            "type": "class",
+            "name": "FormModelRequiredValidationAlias",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "p",
+                    "type": "str"
+                }
+            ],
+            "line_number": 181
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_model_required_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[FormModelRequiredValidationAlias, Form()]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 188
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_validation_alias_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 198
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_validation_alias_missing",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 219
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_validation_alias_by_name",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 245
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_validation_alias_by_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 269
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_required_alias_and_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[str, Form(alias='p_alias', validation_alias='p_val_alias')]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 285
+        },
+        {
+            "type": "class",
+            "name": "FormModelRequiredAliasAndValidationAlias",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "p",
+                    "type": "str"
+                }
+            ],
+            "line_number": 291
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "read_model_required_alias_and_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "p",
+                    "type": "Annotated[FormModelRequiredAliasAndValidationAlias, Form()]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 299
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_alias_and_validation_alias_schema",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 312
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_alias_and_validation_alias_missing",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 333
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_alias_and_validation_alias_by_name",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 359
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_alias_and_validation_alias_by_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 386
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_required_alias_and_validation_alias_by_validation_alias",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 410
+        }
+    ]
+}

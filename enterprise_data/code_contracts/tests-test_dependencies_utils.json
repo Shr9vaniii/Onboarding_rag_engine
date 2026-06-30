@@ -1,0 +1,14 @@
+{
+    "file_path": "tests\\test_dependencies_utils.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_get_typed_annotation",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 4
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "file_path": "docs_src\\dependencies\\tutorial005_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "query_extractor",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "q",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 6
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "query_or_cookie_extractor",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "q",
+                    "type": "str"
+                },
+                {
+                    "name": "last_query",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 10
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_query",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "query_or_default",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 19
+        }
+    ]
+}

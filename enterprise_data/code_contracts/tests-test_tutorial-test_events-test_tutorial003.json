@@ -1,0 +1,23 @@
+{
+    "file_path": "tests\\test_tutorial\\test_events\\test_tutorial003.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_events",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 11
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 21
+        }
+    ]
+}

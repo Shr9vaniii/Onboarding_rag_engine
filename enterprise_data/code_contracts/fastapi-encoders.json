@@ -1,0 +1,107 @@
+{
+    "file_path": "fastapi\\encoders.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "isoformat",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "o",
+                    "type": "datetime.date | datetime.time"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 53
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "decimal_encoder",
+            "docstring": "Encodes a Decimal as int if there's no exponent, otherwise float\n\nThis is useful when we use ConstrainedDecimal to represent Numeric(x,0)\nwhere an integer (but not int typed) is used. Encoding this as a float\nresults in failed round-tripping between encode and parse.\nOur Id type is a prime example of this.\n\n>>> decimal_encoder(Decimal(\"1.0\"))\n1.0\n\n>>> decimal_encoder(Decimal(\"1\"))\n1\n\n>>> decimal_encoder(Decimal(\"NaN\"))\nnan",
+            "args": [
+                {
+                    "name": "dec_value",
+                    "type": "Decimal"
+                }
+            ],
+            "return_type": "int | float",
+            "line_number": 59
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "generate_encoders_by_class_tuples",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "type_encoder_map",
+                    "type": "dict[Any, Callable[[Any], Any]]"
+                }
+            ],
+            "return_type": "dict[Callable[[Any], Any], tuple[Any, ...]]",
+            "line_number": 115
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "jsonable_encoder",
+            "docstring": "Convert any object to something that can be encoded in JSON.\n\nThis is used internally by FastAPI to make sure anything you return can be\nencoded as JSON before it is sent to the client.\n\nYou can also use it yourself, for example to convert objects before saving them\nin a database that supports only JSON.\n\nRead more about it in the\n[FastAPI docs for JSON Compatible Encoder](https://fastapi.tiangolo.com/tutorial/encoder/).",
+            "args": [
+                {
+                    "name": "obj",
+                    "type": "Annotated[Any, Doc('\\n            The input object to convert to JSON.\\n            ')]"
+                },
+                {
+                    "name": "include",
+                    "type": "Annotated[IncEx | None, Doc(\"\\n            Pydantic's `include` parameter, passed to Pydantic models to set the\\n            fields to include.\\n            \")]"
+                },
+                {
+                    "name": "exclude",
+                    "type": "Annotated[IncEx | None, Doc(\"\\n            Pydantic's `exclude` parameter, passed to Pydantic models to set the\\n            fields to exclude.\\n            \")]"
+                },
+                {
+                    "name": "by_alias",
+                    "type": "Annotated[bool, Doc(\"\\n            Pydantic's `by_alias` parameter, passed to Pydantic models to define if\\n            the output should use the alias names (when provided) or the Python\\n            attribute names. In an API, if you set an alias, it's probably because you\\n            want to use it in the result, so you probably want to leave this set to\\n            `True`.\\n            \")]"
+                },
+                {
+                    "name": "exclude_unset",
+                    "type": "Annotated[bool, Doc(\"\\n            Pydantic's `exclude_unset` parameter, passed to Pydantic models to define\\n            if it should exclude from the output the fields that were not explicitly\\n            set (and that only had their default values).\\n            \")]"
+                },
+                {
+                    "name": "exclude_defaults",
+                    "type": "Annotated[bool, Doc(\"\\n            Pydantic's `exclude_defaults` parameter, passed to Pydantic models to define\\n            if it should exclude from the output the fields that had the same default\\n            value, even when they were explicitly set.\\n            \")]"
+                },
+                {
+                    "name": "exclude_none",
+                    "type": "Annotated[bool, Doc(\"\\n            Pydantic's `exclude_none` parameter, passed to Pydantic models to define\\n            if it should exclude from the output any fields that have a `None` value.\\n            \")]"
+                },
+                {
+                    "name": "custom_encoder",
+                    "type": "Annotated[dict[Any, Callable[[Any], Any]] | None, Doc(\"\\n            Pydantic's `custom_encoder` parameter, passed to Pydantic models to define\\n            a custom encoder.\\n            \")]"
+                },
+                {
+                    "name": "sqlalchemy_safe",
+                    "type": "Annotated[bool, Doc(\"\\n            Exclude from the output any fields that start with the name `_sa`.\\n\\n            This is mainly a hack for compatibility with SQLAlchemy objects, they\\n            store internal SQLAlchemy-specific state in attributes named with `_sa`,\\n            and those objects can't (and shouldn't be) serialized to JSON.\\n            \")]"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 129
+        },
+        {
+            "type": "class",
+            "name": "Color",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 39
+        },
+        {
+            "type": "class",
+            "name": "PyExtraColor",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 48
+        }
+    ]
+}

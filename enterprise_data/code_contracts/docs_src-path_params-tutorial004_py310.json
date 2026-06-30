@@ -1,0 +1,19 @@
+{
+    "file_path": "docs_src\\path_params\\tutorial004_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_file",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "file_path",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 7
+        }
+    ]
+}

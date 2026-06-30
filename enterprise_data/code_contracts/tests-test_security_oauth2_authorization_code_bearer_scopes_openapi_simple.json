@@ -1,0 +1,46 @@
+{
+    "file_path": "tests\\test_security_oauth2_authorization_code_bearer_scopes_openapi_simple.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_token",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "token",
+                    "type": "Annotated[str, Depends(oauth2_scheme)]"
+                }
+            ],
+            "return_type": "str",
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_admin",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 25
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_read_admin",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 32
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_openapi_schema",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 38
+        }
+    ]
+}

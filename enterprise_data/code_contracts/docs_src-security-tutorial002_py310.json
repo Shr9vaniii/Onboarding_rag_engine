@@ -1,0 +1,71 @@
+{
+    "file_path": "docs_src\\security\\tutorial002_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "User",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "username",
+                    "type": "str"
+                },
+                {
+                    "name": "email",
+                    "type": "str | None"
+                },
+                {
+                    "name": "full_name",
+                    "type": "str | None"
+                },
+                {
+                    "name": "disabled",
+                    "type": "bool | None"
+                }
+            ],
+            "line_number": 10
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "fake_decode_token",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "token",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 17
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_current_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "token",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 23
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_users_me",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "current_user",
+                    "type": "User"
+                }
+            ],
+            "return_type": "",
+            "line_number": 29
+        }
+    ]
+}

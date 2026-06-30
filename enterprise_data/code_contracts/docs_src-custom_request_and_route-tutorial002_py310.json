@@ -1,0 +1,54 @@
+{
+    "file_path": "docs_src\\custom_request_and_route\\tutorial002_py310.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "ValidationErrorLoggingRoute",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 8
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "sum_numbers",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "numbers",
+                    "type": "list[int]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 28
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_route_handler",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "Callable",
+            "line_number": 9
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "custom_route_handler",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "request",
+                    "type": "Request"
+                }
+            ],
+            "return_type": "Response",
+            "line_number": 12
+        }
+    ]
+}

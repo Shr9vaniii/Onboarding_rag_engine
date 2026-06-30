@@ -1,0 +1,23 @@
+{
+    "file_path": "tests\\test_tutorial\\test_behind_a_proxy\\test_tutorial001_01.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_redirect",
+            "docstring": "",
+            "args": [],
+            "return_type": "None",
+            "line_number": 12
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_no_redirect",
+            "docstring": "",
+            "args": [],
+            "return_type": "None",
+            "line_number": 18
+        }
+    ]
+}

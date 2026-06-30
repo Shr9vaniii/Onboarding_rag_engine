@@ -1,0 +1,143 @@
+{
+    "file_path": "docs_src\\security\\tutorial003_an_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "fake_hash_password",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "password",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 27
+        },
+        {
+            "type": "class",
+            "name": "User",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "username",
+                    "type": "str"
+                },
+                {
+                    "name": "email",
+                    "type": "str | None"
+                },
+                {
+                    "name": "full_name",
+                    "type": "str | None"
+                },
+                {
+                    "name": "disabled",
+                    "type": "bool | None"
+                }
+            ],
+            "line_number": 34
+        },
+        {
+            "type": "class",
+            "name": "UserInDB",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "hashed_password",
+                    "type": "str"
+                }
+            ],
+            "line_number": 41
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "db",
+                    "type": ""
+                },
+                {
+                    "name": "username",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 45
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "fake_decode_token",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "token",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 51
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_current_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "token",
+                    "type": "Annotated[str, Depends(oauth2_scheme)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 58
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "get_current_active_user",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "current_user",
+                    "type": "Annotated[User, Depends(get_current_user)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 69
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "login",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "form_data",
+                    "type": "Annotated[OAuth2PasswordRequestForm, Depends()]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 78
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_users_me",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "current_user",
+                    "type": "Annotated[User, Depends(get_current_active_user)]"
+                }
+            ],
+            "return_type": "",
+            "line_number": 91
+        }
+    ]
+}

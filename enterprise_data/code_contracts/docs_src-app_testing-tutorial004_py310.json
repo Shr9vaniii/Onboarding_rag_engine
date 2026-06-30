@@ -1,0 +1,42 @@
+{
+    "file_path": "docs_src\\app_testing\\tutorial004_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "lifespan",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "app",
+                    "type": "FastAPI"
+                }
+            ],
+            "return_type": "",
+            "line_number": 10
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item_id",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 22
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_read_items",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 26
+        }
+    ]
+}

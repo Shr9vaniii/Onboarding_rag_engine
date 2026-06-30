@@ -1,0 +1,83 @@
+{
+    "file_path": "scripts\\tests\\test_translation_fixer\\conftest.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "pytest_collection_modifyitems",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "config",
+                    "type": ""
+                },
+                {
+                    "name": "items",
+                    "type": "list[pytest.Item]"
+                }
+            ],
+            "return_type": "None",
+            "line_number": 19
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "changing_dir",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "directory",
+                    "type": "str | Path"
+                }
+            ],
+            "return_type": "Generator[None, None, None]",
+            "line_number": 30
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_runner",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "tmp_path",
+                    "type": "Path"
+                }
+            ],
+            "return_type": "",
+            "line_number": 40
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "prepare_paths",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "runner",
+                    "type": ""
+                }
+            ],
+            "return_type": "",
+            "line_number": 46
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "copy_test_files",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "root_dir",
+                    "type": "Path"
+                },
+                {
+                    "name": "request",
+                    "type": "pytest.FixtureRequest"
+                }
+            ],
+            "return_type": "",
+            "line_number": 56
+        }
+    ]
+}

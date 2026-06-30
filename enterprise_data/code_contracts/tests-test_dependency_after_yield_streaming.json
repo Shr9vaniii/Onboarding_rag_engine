@@ -1,0 +1,227 @@
+{
+    "file_path": "tests\\test_dependency_after_yield_streaming.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "Session",
+            "docstring": "",
+            "attributes": [],
+            "line_number": 11
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "acquire_session",
+            "docstring": "",
+            "args": [],
+            "return_type": "Generator[Session, None, None]",
+            "line_number": 25
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "dep_session",
+            "docstring": "",
+            "args": [],
+            "return_type": "Any",
+            "line_number": 33
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "broken_dep_session",
+            "docstring": "",
+            "args": [],
+            "return_type": "Any",
+            "line_number": 38
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_data",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "session",
+                    "type": "SessionDep"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 51
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_stream_simple",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "session",
+                    "type": "SessionDep"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 57
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_stream_session",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "session",
+                    "type": "SessionDep"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 65
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_broken_session_data",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "session",
+                    "type": "BrokenSessionDep"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 73
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_broken_session_stream",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "session",
+                    "type": "BrokenSessionDep"
+                }
+            ],
+            "return_type": "Any",
+            "line_number": 78
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_regular_no_stream",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 88
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_stream_simple",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 93
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_stream_session",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 98
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_broken_session_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 103
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_broken_session_data_no_raise",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 108
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_broken_session_stream_raise",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 115
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_broken_session_stream_no_raise",
+            "docstring": "When a dependency with yield raises after the streaming response already started\nthe 200 status code is already sent, but there's still an error in the server\nafterwards, an exception is raised and captured or shown in the server logs.",
+            "args": [],
+            "return_type": "",
+            "line_number": 121
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__init__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "None",
+            "line_number": 12
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "__iter__",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "self",
+                    "type": ""
+                }
+            ],
+            "return_type": "Generator[str, None, None]",
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "iter_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 58
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "iter_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 66
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "iter_data",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 79
+        }
+    ]
+}

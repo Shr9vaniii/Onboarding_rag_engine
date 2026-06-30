@@ -1,0 +1,37 @@
+{
+    "file_path": "docs_src\\app_testing\\tutorial003_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "startup_event",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 10
+        },
+        {
+            "type": "function",
+            "is_async": true,
+            "name": "read_items",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "item_id",
+                    "type": "str"
+                }
+            ],
+            "return_type": "",
+            "line_number": 16
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_read_items",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 20
+        }
+    ]
+}

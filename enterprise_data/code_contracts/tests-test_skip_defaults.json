@@ -1,0 +1,167 @@
+{
+    "file_path": "tests\\test_skip_defaults.py",
+    "elements": [
+        {
+            "type": "class",
+            "name": "SubModel",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "a",
+                    "type": "str | None"
+                }
+            ],
+            "line_number": 8
+        },
+        {
+            "type": "class",
+            "name": "Model",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "x",
+                    "type": "int | None"
+                },
+                {
+                    "name": "sub",
+                    "type": "SubModel"
+                }
+            ],
+            "line_number": 12
+        },
+        {
+            "type": "class",
+            "name": "ModelSubclass",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "y",
+                    "type": "int"
+                },
+                {
+                    "name": "z",
+                    "type": "int"
+                },
+                {
+                    "name": "w",
+                    "type": "int | None"
+                }
+            ],
+            "line_number": 17
+        },
+        {
+            "type": "class",
+            "name": "ModelDefaults",
+            "docstring": "",
+            "attributes": [
+                {
+                    "name": "w",
+                    "type": "str | None"
+                },
+                {
+                    "name": "x",
+                    "type": "str | None"
+                },
+                {
+                    "name": "y",
+                    "type": "str"
+                },
+                {
+                    "name": "z",
+                    "type": "str"
+                }
+            ],
+            "line_number": 23
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_root",
+            "docstring": "",
+            "args": [],
+            "return_type": "ModelSubclass",
+            "line_number": 31
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_exclude_unset",
+            "docstring": "",
+            "args": [],
+            "return_type": "ModelDefaults",
+            "line_number": 38
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_exclude_defaults",
+            "docstring": "",
+            "args": [],
+            "return_type": "ModelDefaults",
+            "line_number": 47
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_exclude_none",
+            "docstring": "",
+            "args": [],
+            "return_type": "ModelDefaults",
+            "line_number": 54
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "get_exclude_unset_none",
+            "docstring": "",
+            "args": [],
+            "return_type": "ModelDefaults",
+            "line_number": 64
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_return_defaults",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 71
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_return_exclude_unset",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 76
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_return_exclude_defaults",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 81
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_return_exclude_none",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 86
+        },
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "test_return_exclude_unset_none",
+            "docstring": "",
+            "args": [],
+            "return_type": "",
+            "line_number": 91
+        }
+    ]
+}

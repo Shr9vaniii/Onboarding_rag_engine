@@ -1,0 +1,19 @@
+{
+    "file_path": "docs_src\\python_types\\tutorial009_py310.py",
+    "elements": [
+        {
+            "type": "function",
+            "is_async": false,
+            "name": "say_hi",
+            "docstring": "",
+            "args": [
+                {
+                    "name": "name",
+                    "type": "str | None"
+                }
+            ],
+            "return_type": "",
+            "line_number": 1
+        }
+    ]
+}
