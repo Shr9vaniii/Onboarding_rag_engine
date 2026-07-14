@@ -6,16 +6,18 @@ import subprocess
 import ast
 import time
 from pathlib import Path
+from extract_code_contracts import extract_contract_from_source
 
 REPO_OWNER = "fastapi"       # ← also fix: repo moved to fastapi org, not tiangolo
 REPO_NAME = "fastapi"
 GITHUB_REPO_URL = f"https://github.com/{REPO_OWNER}/{REPO_NAME}.git"
 
-DATA_DIR = Path("./enterprise_data")
+DATA_DIR = Path("../enterprise_data")
 RAW_REPO_DIR = DATA_DIR / "raw_repo"
 DOCS_DIR = DATA_DIR / "wikis_and_docs"
 ISSUES_DIR = DATA_DIR / "tribal_history"
-CODE_DIR = DATA_DIR / "code_contracts"
+CODE_DIR = DATA_DIR / "code_contracts_v3"
+CODE_DIR.mkdir(parents=True, exist_ok=True)
 
 GITHUB_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN")
 HEADERS = {
@@ -223,51 +225,16 @@ def extract_code_contracts():
             if not file.endswith(".py"):
                 continue
             file_path = Path(root) / file
+            relative_path = str(file_path.relative_to(RAW_REPO_DIR))
+            
+            with open(file_path, "r", encoding="utf-8") as f:
+                source = f.read()
+            
+        
+            is_docs=relative_path.startswith("docs_src")
+            is_tests=relative_path.startswith("test")
 
-            try:
-                source = file_path.read_text(encoding="utf-8")
-                tree = ast.parse(source)
-            except Exception:
-                continue
-
-            elements = []
-            for node in ast.walk(tree):
-                if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
-                    # fix: extract full type signatures
-                    args_with_types = [
-                        {
-                            "name": arg.arg,
-                            "type": get_annotation_str(arg.annotation)
-                        }
-                        for arg in node.args.args
-                    ]
-                    elements.append({
-                        "type": "function",
-                        "is_async": isinstance(node, ast.AsyncFunctionDef),
-                        "name": node.name,
-                        "docstring": ast.get_docstring(node) or "",
-                        "args": args_with_types,                    # ← fixed
-                        "return_type": get_annotation_str(node.returns),  # ← new
-                        "line_number": node.lineno,
-                    })
-
-                elif isinstance(node, ast.ClassDef):
-                    # extract class-level attributes too
-                    class_attrs = []
-                    for item in node.body:
-                        if isinstance(item, ast.AnnAssign):
-                            class_attrs.append({
-                                "name": ast.unparse(item.target) if hasattr(ast, 'unparse') else "",
-                                "type": get_annotation_str(item.annotation)
-                            })
-
-                    elements.append({
-                        "type": "class",
-                        "name": node.name,
-                        "docstring": ast.get_docstring(node) or "",
-                        "attributes": class_attrs,                  # ← new
-                        "line_number": node.lineno,
-                    })
+            elements = extract_contract_from_source(source, is_docs or is_tests)
 
             if not elements:
                 continue
@@ -277,7 +244,7 @@ def extract_code_contracts():
 
             contract_data = {
                 "file_path": relative_path,
-                "elements": elements,
+                "elements": elements
             }
             with open(CODE_DIR / safe_name, "w", encoding="utf-8") as f:
                 json.dump(contract_data, f, ensure_ascii=False, indent=4)
@@ -291,11 +258,15 @@ def extract_code_contracts():
 # ─── MAIN ────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    print("Starting extraction pipeline...\n")
+    '''print("Starting extraction pipeline...\n")
     setup_data_lake()
     clone_repo()
     #extract_architectural_docs()
     #fetch_tribal_history()
     #fetch_merged_prs()          # ← new — this is your decision_history class
+    
+    print("Pipeline complete. Data lake ready.\n")'''
+
     extract_code_contracts()
-    print("Pipeline complete. Data lake ready.\n")
+
+    

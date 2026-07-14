@@ -12,7 +12,6 @@ GRAPHQL_URL = "https://api.github.com/graphql"
 
 # Signal thresholds — tune these based on your quality bar
 MIN_DISCUSSION_UPVOTES = 1       # ▲ arrow on discussion itself
-
 TOP_N_COMMENTS         = 3       # max comments to include per discussion
 
 TOKEN = os.environ.get("GH_TOKEN", "")
@@ -20,7 +19,7 @@ HEADERS = {
     "Accept": "application/vnd.github+json",
     **({"Authorization": f"Bearer {TOKEN}"} if TOKEN else {}),
 }
-OUTPUT_DIR = Path("enterprise_data/discussion_new")
+OUTPUT_DIR = Path("enterprise_data/discussion_new_v2")
 OUTPUT_DIR.mkdir(parents=True,exist_ok=True)
 
 # ── GraphQL query ────────────────────────────────────────────────────────────
@@ -166,7 +165,7 @@ def scrape_discussions(max_pages: int = 100) -> list[dict]:
                 non_answer_comments,
                 key=lambda c: max(c["reactions"]["totalCount"],c['upvoteCount']),
                 reverse=True
-                )[:TOP_N_COMMENTS]
+                )[:]
             
 
             # ── Build structured record ───────────────────────────────────
