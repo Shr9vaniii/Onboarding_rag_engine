@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Onboarding RAG</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --panel: #1a2332;
+      --border: #2d3a4f;
+      --text: #e7ecf3;
+      --muted: #9aa8bc;
+      --accent: #5b9fd4;
+      --accent2: #3d8b6e;
+      --danger: #d46464;
+      --user: #243447;
+      --bot: #1e2a3a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--panel);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    header h1 { margin: 0; font-size: 1.15rem; font-weight: 600; }
+    .meta { color: var(--muted); font-size: 0.8rem; }
+    .pill {
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .pill.ok { border-color: var(--accent2); color: #8fd6b5; }
+    .pill.warn { border-color: #c9a227; color: #e6c86a; }
+    .pill.bad { border-color: var(--danger); color: #f0a0a0; }
+    main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      max-width: 960px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1rem;
+      gap: 0.75rem;
+    }
+    #chat {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      min-height: 55vh;
+      max-height: 65vh;
+      overflow-y: auto;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .msg {
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      line-height: 1.45;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .msg.user { background: var(--user); align-self: flex-end; max-width: 85%; }
+    .msg.bot { background: var(--bot); align-self: flex-start; max-width: 95%; border: 1px solid var(--border); }
+    .msg.error { border-color: var(--danger); color: #f0c0c0; }
+    .msg .label { font-size: 0.7rem; color: var(--muted); margin-bottom: 0.35rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .citations { margin-top: 0.75rem; padding-top: 0.65rem; border-top: 1px solid var(--border); }
+    .citations h4 { margin: 0 0 0.4rem; font-size: 0.8rem; color: var(--accent); }
+    .cite {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+      padding-left: 0.5rem;
+      border-left: 2px solid var(--border);
+    }
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.65rem;
+    }
+    form {
+      display: flex;
+      gap: 0.5rem;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.75rem;
+    }
+    textarea {
+      flex: 1;
+      resize: vertical;
+      min-height: 52px;
+      max-height: 140px;
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.65rem 0.75rem;
+      font: inherit;
+    }
+    button {
+      background: var(--accent);
+      color: #071018;
+      border: none;
+      border-radius: 8px;
+      padding: 0 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .toolbar { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+    .toolbar label { font-size: 0.8rem; color: var(--muted); display: flex; gap: 0.35rem; align-items: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>FastAPI Onboarding RAG</h1>
+      <div class="meta">Hybrid retrieval · conversational rewrite · LoRA generation</div>
+    </div>
+    <div class="toolbar">
+      <span id="healthPill" class="pill">checking…</span>
+      <span id="sessionPill" class="pill">no session</span>
+      <label><input type="checkbox" id="bypassCache" /> bypass cache</label>
+      <button type="button" id="newSessionBtn">New session</button>
+    </div>
+  </header>
+  <main>
+    <div id="chat"></div>
+    <form id="askForm">
+      <textarea id="question" placeholder="Ask about FastAPI APIs, patterns, or debugging…" required></textarea>
+      <button type="submit" id="sendBtn">Ask</button>
+    </form>
+  </main>
+  <script>
+    const chat = document.getElementById("chat");
+    const form = document.getElementById("askForm");
+    const questionEl = document.getElementById("question");
+    const sendBtn = document.getElementById("sendBtn");
+    const healthPill = document.getElementById("healthPill");
+    const sessionPill = document.getElementById("sessionPill");
+    const bypassCache = document.getElementById("bypassCache");
+    const newSessionBtn = document.getElementById("newSessionBtn");
+
+    let sessionId = localStorage.getItem("rag_session_id") || "";
+
+    function setSession(id) {
+      sessionId = id || "";
+      if (sessionId) {
+        localStorage.setItem("rag_session_id", sessionId);
+        sessionPill.textContent = "session " + sessionId.slice(0, 8);
+      } else {
+        localStorage.removeItem("rag_session_id");
+        sessionPill.textContent = "no session";
+      }
+    }
+
+    function addMessage(role, text, opts = {}) {
+      const div = document.createElement("div");
+      div.className = "msg " + role + (opts.error ? " error" : "");
+      const label = document.createElement("div");
+      label.className = "label";
+      label.textContent = role === "user" ? "You" : "Assistant";
+      div.appendChild(label);
+      const body = document.createElement("div");
+      body.textContent = text;
+      div.appendChild(body);
+
+      if (opts.citations && opts.citations.length) {
+        const box = document.createElement("div");
+        box.className = "citations";
+        const h = document.createElement("h4");
+        h.textContent = "Citations";
+        box.appendChild(h);
+        opts.citations.slice(0, 5).forEach((c, i) => {
+          const row = document.createElement("div");
+          row.className = "cite";
+          row.textContent = `[${i + 1}] ${c.name || c.chunk_type || "chunk"} · ${c.source || ""}`;
+          box.appendChild(row);
+        });
+        div.appendChild(box);
+      }
+
+      if (opts.stats) {
+        const stats = document.createElement("div");
+        stats.className = "stats";
+        opts.stats.forEach((s) => {
+          const pill = document.createElement("span");
+          pill.className = "pill";
+          pill.textContent = s;
+          stats.appendChild(pill);
+        });
+        div.appendChild(stats);
+      }
+
+      chat.appendChild(div);
+      chat.scrollTop = chat.scrollHeight;
+      return div;
+    }
+
+    async function refreshHealth() {
+      try {
+        const res = await fetch("/health");
+        const data = await res.json();
+        healthPill.className = "pill " + (data.status === "ok" ? "ok" : data.status === "starting" ? "warn" : "warn");
+        if (data.status === "ok") healthPill.textContent = "healthy";
+        else if (data.message && /waking/i.test(data.message)) healthPill.textContent = "model waking up";
+        else healthPill.textContent = data.status || "degraded";
+      } catch (e) {
+        healthPill.className = "pill bad";
+        healthPill.textContent = "offline";
+      }
+    }
+
+    async function ensureSession() {
+      if (sessionId) return sessionId;
+      const res = await fetch("/sessions", { method: "POST" });
+      if (!res.ok) throw new Error("Failed to create session");
+      const data = await res.json();
+      setSession(data.session_id);
+      return sessionId;
+    }
+
+    newSessionBtn.addEventListener("click", async () => {
+      setSession("");
+      chat.innerHTML = "";
+      try {
+        await ensureSession();
+        addMessage("bot", "New session started. Ask a FastAPI onboarding question.");
+      } catch (e) {
+        addMessage("bot", String(e), { error: true });
+      }
+    });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const question = questionEl.value.trim();
+      if (!question) return;
+      addMessage("user", question);
+      questionEl.value = "";
+      sendBtn.disabled = true;
+      const loading = addMessage("bot", "Thinking…");
+
+      try {
+        await ensureSession();
+        const res = await fetch("/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            question,
+            session_id: sessionId,
+            bypass_cache: bypassCache.checked,
+          }),
+        });
+        const data = await res.json();
+        loading.remove();
+        if (!res.ok) {
+          const detail = data.detail;
+          const msg = typeof detail === "string" ? detail : (detail && detail.message) || JSON.stringify(data);
+          addMessage("bot", msg, { error: true });
+          return;
+        }
+        if (data.session_id) setSession(data.session_id);
+        const stats = [
+          data.cache_hit ? "cache HIT" : "cache MISS",
+          data.intent || "intent?",
+          (data.timings && data.timings.total_ms != null) ? `${Math.round(data.timings.total_ms)} ms` : "",
+          data.dual_retrieval ? "dual retrieval" : "",
+          data.decompose && data.decompose.is_multi ? `multi×${data.decompose.sub_queries.length}` : "",
+          data.partial ? "partial" : "",
+        ].filter(Boolean);
+        addMessage("bot", data.answer, { citations: data.citations || [], stats });
+      } catch (err) {
+        loading.remove();
+        addMessage("bot", String(err), { error: true });
+      } finally {
+        sendBtn.disabled = false;
+        questionEl.focus();
+        refreshHealth();
+      }
+    });
+
+    setSession(sessionId);
+    refreshHealth();
+    setInterval(refreshHealth, 30000);
+    if (!sessionId) {
+      addMessage("bot", "Welcome. Ask about FastAPI APIs, file uploads, Depends, HTTPException, and more.");
+    }
+  </script>
+</body>
+</html>
