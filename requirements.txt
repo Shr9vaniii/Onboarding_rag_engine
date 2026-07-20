@@ -1,0 +1,19 @@
+# Core inference / API
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.0.0
+httpx>=0.27.0
+numpy>=1.26.0
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+rank-bm25>=0.2.2
+groq>=0.9.0
+redis>=5.0.0
+langgraph>=0.2.0
+
+# Optional local GPU generation (not required for remote backend)
+# torch
+# transformers
+# peft
+# unsloth
+# bitsandbytes
